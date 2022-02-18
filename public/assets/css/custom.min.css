@@ -1194,13 +1194,9 @@ body {
     height: 65px;
     padding: 10px 0;
 }
-.page-title-left {
-    /* padding: 10px 35px; */
-}
 .card-body-color {
     margin-top: 15px;
     background-color: #3f7aa71f;
-    /* margin: 10px 35px; */
     padding: 0;
     border-radius: 15px;
 }
