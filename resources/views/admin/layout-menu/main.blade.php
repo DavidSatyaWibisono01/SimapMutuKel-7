@@ -46,13 +46,13 @@
                   <li><a><i class="fa fa-book"></i>Data</a>
                     <ul class="nav child_menu">
                       <li><a href="/pendidik-kependidik">Pendidik</a></li>
-                      <li><a href="form.html">Kependidik</a></li>
+                      <li><a href="form.html">Kependidikan</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bars"></i>Hasil Evaluasi</a>
                     <ul class="nav child_menu">
                       <li><a href="form.html">Pendidik</a></li>
-                      <li><a href="form.html">Kependidik</a></li>
+                      <li><a href="form.html">Kependidikan</a></li>
                     </ul>
                   </li>
 

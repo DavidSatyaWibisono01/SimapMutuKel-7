@@ -18,25 +18,29 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('user/dashboard');
 });
 
-Route::get('/pendidik-kependidik', function () {
-    return view('pendidik-kependidik');
+Route::get('/data-pendidik-kependidik', function () {
+    return view('admin/data-pendidik-kependidikan/data-pendidik-kependidikan');
 });
 
 Route::get('/data-diri', function () {
     return view('data-diri');
 });
 
-// Evaluasi diri tipe 1
 Route::get('/evaluasi-diri', function () {
-    return view('evaluasi-diri');
+    return view('user/evadir/evaluasi-diri-landingpage');
+});
+
+// Evaluasi diri tipe 1
+Route::get('/evaluasi-diri-tipe1', function () {
+    return view('user/evadir/evaluasi-diri-tipe1');
 });
 
 // Evaluasi diri tipe 2
-Route::get('/evaluasi-diri-user', function () {
-    return view('evaluasi-diri-user');
+Route::get('/evaluasi-diri-tipe2', function () {
+    return view('user/evadir/evaluasi-diri-tipe2');
 });
 
 Route::get('/lupa-password', function () {
@@ -44,9 +48,6 @@ Route::get('/lupa-password', function () {
 });
 
 Route::get('/create-question-pedagogik', function () {
-    return view('create-question-pedagogik');
+    return view('admin/pertanyaan/create-question-pedagogik');
 });
 
-Route::get('/evaluasi-guru', function () {
-    return view('user-evaluasi-diri');
-});
