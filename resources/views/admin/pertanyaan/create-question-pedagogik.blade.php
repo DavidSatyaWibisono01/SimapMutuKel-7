@@ -1,8 +1,7 @@
-@extends('layout/main')
+@extends('admin/layout-menu/main')
 
 @section('container')
 
-<!-- page content -->
 <div class="right_col">
   <div class="">
 
@@ -23,7 +22,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>Data Pendidik dan Kependidik</h1>
+        <h1>Pertanyaan Pedagogik</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
@@ -35,7 +34,29 @@
           <button type="button" class="btn btn-search"><i class="fa fa-search"></i> Cari</button>
       </span>
         <span class="input-group-btn">
-            <button type="button" class="btn btn-tambah-data"><i class="fa fa-plus"></i> Tambah</button>
+            <button type="button" class="btn btn-tambah-data" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"><i class="fa fa-plus"></i> Tambah</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Question</h5>
+                    <a href="#" arial-label="close" data-bs-dismiss="modal"><i class="fa fa-close"></i></a>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Masukkan Pertanyaan</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+                    <button type="button" class="btn btn-primary">Simpan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
         </span>
     </div>
     <!-- End Button Cari & Tambah -->
@@ -130,21 +151,6 @@
           </tbody>
       </table>
     </div>
-    <!-- End Table -->
+            
 
-    <!-- Pagination -->
-    <div class="pagination pagi-right">
-      <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-left"></i></button>
-      </li>
-        <button type="button" class="btn btn-pagination">1</button>
-        <button type="button" class="btn btn-pagination">2</button>
-        <button type="button" class="btn btn-pagination">3</button>
-      <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-right"></i></button>
-      </li>
-    </div>
-    <!-- End Pagination -->
-
-    <!-- End page content -->
 @endsection
