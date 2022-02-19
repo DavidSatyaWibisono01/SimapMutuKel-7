@@ -1,29 +1,15 @@
-@extends('admin/layout-menu/main')
+@extends('admin/layout-menu-navbar/main')
 
 @section('container')
 
 <!-- page content -->
 <div class="right_col">
   <div class="">
-
-    <!-- Breadcreumb -->
-    <div  iv class="page-title">
-      <div class="title_left">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb breadcrum-page">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Library</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Data</li>
-        </ol>
-      </nav>
-      </div>
-    </div>
-    <!-- End Breadcreumb -->
     
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>Data Pendidik dan Kependidikan</h1>
+        <h1>Data Pendidik</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->

@@ -1,4 +1,4 @@
-@extends('user/layout-menu/main')
+@extends('user/layout-navbar/main')
 
 @section('container')
 
