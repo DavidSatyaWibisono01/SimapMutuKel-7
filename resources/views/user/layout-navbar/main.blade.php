@@ -24,10 +24,52 @@
   </head>
 
   <body class="nav-md">
+  <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col footer_fixed">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><img src="{!! asset('assets/images/logo-wk.png') !!} " class="profilebar-img"><span class="title-nav">SIM MUTU</span></a>
+            </div>
 
-  <!-- top navigation -->
+            <div class="clearfix"></div>
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i>HOME</a>
+                    <ul class="nav child_menu">
+                      <li><a href="/dashboard">Dashboard</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a><i class="fa fa-bookmark-o"></i>Evaluasi Diri</a>
+                    <ul class="nav child_menu">
+                      <li><a href="/evaluasi-diri-1">Evaluasi Diri Tipe 1</a></li>
+                      <li><a href="/evaluasi-diri-2">Evaluasi Diri Tipe 2</a></li>
+                    </ul>
+                  </li>
+                                    
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a><p>&copy; SMK Wikrama Bogor 2022</p></a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
         <div class="top_nav">
             <div class="nav_menu">
+                <div class="nav toggle">
+                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
                 <nav class="nav navbar-nav">
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
@@ -54,6 +96,17 @@
         @yield('container')
         <!-- /pembatas content -->
 
+        <!-- footer content -->
+        <!-- <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer> -->
+        <!-- /footer content -->
+      </diwwwv>
+    </divww>
+    <!-- /compose -->
 
     <!-- jQuery -->
     <script src="{!! asset('assets/vendors/jquery/dist/jquery.min.js') !!}"></script>

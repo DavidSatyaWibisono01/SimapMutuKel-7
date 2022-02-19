@@ -1,4 +1,4 @@
-@extends('layout-navbar/navbar')
+@extends('user/layout-navbar/navbar')
 
 @section('container')
 
@@ -28,6 +28,7 @@
                                 <li>Kepribadian</li>
                                 <li>Sosial</li>
                                 <li>Profesi</li>
+                                <li>Berbagai hal terkait dengan pemenuhan peningkatan kompetensi inti tersebut</li>
                             </ul>
                             <h5><b>B.</b> Kompetensi Menghasilkan Publikasi Ilmiah.</h5>
                             <h5><b>C.</b> Kompetensi Menghasilkan Karya Inovatif.</h5>
@@ -39,7 +40,9 @@
 
             <div class="field item form-group btn-card-user">
                 <p>Total : 91 Pertanyaan</p>
-                <button type="button" class="btn btn-next-card">Mulai</button>
+                <a href="/evaluasi-diri-tipe2">
+                    <button type="button" class="btn btn-next-card">Mulai</button>
+                </a>
             </div>
 
         </div>
