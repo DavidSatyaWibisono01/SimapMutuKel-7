@@ -1,4 +1,4 @@
-@extends('layout/main')
+@extends('admin/layout-menu-navbar/main')
 
 @section('container')
 
@@ -20,7 +20,7 @@
                         </li>
 
                         <li>
-                          <i class="fa fa-briefcase user-profile-icon"></i> Kependidik
+                          <i class="fa fa-briefcase user-profile-icon"></i> Kependidikan
                         </li>
                       </ul>
 

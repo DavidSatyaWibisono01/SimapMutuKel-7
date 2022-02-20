@@ -17,25 +17,41 @@ use App\Http\Controllers\LoginController;
 Route::get('/', [LoginController::class, 'index']);
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin/dashboard');
 });
 
-Route::get('/pendidik-kependidik', function () {
-    return view('pendidik-kependidik');
+Route::get('/user-dashboard', function () {
+    return view('user/dashboard');
+});
+
+Route::get('/data-pendidik', function () {
+    return view('admin/data-pendidik-kependidikan/data-pendidik');
+});
+
+Route::get('/data-kependidik', function () {
+    return view('admin/data-pendidik-kependidikan/data-kependidik');
 });
 
 Route::get('/data-diri', function () {
     return view('data-diri');
 });
 
+Route::get('/evaluasi-diri-1', function () {
+    return view('user/evadir/eval-diri-tipe-1/evaluasi-diri-landingpage');
+});
+
+Route::get('/evaluasi-diri-2', function () {
+    return view('user/evadir/eval-diri-tipe-2/evaluasi-diri-landingpage');
+});
+
 // Evaluasi diri tipe 1
-Route::get('/evaluasi-diri', function () {
-    return view('evaluasi-diri');
+Route::get('/evaluasi-diri-tipe1', function () {
+    return view('user/evadir/eval-diri-tipe-1/evaluasi-diri-tipe1');
 });
 
 // Evaluasi diri tipe 2
-Route::get('/evaluasi-diri-user', function () {
-    return view('evaluasi-diri-user');
+Route::get('/evaluasi-diri-tipe2', function () {
+    return view('user/evadir/eval-diri-tipe-2/evaluasi-diri-tipe2');
 });
 
 Route::get('/lupa-password', function () {
@@ -43,9 +59,10 @@ Route::get('/lupa-password', function () {
 });
 
 Route::get('/create-question-pedagogik', function () {
-    return view('create-question-pedagogik');
+    return view('admin/pertanyaan/create-question-pedagogik');
 });
 
-Route::get('/evaluasi-guru', function () {
-    return view('user-evaluasi-diri');
+Route::get('/test-modal', function () {
+    return view('test-modal');
 });
+

@@ -1,4 +1,4 @@
-@extends('layout-non-menu/navbar')
+@extends('user/layout-navbar/navbar')
 
 @section('container')
 
@@ -9,26 +9,18 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>A. Kompetensi Inti</h1>
+        <h1>Berbagai hal terkait dengan pemenuhan dan peningkatan kompetensi inti tersebut</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
 
-    <!-- Breadcrumb -->
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb  breadcrumb-page">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
-      </ol>
-    </nav>
-    <!-- EndBreadcrumb -->
-
     <!-- Button back to home -->
     <div class="btn-home">
-      <span class="input-group-btn">
-          <button type="button" class="btn btn-back">Kembali ke Dashboard</button>
-      </span>
+        <span class="input-group-btn">
+            <a href="/user-dashboard">
+                <button type="button" class="btn btn-back">Kembali ke Dashboard</button>
+            </a>
+        </span>
     </div>
     <!-- End Button back to home -->
       
@@ -49,20 +41,11 @@
               <th scope="row">1</th>
                 <td class="td-question">Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya.</td>
                 <td class="ck-question">
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
+                    <div class="form-group row">
+                        <div class="col-md-9 col-sm-9 ">
+                            <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                    </div>
                 </td>
                 <td class="td-question">
                     <div class="form-group row">
@@ -76,20 +59,11 @@
               <th scope="row">2</th>
                 <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
                 <td>
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
+                    <div class="form-group row">
+                        <div class="col-md-9 col-sm-9 ">
+                            <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                    </div>
                 </td>
                 <td class="td-question">
                     <div class="form-group row">
@@ -103,20 +77,11 @@
               <th scope="row">3</th>
                 <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
                 <td>
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
+                    <div class="form-group row">
+                        <div class="col-md-9 col-sm-9 ">
+                            <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                    </div>
                 </td>
                 <td class="td-question">
                     <div class="form-group row">
@@ -130,20 +95,11 @@
               <th scope="row">4</th>
                 <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
                 <td>
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
+                    <div class="form-group row">
+                        <div class="col-md-9 col-sm-9 ">
+                            <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                    </div>
                 </td>
                 <td class="td-question">
                     <div class="form-group row">
@@ -157,20 +113,11 @@
               <th scope="row">5</th>
                 <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
                 <td>
-                <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
+                    <div class="form-group row">
+                        <div class="col-md-9 col-sm-9 ">
+                            <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                    </div>
                 </td>
                 <td class="td-question">
                     <div class="form-group row">
@@ -187,10 +134,9 @@
     <!-- End Table -->
 
     <!-- Pagination -->
-    <div class="pagination pagi-right">
-      <li class="page-item">
-        <button type="button" class="btn btn-next">Selanjutnya</button>
-      </li>
+    <div class="field item form-group btn-data">
+        <button type="button" class="btn btn-back">Kembali</button>
+        <button type="button" class="btn btn-next">Lanjut</button>
     </div>
     <!-- End Pagination -->
 
