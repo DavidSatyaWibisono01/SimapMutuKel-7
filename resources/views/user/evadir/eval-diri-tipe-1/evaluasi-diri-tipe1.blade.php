@@ -5,6 +5,22 @@
 <!-- page content -->
 <div class="container-card">
   <div class="">
+<div class="right_col">
+  <div class="">
+
+    <!-- Breadcreumb -->
+    <div  iv class="page-title">
+      <div class="title_left">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrum-page">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+      </div>
+    </div>
+    <!-- End Breadcreumb -->
     
     <!-- Title dari Menu -->
     <div  iv class="page-title">
@@ -26,6 +42,13 @@
       </span>
     </div>
     <!-- End Button back to home -->
+      <div class="title_right_info">
+        <span>lorem ipsum bebeledagan pasti jaya</span>
+      </div>
+    </div>
+    <div class="page-title">
+    </div>
+    <!-- End Title dari Menu -->
       
     <!-- Table -->
     <div class="table-responsive">
@@ -58,6 +81,14 @@
 											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
 										</label>
 									</div>
+                    <div class="checkbox">
+						<label>
+							<input type="checkbox" value=""> Tidak Pernah
+							<input type="checkbox" value=""> Jarang
+							<input type="checkbox" value=""> Sering
+							<input type="checkbox" value=""> Selalu
+						</label>
+					</div>
                 </td>
                 <td class="td-question">
                     <div class="form-group row">
@@ -86,6 +117,7 @@
 										</label>
 									</div>
                 </td>
+                <td>Thornton</td>
                 <td class="td-question">
                     <div class="form-group row">
                         <div class="col-md-9 col-sm-9 ">
@@ -113,6 +145,7 @@
 										</label>
 									</div>
                 </td>
+                <td>Thornton</td>
                 <td class="td-question">
                     <div class="form-group row">
                         <div class="col-md-9 col-sm-9 ">
@@ -140,6 +173,7 @@
 										</label>
 									</div>
                 </td>
+                <td>Thornton</td>
                 <td class="td-question">
                     <div class="form-group row">
                         <div class="col-md-9 col-sm-9 ">
@@ -167,6 +201,7 @@
 										</label>
 									</div>
                 </td>
+                <td>Thornton</td>
                 <td class="td-question">
                     <div class="form-group row">
                         <div class="col-md-9 col-sm-9 ">
@@ -176,6 +211,17 @@
                 </td>
             </tr>
             <tr>
+              <th scope="row">6</th>
+                <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
+                <td>Thornton</td>
+                <td class="td-question">
+                    <div class="form-group row">
+                        <div class="col-md-9 col-sm-9 ">
+                            <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                    </div>
+                </td>
+            </tr>
           </tbody>
       </table>
     </div>
