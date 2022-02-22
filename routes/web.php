@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DataUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,22 +18,16 @@ use App\Http\Controllers\LoginController;
 */
 
 Route::get('/', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::get('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', function () {
-    return view('admin/dashboard');
-});
+Route::get('/dashboard', [AdminController::class, 'index']);
 
-Route::get('/user-dashboard', function () {
-    return view('user/dashboard');
-});
+Route::get('/user-dashboard', [UserController::class, 'index']);
 
-Route::get('/data-pendidik', function () {
-    return view('admin/data-pendidik-kependidikan/data-pendidik');
-});
+Route::get('/data-pendidik', [DataUserController::class, 'pendidik']);
 
-Route::get('/data-kependidik', function () {
-    return view('admin/data-pendidik-kependidikan/data-kependidik');
-});
+Route::get('/data-kependidik', [DataUserController::class, 'kependidikan']);
 
 Route::get('/data-diri', function () {
     return view('data-diri');
@@ -66,3 +63,17 @@ Route::get('/test-modal', function () {
     return view('test-modal');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
+
+//pengecekan level user login
+Route::group(['middleware' => ['auth']], function () {
+    Route::group(['middleware' => ['cek_login:admin']], function () {
+        Route::resource('admin', AdminController::class);
+    });
+    Route::group(['middleware' => ['cek_login:user']], function () {
+        Route::resource('user', AdminController::class);
+    });
+});
