@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link href="{!! asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
     <!-- Font Awesome -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="{!! asset('assets/vendors/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{!! asset('assets/vendors/nprogress/nprogress.css" rel="stylesheet') !!}">
@@ -54,15 +55,17 @@
 
                   <li><a><i class="fa fa-bars"></i>Hasil Evaluasi Individu</a>
                     <ul class="nav child_menu">
-                      <li><a href="#">Pendidik</a></li>
-                      <li><a href="#">Kependidikan</a></li>
+                      <li><a href="/hasil-evaluasi-individu-pendidik">Pendidik</a></li>
+                      <li><a href="/hasil-evaluasi-individu-kependidik">Kependidikan</a></li>
                     </ul>
                   </li>
 
                   <li><a><i class="fa fa-bookmark-o"></i>Hasil Evaluasi Pertanyaan</a>
                     <ul class="nav child_menu">
-                      <li><a href="#">Example</a></li>
-                      <li><a href="#">Example</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-pedagogik">Pedagogik</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-kepribadian">Kepribadian</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-sosial">Sosial</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-profesional">Profesional</a></li>
                     </ul>
                   </li>
 
@@ -70,15 +73,15 @@
                     <ul class="nav child_menu">
                         <li><a>Bagian A<span class="fa fa-chevron-down"></span></a>
                           <ul class="nav child_menu">
-                            <li><a href="#">Pedagogik</a>
+                            <li><a href="/hasil-evaluasi-individu-a-pedagogik">Pedagogik</a>
                             </li>
-                            <li><a href="#">Kepribadian</a>
+                            <li><a href="/hasil-evaluasi-individu-a-kepribadian">Kepribadian</a>
                             </li>
-                            <li><a href="#">Sosial</a>
+                            <li><a href="/hasil-evaluasi-individu-a-sosial">Sosial</a>
                             </li>
-                            <li><a href="#">Profesional</a>
+                            <li><a href="/hasil-evaluasi-individu-a-profesional">Profesional</a>
                             </li>
-                            <li><a href="#">Berbagai Hal Terkait Pemenuhan</a>
+                            <li><a href="/hasil-evaluasi-individu-a-berbagai-hal">Berbagai Hal Terkait Pemenuhan</a>
                             </li>
                           </ul>
                         </li>
@@ -111,16 +114,12 @@
                 <nav class="nav navbar-nav">
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
-                    <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    <a href="#" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
                       <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;"> Profile</a>
-                        <a class="dropdown-item"  href="javascript:;">
-                          <span class="badge bg-red pull-right">50%</span>
-                          <span>Settings</span>
-                        </a>
-                    <a class="dropdown-item"  href="javascript:;">Help</a>
+                      <a class="dropdown-item user-profile"  href="javascript:;"><img src="{!! asset('assets/images/logo-wk.png') !!}">James Kipli</a>
+                      <a class="dropdown-item"  href="javascript:;">Edit Profil</a>
                       <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
