@@ -1,8 +1,7 @@
-@extends('layout/main')
+@extends('admin/layout-menu-navbar/main')
 
 @section('container')
 
-<!-- page content -->
 <div class="right_col">
   <div class="">
 
@@ -10,7 +9,7 @@
     <div  iv class="page-title">
       <div class="title_left">
       <nav aria-label="breadcrumb">
-        <ol class="breadcrumb breadcrum-page">
+        <ol class="breadcrumb breadcrumb-page">
           <li class="breadcrumb-item"><a href="#">Home</a></li>
           <li class="breadcrumb-item"><a href="#">Library</a></li>
           <li class="breadcrumb-item active" aria-current="page">Data</li>
@@ -23,7 +22,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>Data Pendidik dan Kependidik</h1>
+        <h1>Pertanyaan Pedagogik</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
@@ -35,7 +34,8 @@
           <button type="button" class="btn btn-search"><i class="fa fa-search"></i> Cari</button>
       </span>
         <span class="input-group-btn">
-            <button type="button" class="btn btn-tambah-data"><i class="fa fa-plus"></i> Tambah</button>
+            <button type="button" class="btn btn-tambah-data" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat"><i class="fa fa-plus"></i> Tambah</button>
+            @extends('admin/modals/question/create-modal-question')
         </span>
     </div>
     <!-- End Button Cari & Tambah -->
@@ -130,21 +130,6 @@
           </tbody>
       </table>
     </div>
-    <!-- End Table -->
+            
 
-    <!-- Pagination -->
-    <div class="pagination pagi-right">
-      <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-left"></i></button>
-      </li>
-        <button type="button" class="btn btn-pagination">1</button>
-        <button type="button" class="btn btn-pagination">2</button>
-        <button type="button" class="btn btn-pagination">3</button>
-      <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-right"></i></button>
-      </li>
-    </div>
-    <!-- End Pagination -->
-
-    <!-- End page content -->
 @endsection

@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link href="{!! asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
     <!-- Font Awesome -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="{!! asset('assets/vendors/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{!! asset('assets/vendors/nprogress/nprogress.css" rel="stylesheet') !!}">
@@ -26,7 +27,7 @@
   <body class="nav-md">
   <div class="container body">
       <div class="main_container">
-        <div class="col-md-3 left_col menu_fixed">
+        <div class="col-md-3 left_col footer_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="index.html" class="site_title"><img src="{!! asset('assets/images/logo-wk.png') !!} " class="profilebar-img"><span class="title-nav">SIM MUTU</span></a>
@@ -37,27 +38,22 @@
             <!-- sidebar menu -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
+
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> HOME</a>
+                  <li><a><i class="fa fa-home"></i>HOME</a>
                     <ul class="nav child_menu">
                       <li><a href="/dashboard">Dashboard</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-book"></i>Data</a>
-                    <ul class="nav child_menu">
-                      <li><a href="/pendidik-kependidik">Pendidik</a></li>
-                      <li><a href="form.html">Kependidik</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-bars"></i>Hasil Evaluasi</a>
-                    <ul class="nav child_menu">
-                      <li><a href="form.html">Pendidik</a></li>
-                      <li><a href="form.html">Kependidik</a></li>
-                    </ul>
-                  </li>
 
+                  <li><a><i class="fa fa-bookmark-o"></i>Evaluasi Diri</a>
+                    <ul class="nav child_menu">
+                      <li><a href="/evaluasi-diri-1">Evaluasi Diri Tipe 1</a></li>
+                      <li><a href="/evaluasi-diri-2">Evaluasi Diri Tipe 2</a></li>
+                    </ul>
+                  </li>
+                                    
               </div>
-
             </div>
             <!-- /sidebar menu -->
 
@@ -82,12 +78,8 @@
                       <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;"> Profile</a>
-                        <a class="dropdown-item"  href="javascript:;">
-                          <span class="badge bg-red pull-right">50%</span>
-                          <span>Settings</span>
-                        </a>
-                    <a class="dropdown-item"  href="javascript:;">Help</a>
+                      <a class="dropdown-item user-profile"  href="javascript:;"><img src="{!! asset('assets/images/logo-wk.png') !!}">James Kipli</a>
+                      <a class="dropdown-item"  href="javascript:;">Edit Profil</a>
                       <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>

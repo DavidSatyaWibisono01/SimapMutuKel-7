@@ -1,4 +1,4 @@
-@extends('layout-non-menu/navbar')
+@extends('user/layout-navbar/navbar')
 
 @section('container')
 
@@ -23,12 +23,12 @@
                     <div class="page-title">
                         <div class="title_left">
                             <h5><b>A.</b> Kompetensi inti</h5>
-                            <ul>
-                                <li>Pedagogik</li>
-                                <li>Kepribadian</li>
-                                <li>Sosial</li>
-                                <li>Profesi</li>
-                            </ul>
+                                <ul>
+                                    <li>Pedagogik</li>
+                                    <li>Kepribadian</li>
+                                    <li>Sosial</li>
+                                    <li>Profesi</li>
+                                </ul>
                             <h5><b>B.</b> Kompetensi Menghasilkan Publikasi Ilmiah.</h5>
                             <h5><b>C.</b> Kompetensi Menghasilkan Karya Inovatif.</h5>
                             <h5><b>D.</b> Kompetensi Untuk Penunjang Pelaksanaan Pembelajaran Berkualitas (TIK, Bahasa Asing, Dsb).</h5>
@@ -39,7 +39,9 @@
 
             <div class="field item form-group btn-card-user">
                 <p>Total : 91 Pertanyaan</p>
-                <button type="button" class="btn btn-next-card">Mulai</button>
+                <a href="/evaluasi-diri-tipe1">
+                    <button type="button" class="btn btn-next-card">Mulai</button>
+                </a>
             </div>
 
         </div>
