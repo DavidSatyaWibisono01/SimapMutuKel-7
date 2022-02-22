@@ -1,8 +1,8 @@
-<div class="modal fade" id="exampleModal-Edit-Profile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal-Tambah-Profile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Edit Profile Guru</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Tambah Profile Guru</h5>
             <a href="#" arial-label="close" data-bs-dismiss="modal"><i class="fa fa-close"></i></a>
         </div>
 

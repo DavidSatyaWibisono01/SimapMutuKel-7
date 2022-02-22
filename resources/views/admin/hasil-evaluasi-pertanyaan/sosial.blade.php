@@ -1,31 +1,27 @@
-@extends('user/layout-navbar/navbar')
+@extends('admin/layout-menu-navbar/main')
 
 @section('container')
 
 <!-- page content -->
-<div class="container-card">
+<div class="right_col">
   <div class="">
     
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>Berbagai hal terkait dengan pemenuhan peningkatan kompetensi inti tersebut</h1>
-      </div>
-      <div class="title_left mb-3">
-        <h2>Pedagogik</h2>
+        <h1>Hasil Evaluasi Pertanyaan Sosial</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
-
-    <!-- Button back to home -->
-    <div class="btn-home">
+    
+    <!-- Button Cari & Tambah -->
+    <div class="input-group">
+      <input type="text" class="input-search">
       <span class="input-group-btn">
-        <a href="/user-dashboard">
-          <button type="button" class="btn btn-back">Kembali ke Dashboard</button>
-        </a>
+          <button type="button" class="btn btn-search"><i class="fa fa-search"></i> Cari</button>
       </span>
     </div>
-    <!-- End Button back to home -->
+    <!-- End Button Cari & Tambah -->
       
     <!-- Table -->
     <div class="table-responsive">
@@ -34,15 +30,16 @@
             <tr>
                 <th><b>No</b></th>
                 <th colspan='2'><b>Pertanyaan</b></th>
-                <th class="tds-question" colspan='5'><b>Level Kinerja</b></th>
-                <th class="tds-question" colspan='3'><b>Kendala yang dihadapi</b></th>
+                <th class="ck-question" colspan='5'><b>Hasil Evaluasi</b></th>
             </tr>
             <tr class="bg-table-color">
                 <td></td>
-                <td colspan='2'><b></b></td>
-
-                <td class="tds-question" colspan='2'>Harap diisi</td>
-                <td class="tds-question" colspan='4'>Harap diisi</td>
+                <td colspan='2'><b> Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya </b></td>
+                
+                <td class="td-question">Tidak Pernah</td>
+                <td class="td-question">Jarang</td>
+                <td class="td-question">Sering</td>
+                <td class="td-question">Selalu</td>
             </tr>
           </thead>
 
@@ -50,12 +47,10 @@
             <tr>
                 <td colspan='1'>1</td>
                 <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
-                <td colspan='2'>
-                  <textarea class="form-control" rows="3" placeholder="" ></textarea>
-                </td>
-                <td colspan='4'>
-                  <textarea class="form-control" rows="3" placeholder="" ></textarea>
-                </td>
+                <td class="ck-question">23</td>
+                <td class="ck-question">88</td>
+                <td class="ck-question">72</td>
+                <td class="ck-question">90</td>
             </tr>
           </tbody>
       </table>

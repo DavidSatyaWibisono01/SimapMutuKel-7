@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link href="{!! asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
     <!-- Font Awesome -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="{!! asset('assets/vendors/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{!! asset('assets/vendors/nprogress/nprogress.css" rel="stylesheet') !!}">
