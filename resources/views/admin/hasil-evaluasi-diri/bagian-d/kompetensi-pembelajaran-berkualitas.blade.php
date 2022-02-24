@@ -9,10 +9,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>A. Kompetensi Inti</h1>
-      </div>
-      <div class="title_left mb-2">
-        <h2>Kepribadian</h2>
+        <h1>D : Kompetensi Untuk Penunjang Pelaksanaan Pembelajaran Berkualitas ( TIK, Bahasa Asing, Dsb)</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->

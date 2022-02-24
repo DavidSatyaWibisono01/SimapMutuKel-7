@@ -27,30 +27,41 @@
 
   <body class="nav-md">
 
-      <!-- top navigation -->
-      <div class="top_nav">
-          <div class="nav_menu">
-              <nav class="nav navbar-nav">
-              <ul class=" navbar-right">
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <!-- Breadcreumb -->
+                <div class="nav toggle-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-page">
+                    <li class="breadcrumb-item"><a href="/user-dashboard">Dashboard</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Evaluasi diri Bagian
+                        1</li>
+                    </ol>
+                </nav>
+                </div>
+                <!-- End Breadcreumb -->
+                <nav class="nav navbar-nav">
+                <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
                     <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
-                  </a>
-                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="/user-edit-profile">Edit Profile</a>
-                      <a class="dropdown-item"  href="/user-dashboard">Kembali ke Dashboard</a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
-                  </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item"  href="/user-edit-profile">Edit Profile</a>
+                        <a class="dropdown-item"  href="/user-dashboard">Kembali ke Dashboard</a>
+                      <a class="dropdown-item"  href="login.html"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                    </div>
                 </li>
-              </ul>
+                </ul>
             </nav>
-          </div>
-      </div>
-      <!-- /top navigation -->
+            </div>
+        </div>
+        <!-- /top navigation -->
       
-      <!-- pembatas content -->
-      @yield('container')
-      <!-- /pembatas content -->
+        <!-- pembatas content -->
+        @yield('container')
+        <!-- /pembatas content -->
   </body>
 
     <!-- jQuery -->

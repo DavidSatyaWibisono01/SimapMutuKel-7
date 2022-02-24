@@ -23,7 +23,7 @@
     <div class="input-group">
       <input type="text" class="input-search">
       <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fa fa-search"></i> Cari</button>
+          <button type="button" class="btn btn-search"><i class="fa fi-rr-search"></i> Cari</button>
       </span>
       <form class="col-md-5 mb-3">
           <select class="form-control">

@@ -24,20 +24,20 @@
 			</select>
 		</div>
 
-        <div class="modal-body">
-            <label for="message-text" class="col-form-label">Nomor</label>
-			<select class="form-control">
-				<option></option>
-				<option>1.1</option>
-				<option>1.2</option>
-				<option>1.3</option>
-				<option>1.5</option>
-				<option>1.6</option>
-			</select>
-		</div>
+      <div class="modal-body">
+          <label for="message-text" class="col-form-label">Nomor</label>
+          <select class="form-control">
+            <option></option>
+            <option>1.1</option>
+            <option>1.2</option>
+            <option>1.3</option>
+            <option>1.5</option>
+            <option>1.6</option>
+          </select>
+		  </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
+        <button type="button" class="btn btn-back" data-bs-dismiss="modal">Kembali</button>
         <button type="button" class="btn btn-tambah-data">Simpan</button>
       </div>
     </div>

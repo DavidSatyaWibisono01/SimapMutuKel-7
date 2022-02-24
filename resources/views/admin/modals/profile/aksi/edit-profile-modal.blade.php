@@ -62,8 +62,9 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-          <button type="button" class="btn btn-primary">Simpan</button>
+          <button type="button" class="btn btn-back" data-bs-dismiss="modal" >Kembali</button>
+          <button type="button" class="btn btn-tambah-data" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Simpan</button>
+          @extends('admin/modals/profile/aksi/confirm-profile-modal')
         </div>
     </div>
   </div>

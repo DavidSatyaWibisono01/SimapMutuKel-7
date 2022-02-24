@@ -21,10 +21,10 @@
     <div class="input-group">
       <input type="text" class="input-search">
       <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fa fa-search"></i> Cari</button>
+          <button type="button" class="btn btn-search"><i class="fa fi-rr-search"></i> Cari</button>
       </span>
       <span class="input-group-btn">
-          <button type="button" class="btn btn-tambah-data"  data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Question" data-bs-whatever="@fat"><i class="fa fa-plus"></i> Tambah Pertanyaan</button>
+          <button type="button" class="btn btn-tambah-data"  data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Question" data-bs-whatever="@fat"><i class="fa fi-rr-add"></i> Tambah Pertanyaan</button>
           @extends('admin/modals/question/create-modal-question')
       </span>
     </div>
@@ -47,11 +47,11 @@
 
           <tbody>
             <tr>
-                <td colspan='1'>1</td>
-                <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Question" data-bs-whatever="@fat"><i class="fa fa-edit">@extends('admin/modals/question/edit-modal-question')</i></a></td>
-                <td class="ckk-question"><a href=""><i class="fa fa-trash"></i></a></td>
-            </tr>
+              <td colspan='1'>1</td>
+              <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
+              <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Question" data-bs-whatever="@fat"><i class="fa fi-rr-edit">@extends('admin/modals/question/edit-modal-question')</i></a></td>
+              <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fa fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
+          </tr>
           </tbody>
       </table>
     </div>

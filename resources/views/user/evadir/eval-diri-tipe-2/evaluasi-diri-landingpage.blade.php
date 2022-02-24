@@ -1,14 +1,16 @@
-@extends('user/layout-navbar/navbar')
+@extends('user/evadir/eval-diri-tipe-1/layout-nav/nav-bread')
 
 @section('container')
 
     <div class="container-card">
         <div class="">
+
+
             
             <!-- Title dari Menu -->
             <div class="page-title">
                 <div class="title_left page-title-left">
-                    <h1>Evaluasi Diri Guru untuk Rencana Pengembangan Keprofesian Berkelanjutan</h1>
+                    <h1>“Evaluasi Diri Guru Untuk Rencana Pengembangan Keprofesian Berkelanjutan Bagian 2</h1>
                 </div>
             </div>
             <!-- End Title dari Menu -->

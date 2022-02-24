@@ -12,6 +12,7 @@
     <!-- Bootstrap -->
     <link href="{!! asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
     <!-- Font Awesome -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="{!! asset('assets/vendors/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
     <!-- NProgress -->
@@ -26,7 +27,7 @@
 
   <body class="nav-md">
 
-  <!-- top navigation -->
+        <!-- top navigation -->
         <div class="top_nav">
             <div class="nav_menu">
                 <nav class="nav navbar-nav">
@@ -36,15 +37,15 @@
                       <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="#"> Profile</a>
+                      <a class="dropdown-item"  href="/admin-edit-profile">Edit Profile</a>
                         <a class="dropdown-item"  href="/dashboard">Kembali ke Dashboard</a>
-                      <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <a class="dropdown-item"  href="#"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
                 </ul>
               </nav>
             </div>
-          </div>
+        </div>
         <!-- /top navigation -->
 
         <!-- pembatas content -->

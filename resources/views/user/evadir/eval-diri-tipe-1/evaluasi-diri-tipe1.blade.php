@@ -30,7 +30,7 @@
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
-          <thead>
+        <thead>
             <tr>
                 <th><b>No</b></th>
                 <th colspan='2'><b>Pertanyaan</b></th>
@@ -48,29 +48,29 @@
 
                 <td class="tds-question" colspan='2'>Harap diisi</td>
             </tr>
-          </thead>
+        </thead>
 
-          <tbody>
-            <tr>
-                <td colspan='1'>1</td>
-                <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
-                <td class="ck-question">
-									<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-                </td>
-                <td class="ck-question">
-									<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-                </td>
-                <td class="ck-question">
-									<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-                </td>
-                <td class="ck-question">
-									<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-                </td>
-                <td colspan='2'>
-                  <textarea class="form-control" rows="3" placeholder="" ></textarea>
-                </td>
-            </tr>
-          </tbody>
+        <tbody>
+          <tr>
+              <td colspan='1'>1</td>
+              <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td colspan='2'>
+                <textarea class="form-control" rows="3" placeholder="" ></textarea>
+              </td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <!-- End Table -->
@@ -80,6 +80,7 @@
         <button type="button" class="btn btn-next">Selanjutnya</button>
     </div>
     <!-- End Pagination -->
-
+  </div>
+</div>
     <!-- End page content -->
 @endsection

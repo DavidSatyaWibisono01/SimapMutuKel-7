@@ -18,11 +18,11 @@
     <div class="input-group">
       <input type="text" class="input-search">
       <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fa fa-search"></i> Cari</button>
+          <button type="button" class="btn btn-search"><i class="fi fi-rr-search"></i> Cari</button>
       </span>
         <span class="input-group-btn">
-            <button type="button" class="btn btn-tambah-data" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fa fa-plus"></i> Tambah</button>
-            @extends('admin/modals/profile/aksi/edit-profile-modal')
+            <button type="button" class="btn btn-tambah-data" data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-add"></i> Tambah</button>
+            @extends('admin/modals/profile/aksi/tambah-profile-modal')
         </span>
     </div>
     <!-- End Button Cari & Tambah -->
@@ -46,9 +46,9 @@
                 <td>Ono Supriadi</td>
                 <td>B. Inggris</td>
                 <td>Pendidik</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fa fa-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fa fa-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
-                <td class="ckk-question"><a href=""><i class="fa fa-trash"></i></a></td>
+                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
+                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
+                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
             </tr>
           </tbody>
       </table>
@@ -58,13 +58,13 @@
     <!-- Pagination -->
     <div class="pagination pagi-right">
       <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-left"></i></button>
+        <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-left"></i></button>
       </li>
         <button type="button" class="btn btn-pagination">1</button>
         <button type="button" class="btn btn-pagination">2</button>
         <button type="button" class="btn btn-pagination">3</button>
       <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-right"></i></button>
+        <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-right"></i></button>
       </li>
     </div>
     <!-- End Pagination -->

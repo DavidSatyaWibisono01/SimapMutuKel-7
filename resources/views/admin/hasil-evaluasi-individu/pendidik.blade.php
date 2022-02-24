@@ -9,7 +9,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>Hasil Evaluasi Individu</h1>
+        <h1>Hasil Evaluasi Pendidik</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
@@ -18,7 +18,7 @@
     <div class="input-group">
       <input type="text" class="input-search">
       <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fa fa-search"></i> Cari</button>
+          <button type="button" class="btn btn-search"><i class="fa fi-rr-search"></i> Cari</button>
       </span>
     </div>
     <!-- End Button Cari & Tambah -->
@@ -42,7 +42,7 @@
                 <td>Ono Supriadi</td>
                 <td>B. Inggris</td>
                 <td>Pendidik</td>
-                <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru"><i class="fa fa-eye"></i></a></td>
+                <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru"><i class="fa fi-rr-eye"></i></a></td>
             </tr>
           </tbody>
       </table>
@@ -52,13 +52,13 @@
     <!-- Pagination -->
     <div class="pagination pagi-right">
       <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-left"></i></button>
+        <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-left"></i></button>
       </li>
         <button type="button" class="btn btn-pagination">1</button>
         <button type="button" class="btn btn-pagination">2</button>
         <button type="button" class="btn btn-pagination">3</button>
       <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fa-long-arrow-right"></i></button>
+        <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-right"></i></button>
       </li>
     </div>
     <!-- End Pagination -->
