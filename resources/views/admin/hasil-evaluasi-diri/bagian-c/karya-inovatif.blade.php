@@ -9,7 +9,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>C : Kompetensi Menghasilkan Karya Inovatif</h1>
+        <h1>C. Kompetensi Menghasilkan Karya Inovatif</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->

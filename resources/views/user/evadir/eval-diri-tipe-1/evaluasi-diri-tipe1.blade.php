@@ -39,7 +39,7 @@
             </tr>
             <tr class="bg-table-color">
                 <td></td>
-                <td colspan='2'><b></b></td>
+                <td colspan='2'><b>Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya</b></td>
                 
                 <td class="td-question">Tidak Pernah</td>
                 <td class="td-question">Jarang</td>
