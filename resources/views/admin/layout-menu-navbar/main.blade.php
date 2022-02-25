@@ -12,6 +12,8 @@
     <!-- Bootstrap -->
     <link href="{!! asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
     <!-- Font Awesome -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="{!! asset('assets/vendors/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{!! asset('assets/vendors/nprogress/nprogress.css" rel="stylesheet') !!}">
@@ -29,7 +31,7 @@
         <div class="col-md-3 left_col footer_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><img src="{!! asset('assets/images/logo-wk.png') !!} " class="profilebar-img"><span class="title-nav">SIM MUTU</span></a>
+              <a href="dashboard" class="site_title"><img src="{!! asset('assets/images/logo-wk.png') !!} " class="profilebar-img"><span class="title-nav">SIM MUTU</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -39,52 +41,68 @@
               <div class="menu_section">
 
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i>HOME</a>
-                    <ul class="nav child_menu">
-                      <li><a href="/dashboard">Dashboard</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="/dashboard"><i class="fa fi-rr-home"></i>Dashboard</a></li>
 
-                  <li><a><i class="fa fa-book"></i>Data Pendidik & Kependidik</a>
+                  <li><a><i class="fa fi-rr-address-book"></i>Data Pendidik & Kependidik</a>
                     <ul class="nav child_menu">
                       <li><a href="/data-pendidik">Pendidik</a></li>
                       <li><a href="/data-kependidik">Kependidikan</a></li>
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-bars"></i>Hasil Evaluasi Individu</a>
+                  <li><a><i class="fa fi-rr-book"></i>Hasil Evaluasi Individu</a>
                     <ul class="nav child_menu">
-                      <li><a href="#">Pendidik</a></li>
-                      <li><a href="#">Kependidikan</a></li>
+                      <li><a href="/hasil-evaluasi-individu-pendidik">Pendidik</a></li>
+                      <li><a href="/hasil-evaluasi-individu-kependidik">Kependidikan</a></li>
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-bookmark-o"></i>Hasil Evaluasi Pertanyaan</a>
+                  <li><a><i class="fa fi-rr-book"></i>Hasil Evaluasi Pertanyaan</a>
                     <ul class="nav child_menu">
-                      <li><a href="#">Example</a></li>
-                      <li><a href="#">Example</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-pedagogik">Pedagogik</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-kepribadian">Kepribadian</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-sosial">Sosial</a></li>
+                      <li><a href="/hasil-evaluasi-pertanyaan-profesional">Profesional</a></li>
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-sitemap"></i> List Pertanyaan Evaluasi Diri</a>
+                  <li><a><i class="fa fi-rr-list"></i>List Pertanyaan Evaluasi Diri</a>
                     <ul class="nav child_menu">
-                        <li><a>Bagian A<span class="fa fa-chevron-down"></span></a>
+                      {{-- Bagian A --}}
+                        <li><a>Bagian A<span class="fa fi-rr-angle-small-down"></span></a>
                           <ul class="nav child_menu">
-                            <li><a href="#">Pedagogik</a>
+                            <li><a href="/hasil-evaluasi-individu-a-pedagogik">Pedagogik</a>
                             </li>
-                            <li><a href="#">Kepribadian</a>
+                            <li><a href="/hasil-evaluasi-individu-a-kepribadian">Kepribadian</a>
                             </li>
-                            <li><a href="#">Sosial</a>
+                            <li><a href="/hasil-evaluasi-individu-a-sosial">Sosial</a>
                             </li>
-                            <li><a href="#">Profesional</a>
+                            <li><a href="/hasil-evaluasi-individu-a-profesional">Profesional</a>
                             </li>
-                            <li><a href="#">Berbagai Hal Terkait Pemenuhan</a>
+                            <li><a href="/hasil-evaluasi-individu-a-berbagai-hal">Berbagai Hal Terkait Pemenuhan</a>
                             </li>
                           </ul>
                         </li>
-                        <li><a href="#">Bagian B</a>
-                        <li><a href="#">Bagian C</a>
-                        <li><a href="#">Bagian D</a>
+                        {{-- Bagian B --}}
+                        <li><a>Bagian B<span class="fa fi-rr-angle-small-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li><a href="/hasil-evaluasi-individu-b-publikasi-ilmiah">Publikasi Ilmiah</a>
+                            </li>
+                          </ul>
+                        </li>
+                        {{-- Bagian C --}}
+                        <li><a>Bagian C<span class="fa fi-rr-angle-small-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li><a href="/hasil-evaluasi-individu-c-karya-inovatif">Karya Inovatif</a>
+                            </li>
+                          </ul>
+                        </li>
+                        {{-- Bagian D --}}
+                        <li><a>Bagian D<span class="fa fi-rr-angle-small-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li><a href="/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas">Kompetensi Pembelajaran Berkualitas</a>
+                            </li>
+                          </ul>
                         </li>
                     </ul>
                   </li> 
@@ -99,52 +117,41 @@
               <a><p>&copy; SMK Wikrama Bogor 2022</p></a>
             </div>
             <!-- /menu footer buttons -->
+
+
           </div>
         </div>
 
         <!-- top navigation -->
         <div class="top_nav">
-            <div class="nav_menu">
+          <div class="nav_menu">
                 <div class="nav toggle">
-                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                  <a id="menu_toggle"><i class="fa fi-rr-list"></i></a>
                 </div>
                 <nav class="nav navbar-nav">
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
-                    <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
+                    <a href="#" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                      <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fi-rr-angle-small-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;"> Profile</a>
-                        <a class="dropdown-item"  href="javascript:;">
-                          <span class="badge bg-red pull-right">50%</span>
-                          <span>Settings</span>
-                        </a>
-                    <a class="dropdown-item"  href="javascript:;">Help</a>
-                      <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <a class="dropdown-item user-profile"  href="/dashboard"><img src="{!! asset('assets/images/logo-wk.png') !!}">James Kipli</a>
+                      <a class="dropdown-item"  href="/admin-edit-profile">Edit Profil</a>
+                      <a class="dropdown-item"  href="login.html"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
                 </ul>
               </nav>
-            </div>
           </div>
+        </div>
         <!-- /top navigation -->
 
         <!-- pembatas content -->
         @yield('container')
         <!-- /pembatas content -->
 
-        <!-- footer content -->
-        <!-- <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer> -->
-        <!-- /footer content -->
-      </diwwwv>
-    </divww>
-    <!-- /compose -->
+    </div>
+  </div>
 
     <!-- jQuery -->
     <script src="{!! asset('assets/vendors/jquery/dist/jquery.min.js') !!}"></script>

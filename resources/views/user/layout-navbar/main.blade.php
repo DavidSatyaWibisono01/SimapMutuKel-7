@@ -12,6 +12,8 @@
     <!-- Bootstrap -->
     <link href="{!! asset('assets/vendors/bootstrap/dist/css/bootstrap.min.css') !!}" rel="stylesheet">
     <!-- Font Awesome -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href="{!! asset('assets/vendors/font-awesome/css/font-awesome.min.css') !!}" rel="stylesheet">
     <!-- NProgress -->
     <link href="{!! asset('assets/vendors/nprogress/nprogress.css" rel="stylesheet') !!}">
@@ -29,7 +31,7 @@
         <div class="col-md-3 left_col footer_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><img src="{!! asset('assets/images/logo-wk.png') !!} " class="profilebar-img"><span class="title-nav">SIM MUTU</span></a>
+              <a href="user-dashboard" class="site_title"><img src="{!! asset('assets/images/logo-wk.png') !!} " class="profilebar-img"><span class="title-nav">SIM MUTU</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -39,16 +41,12 @@
               <div class="menu_section">
 
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i>HOME</a>
-                    <ul class="nav child_menu">
-                      <li><a href="/dashboard">Dashboard</a></li>
-                    </ul>
-                  </li>
+                  <li><a href="user-dashboard"><i class="fa fi-rr-home"></i>Dashboard</a></li>
 
-                  <li><a><i class="fa fa-bookmark-o"></i>Evaluasi Diri</a>
+                  <li><a><i class="fa fi-rr-bookmark"></i>Evaluasi Diri</a>
                     <ul class="nav child_menu">
-                      <li><a href="/evaluasi-diri-1">Evaluasi Diri Tipe 1</a></li>
-                      <li><a href="/evaluasi-diri-2">Evaluasi Diri Tipe 2</a></li>
+                      <li><a href="/evaluasi-diri-1">Evaluasi Diri Bagian 1</a></li>
+                      <li><a href="/evaluasi-diri-2">Evaluasi Diri Bagian 2</a></li>
                     </ul>
                   </li>
                                     
@@ -68,22 +66,18 @@
         <div class="top_nav">
             <div class="nav_menu">
                 <div class="nav toggle">
-                  <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                  <a id="menu_toggle"><i class="fa fi-rr-list"></i></a>
                 </div>
                 <nav class="nav navbar-nav">
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
+                      <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fi-rr-angle-small-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item"  href="javascript:;"> Profile</a>
-                        <a class="dropdown-item"  href="javascript:;">
-                          <span class="badge bg-red pull-right">50%</span>
-                          <span>Settings</span>
-                        </a>
-                    <a class="dropdown-item"  href="javascript:;">Help</a>
-                      <a class="dropdown-item"  href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                      <a class="dropdown-item user-profile"  href="javascript:;"><img src="{!! asset('assets/images/logo-wk.png') !!}">James Kipli</a>
+                      <a class="dropdown-item"  href="/user-edit-profile">Edit Profil</a>
+                      <a class="dropdown-item"  href="#"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
                     </div>
                   </li>
                 </ul>
@@ -104,8 +98,6 @@
           <div class="clearfix"></div>
         </footer> -->
         <!-- /footer content -->
-      </diwwwv>
-    </divww>
     <!-- /compose -->
 
     <!-- jQuery -->

@@ -34,8 +34,7 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-          <button type="button" class="btn btn-primary">Simpan</button>
+          <button type="button" class="btn btn-back" data-bs-dismiss="modal">Kembali</button>
         </div>
     </div>
   </div>

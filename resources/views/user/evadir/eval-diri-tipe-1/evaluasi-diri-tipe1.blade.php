@@ -30,153 +30,47 @@
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
-          <thead>
+        <thead>
             <tr>
-              <th>No.</th>
-              <th class="td-question">Pertanyaan</th>
-              <th class="td-question">Level Kinerja</th>
-              <th class="td-question">Kendala yang Dihadapi</th>
+                <th><b>No</b></th>
+                <th colspan='2'><b>Pertanyaan</b></th>
+                <th class="ck-question" colspan='5'><b>Hasil Evaluasi</b></th>
+                <th class="tds-question" colspan='5'><b>Kendala yang dihadapi</b></th>
             </tr>
-          </thead>
+            <tr class="bg-table-color">
+                <td></td>
+                <td colspan='2'><b>Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya</b></td>
+                
+                <td class="td-question">Tidak Pernah</td>
+                <td class="td-question">Jarang</td>
+                <td class="td-question">Sering</td>
+                <td class="td-question">Selalu</td>
 
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-                <td class="td-question">Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya.</td>
-                <td class="ck-question">
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
-                </td>
-                <td class="td-question">
-                    <div class="form-group row">
-                        <div class="col-md-9 col-sm-9 ">
-                            <textarea class="form-control" rows="3" placeholder=""></textarea>
-                        </div>
-                    </div>
-                </td>
+                <td class="tds-question" colspan='2'>Harap diisi</td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-                <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
-                <td>
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
-                </td>
-                <td class="td-question">
-                    <div class="form-group row">
-                        <div class="col-md-9 col-sm-9 ">
-                            <textarea class="form-control" rows="3" placeholder=""></textarea>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-                <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
-                <td>
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
-                </td>
-                <td class="td-question">
-                    <div class="form-group row">
-                        <div class="col-md-9 col-sm-9 ">
-                            <textarea class="form-control" rows="3" placeholder=""></textarea>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-                <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
-                <td>
-                  <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
-                </td>
-                <td class="td-question">
-                    <div class="form-group row">
-                        <div class="col-md-9 col-sm-9 ">
-                            <textarea class="form-control" rows="3" placeholder=""></textarea>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-                <td class="td-question">Guru memberi kesempatan kepada peserta didik untuk menguasai materi pembelajaran sesuai usia dan kemampuan belajarnya melalui pengaturan proses pembelajaran dan aktivitas yang bervariasi.</td>
-                <td>
-                <div class="radio">
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-										<label>
-											<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> selalu
-										</label>
-									</div>
-                </td>
-                <td class="td-question">
-                    <div class="form-group row">
-                        <div class="col-md-9 col-sm-9 ">
-                            <textarea class="form-control" rows="3" placeholder=""></textarea>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-          </tbody>
+        </thead>
+
+        <tbody>
+          <tr>
+              <td colspan='1'>1</td>
+              <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td class="ck-question">
+								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
+              </td>
+              <td colspan='2'>
+                <textarea class="form-control" rows="3" placeholder="" ></textarea>
+              </td>
+          </tr>
+        </tbody>
       </table>
     </div>
     <!-- End Table -->
@@ -186,6 +80,7 @@
         <button type="button" class="btn btn-next">Selanjutnya</button>
     </div>
     <!-- End Pagination -->
-
+  </div>
+</div>
     <!-- End page content -->
 @endsection

@@ -33,7 +33,69 @@ Route::get('/data-kependidik', function () {
 });
 
 Route::get('/data-diri', function () {
-    return view('data-diri');
+    return view('trash/data-diri');
+});
+
+Route::get('/hasil-evaluasi-individu-pendidik', function () {
+    return view('admin/hasil-evaluasi-individu/pendidik');
+});
+
+Route::get('/hasil-evaluasi-individu-kependidik', function () {
+    return view('admin/hasil-evaluasi-individu/kependidik');
+});
+
+Route::get('/hasil-evaluasi-individu-profil-guru', function () {
+    return view('admin/hasil-evaluasi-individu/profil-guru/index');
+});
+
+Route::get('/hasil-evaluasi-pertanyaan-pedagogik', function () {
+    return view('admin/hasil-evaluasi-pertanyaan/pedagogik');
+});
+
+Route::get('/hasil-evaluasi-pertanyaan-kepribadian', function () {
+    return view('admin/hasil-evaluasi-pertanyaan/kepribadian');
+});
+
+Route::get('/hasil-evaluasi-pertanyaan-sosial', function () {
+    return view('admin/hasil-evaluasi-pertanyaan/sosial');
+});
+
+Route::get('/hasil-evaluasi-pertanyaan-profesional', function () {
+    return view('admin/hasil-evaluasi-pertanyaan/profesional');
+});
+
+// Bagian A
+Route::get('/hasil-evaluasi-individu-a-pedagogik', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-a/pedagogik');
+});
+Route::get('/hasil-evaluasi-individu-a-kepribadian', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-a/kepribadian');
+});
+Route::get('/hasil-evaluasi-individu-a-sosial', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-a/sosial');
+});
+Route::get('/hasil-evaluasi-individu-a-profesional', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-a/profesional');
+});
+Route::get('/hasil-evaluasi-individu-a-berbagai-hal', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-a/berbagai-hal');
+});
+// Bagian B
+Route::get('/hasil-evaluasi-individu-b-publikasi-ilmiah', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-b/publikasi-ilmiah');
+});
+// Bagian C
+Route::get('/hasil-evaluasi-individu-c-karya-inovatif', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-c/karya-inovatif');
+});
+// Bagian D
+Route::get('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas', function () {
+    return view('admin/hasil-evaluasi-diri/bagian-d/kompetensi-pembelajaran-berkualitas');
+});
+
+
+Route::get('/hasil-evaluasi-pertanyaan', function () {
+    return view('admin/hasil-evaluasi-pertanyaan/pedagogik');
 });
 
 Route::get('/evaluasi-diri-1', function () {
@@ -63,6 +125,21 @@ Route::get('/create-question-pedagogik', function () {
 });
 
 Route::get('/test-modal', function () {
-    return view('test-modal');
+    return view('trash/test-modal');
 });
 
+Route::get('/data-profil-kependidik', function () {
+    return view('admin/data-pendidik-kependidikan/data-profil/pendidik');
+});
+
+Route::get('/page-edit-profil', function () {
+    return view('trash/page-edit-profil');
+});
+
+Route::get('/admin-edit-profile', function () {
+    return view('admin/edit-profile/edit-profile');
+});
+
+Route::get('/user-edit-profile', function () {
+    return view('user/edit-profile/edit-profile');
+});

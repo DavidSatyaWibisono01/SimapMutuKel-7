@@ -9,7 +9,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>Data Profil Pendidik</h1>
+        <h1>Hasil Evaluasi Kependidikan</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
@@ -18,12 +18,8 @@
     <div class="input-group">
       <input type="text" class="input-search">
       <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fi fi-rr-search"></i> Cari</button>
+          <button type="button" class="btn btn-search"><i class="fa fi-rr-search"></i> Cari</button>
       </span>
-        <span class="input-group-btn">
-            <button type="button" class="btn btn-tambah-data" data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-add"></i> Tambah</button>
-            @extends('admin/modals/profile/aksi/tambah-profile-modal')
-        </span>
     </div>
     <!-- End Button Cari & Tambah -->
       
@@ -46,9 +42,7 @@
                 <td>Ono Supriadi</td>
                 <td>B. Inggris</td>
                 <td>Pendidik</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
+                <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru"><i class="fa fi-rr-eye"></i></a></td>
             </tr>
           </tbody>
       </table>

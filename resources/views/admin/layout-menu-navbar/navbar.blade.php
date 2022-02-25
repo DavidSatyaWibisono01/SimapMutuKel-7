@@ -27,31 +27,31 @@
 
   <body class="nav-md">
 
-      <!-- top navigation -->
-      <div class="top_nav">
-          <div class="nav_menu">
-              <nav class="nav navbar-nav">
-              <ul class=" navbar-right">
-                <li class="nav-item dropdown open" style="padding-left: 15px;">
-                  <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
-                  </a>
-                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item"  href="/user-edit-profile">Edit Profile</a>
-                      <a class="dropdown-item"  href="/user-dashboard">Kembali ke Dashboard</a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
-                  </div>
-                </li>
-              </ul>
-            </nav>
-          </div>
-      </div>
-      <!-- /top navigation -->
-      
-      <!-- pembatas content -->
-      @yield('container')
-      <!-- /pembatas content -->
-  </body>
+        <!-- top navigation -->
+        <div class="top_nav">
+            <div class="nav_menu">
+                <nav class="nav navbar-nav">
+                <ul class=" navbar-right">
+                  <li class="nav-item dropdown open" style="padding-left: 15px;">
+                    <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                      <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item"  href="/admin-edit-profile">Edit Profile</a>
+                        <a class="dropdown-item"  href="/dashboard">Kembali ke Dashboard</a>
+                      <a class="dropdown-item"  href="#"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- pembatas content -->
+        @yield('container')
+        <!-- /pembatas content -->
+
 
     <!-- jQuery -->
     <script src="{!! asset('assets/vendors/jquery/dist/jquery.min.js') !!}"></script>
