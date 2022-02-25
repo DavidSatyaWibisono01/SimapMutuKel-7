@@ -15,19 +15,16 @@ class DataUserController extends Controller
      */
     public function pendidik()
     {
-        $pendidik = DB::table('users')
-        ->where('status', '=', 'pendidik')
-        ->get();
+        $pendidik = user::all()->where('status', '=', 'pendidik');
 
-        return view('admin.data-pendidik-kependidikan.data-pendidik', compact('user'));
+        return view('admin.data-pendidik-kependidikan.data-pendidik', compact('pendidik'));
     }
 
     public function kependidikan()
     {
-        $kependidik = DB::table('users')
-        ->where('status', '=', 'kependidik')
-        ->get();
-        return view('admin.data-pendidik-kependidikan.data-pendidik', compact('user'));
+        $kependidik = User::all()->where('status', '=', 'kependidik');
+
+        return view('admin.data-pendidik-kependidikan.data-kependidik', compact('kependidik'));
     }
 
     /**
