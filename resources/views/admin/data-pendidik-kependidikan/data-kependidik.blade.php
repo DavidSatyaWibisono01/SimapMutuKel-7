@@ -5,7 +5,7 @@
 <!-- page content -->
 <div class="right_col">
   <div class="">
-    
+
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <!-- End Title dari Menu -->
-    
+
     <!-- Button Cari & Tambah -->
     <div class="input-group">
       <input type="text" class="input-search">
@@ -25,7 +25,7 @@
         </span>
     </div>
     <!-- End Button Cari & Tambah -->
-    
+
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
@@ -41,78 +41,21 @@
           </thead>
 
           <tbody>
+            @foreach ($kependidik as $kpndk)
             <tr>
-              <th scope="row">1</th>
-                <td>Mark wtwtwete wetete</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                <th scope="row">{{$loop->iteration}}</th>
+                <td>{{$kpndk->name}}</td>
+                <td>{{$kpndk->bidang}}</td>
+                <td>{{$kpndk->status}}</td>
+                <td>{{$kpndk->username}}</td>
+                <td>{{$kpndk->password}}</td>
                 <td>
                   <a href="#"><i class="fa fa-eye"></i></a>
                   <a href="#"><i class="fa fa-edit"></i></a>
                   <a href="#"><i class="fa fa-trash"></i></a>
                 </td>
             </tr>
-            <tr>
-              <th scope="row">2</th>
-                <td>Jacob etwtewt</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-                <td>
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-edit"></i></a>
-                  <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-                <td>Jacob etwtewt</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-                <td>
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-edit"></i></a>
-                  <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">4</th>
-                <td>Jacob etwtewt</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-                <td>
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-edit"></i></a>
-                  <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">5</th>
-                <td>Jacob etwtewt</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-                <td>
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-edit"></i></a>
-                  <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
-            <tr>
-              <th scope="row">6</th>
-                <td>Jacob etwtewt</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@fat</td>
-                <td>
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-edit"></i></a>
-                  <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
-            </tr>
+            @endforeach
           </tbody>
       </table>
     </div>
