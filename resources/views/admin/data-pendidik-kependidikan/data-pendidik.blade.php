@@ -42,6 +42,7 @@
           <tbody>
             @foreach ($pendidik as $pndk)
             <tr>
+
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>{{$pndk->name}}</td>
                 <td>{{$pndk->bidang}}</td>
