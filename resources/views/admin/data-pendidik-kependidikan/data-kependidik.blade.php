@@ -27,7 +27,6 @@
     </div>
     <!-- End Button Cari & Tambah -->
 
-
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
