@@ -36,7 +36,7 @@
                 <th><b>Bidang</b></th>
                 <th><b>Status</b></th>
                 <th colspan='4' class="ckk-question"><b>Aksi</b></th>
-            </tr>
+                </tr>
           </thead>
 
           <tbody>
