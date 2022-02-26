@@ -43,7 +43,7 @@
           <tbody>
             <tr>
                 <td>1</td>
-                <td>Ono Supriadi</td>
+                <td>Hendray</td>
                 <td>B. Inggris</td>
                 <td>Pendidik</td>
                 <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>

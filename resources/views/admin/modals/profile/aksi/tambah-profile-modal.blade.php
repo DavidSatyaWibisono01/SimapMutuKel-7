@@ -19,45 +19,42 @@
                 <label for="message-text" class="col-form-label">Jenis Kelamin</label>
 		    	<select class="form-control">
 		    		<option></option>
-		    		<option>Setengah Cewe</option>
-		    		<option>Setengah Cowo</option>
-		    		<option>Gapunya Kelamin</option>
+		    		<option>Wanita</option>
+		    		<option>Laki-laki</option>
+		    		<option> - </option>
 		    	</select>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Bidang</label>
 		    	<select class="form-control">
 		    		<option></option>
-		    		<option>OPM - Operasi Pelajar Mengajar</option>
-		    		<option>Cara jadi Komunis</option>
-		    		<option>Cara Menjajah Amerika</option>
+		    		<option>Bahasa Sunda</option>
+		    		<option>Bahasa Indonesia</option>
+		    		<option>PPLG</option>
 		    	</select>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Status</label>
 		    	<select class="form-control">
 		    		<option></option>
-		    		<option>Jomblo Fisabililah</option>
-		    		<option>Jomblo Akut</option>
-		    		<option>Perawan tapi kelamin koncol</option>
+		    		<option>Pendidik</option>
+		    		<option>Kependidikan</option>
 		    	</select>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Tahun Ajaran</label>
 		    	<select class="form-control">
 		    		<option></option>
-		    		<option>2012-2020</option>
-		    		<option>2081-3021</option>
-		    		<option>1 Masehi - 1.5 Masehi</option>
+		    		<option>2021-2022</option>
 		    	</select>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Username</label>
-                <input class="form-control" placeholder="Bekerja di PT. Mencari Cinta Sejati" id="message-text"></input>
+                <input class="form-control" placeholder="Tes" id="message-text"></input>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Password</label>
-                <input class="form-control" placeholder="Rahasia banget" id="message-text"></input>
+                <input class="form-control" placeholder="12345" id="message-text"></input>
             </form>
         </div>
 

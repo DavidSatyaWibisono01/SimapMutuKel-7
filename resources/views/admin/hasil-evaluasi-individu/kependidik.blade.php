@@ -39,7 +39,7 @@
           <tbody>
             <tr>
                 <td>1</td>
-                <td>Ono Supriadi</td>
+                <td>Hendray</td>
                 <td>B. Inggris</td>
                 <td>Pendidik</td>
                 <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru"><i class="fa fi-rr-eye"></i></a></td>
