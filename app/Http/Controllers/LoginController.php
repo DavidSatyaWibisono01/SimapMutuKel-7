@@ -42,10 +42,15 @@ class LoginController extends Controller
                                 ->withErrors(['login_gagal' => 'These credentials do not match our records.']);
     }
 
+
     public function logout(Request $request)
     {
-       $request->session()->flush();
-       Auth::logout();
-       return Redirect('login');
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/');
     }
 }

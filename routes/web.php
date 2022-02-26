@@ -17,13 +17,13 @@ use App\Http\Controllers\DataUserController;
 |
 */
 
-Route::get('/', [LoginController::class, 'index']);
+Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', [AdminController::class, 'index']);
+Route::get('/dashboard', [AdminController::class, 'index'])->middleware('auth');
 
-Route::get('/user-dashboard', [UserController::class, 'index']);
+Route::get('/user-dashboard', [UserController::class, 'index'])->middleware('auth');
 
 Route::get('/data-pendidik', [DataUserController::class, 'pendidik']);
 
