@@ -5,7 +5,7 @@
 <!-- page content -->
 <div class="right_col">
   <div class="">
-    
+
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <!-- End Title dari Menu -->
-    
+
     <!-- Button Cari & Tambah -->
     <div class="input-group">
       <input type="text" class="input-search">
@@ -26,7 +26,6 @@
         </span>
     </div>
     <!-- End Button Cari & Tambah -->
-      
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
@@ -37,19 +36,26 @@
                 <th><b>Bidang</b></th>
                 <th><b>Status</b></th>
                 <th colspan='4' class="ckk-question"><b>Aksi</b></th>
-            </tr>
+                </tr>
           </thead>
 
           <tbody>
+            @foreach ($pendidik as $pndk)
             <tr>
-                <td>1</td>
-                <td>Nomin</td>
-                <td>B. Inggris</td>
-                <td>Pendidik</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
+
+                <th scope="row">{{$loop->iteration}}</th>
+                <td>{{$pndk->name}}</td>
+                <td>{{$pndk->bidang}}</td>
+                <td>{{$pndk->status}}</td>
+                <td>{{$pndk->username}}</td>
+                <td>{{$pndk->password}}</td>
+                <td>
+                  <a href="#"><i class="fa fa-eye"></i></a>
+                  <a href="#"><i class="fa fa-edit"></i></a>
+                  <a href="#"><i class="fa fa-trash"></i></a>
+                </td>
             </tr>
+            @endforeach
           </tbody>
       </table>
     </div>

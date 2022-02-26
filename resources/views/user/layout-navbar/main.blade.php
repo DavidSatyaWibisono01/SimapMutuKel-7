@@ -49,7 +49,7 @@
                       <li><a href="/evaluasi-diri-2">Evaluasi Diri Bagian 2</a></li>
                     </ul>
                   </li>
-                                    
+
               </div>
             </div>
             <!-- /sidebar menu -->
@@ -77,7 +77,10 @@
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item user-profile"  href="javascript:;"><img src="{!! asset('assets/images/logo-wk.png') !!}">James Kipli</a>
                       <a class="dropdown-item"  href="/user-edit-profile">Edit Profil</a>
-                      <a class="dropdown-item"  href="#"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                      <form action="/logout" method="post">
+                        @csrf
+                      <a class="dropdown-item"  ><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                      </form>
                     </div>
                   </li>
                 </ul>

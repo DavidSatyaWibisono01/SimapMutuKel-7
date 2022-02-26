@@ -105,8 +105,8 @@
                           </ul>
                         </li>
                     </ul>
-                  </li> 
-                                    
+                  </li>
+
               </div>
 
             </div>
@@ -137,7 +137,10 @@
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item user-profile"  href="/dashboard"><img src="{!! asset('assets/images/logo-wk.png') !!}">James Kipli</a>
                       <a class="dropdown-item"  href="/admin-edit-profile">Edit Profil</a>
-                      <a class="dropdown-item"  href="login.html"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                      <form action="/logout" method="GET">
+                        @csrf
+                      <a class="dropdown-item" type="submit"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                      </form>
                     </div>
                   </li>
                 </ul>
