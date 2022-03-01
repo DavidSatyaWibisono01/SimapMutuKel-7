@@ -18,9 +18,7 @@
 		    	<select class="form-control">
 		    		<option></option>
 		    		<option>Menguasai teori belajar dan prinsip prinsip yang mendidik</option>
-		    		<option>Apa Aja</option>
-		    		<option>Bisa main bola sambil kayang</option>
-		    		<option>Bermain kapal liar</option>
+		    		<option>Tes123</option>
 		    	</select>
 		    </div>
 

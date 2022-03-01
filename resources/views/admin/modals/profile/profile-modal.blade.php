@@ -17,19 +17,19 @@
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Jenis Kelamin</label>
-                <input class="form-control" placeholder="Koncol" id="message-text" disabled></input>
+                <input class="form-control" placeholder="Laki-laki" id="message-text" disabled></input>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Bidang</label>
-                <input class="form-control" placeholder="Maling S3" id="message-text" disabled></input>
+                <input class="form-control" placeholder="Bahasa Indonesia" id="message-text" disabled></input>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Status</label>
-                <input class="form-control" placeholder="Jomblo Fisabililah" id="message-text" disabled></input>
+                <input class="form-control" placeholder="Pendidik" id="message-text" disabled></input>
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Tahun Ajaran</label>
-                <input class="form-control" placeholder="2075-2003" id="message-text" disabled></input>
+                <input class="form-control" placeholder="2021-2022" id="message-text" disabled></input>
             </form>
         </div>
 
