@@ -64,6 +64,7 @@ Route::get('/hasil-evaluasi-pertanyaan-profesional', function () {
 
 // Bagian A
 Route::get('/hasil-evaluasi-individu-a-pedagogik', [PedagogikController::class, 'index']);
+
 Route::get('/hasil-evaluasi-individu-a-kepribadian', function () {
     return view('admin/hasil-evaluasi-diri/bagian-a/kepribadian');
 });
