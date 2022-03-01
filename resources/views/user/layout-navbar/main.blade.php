@@ -75,7 +75,7 @@
                       <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fi-rr-angle-small-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item user-profile"  href="javascript:;"><img src="{!! asset('assets/images/logo-wk.png') !!}">James Kipli</a>
+                      <a class="dropdown-item user-profile"  href="javascript:;"><img src="{!! asset('assets/images/logo-wk.png') !!}">{{ auth()->user()->name }}</a>
                       <a class="dropdown-item"  href="/user-edit-profile">Edit Profil</a>
                       <form action="/logout" method="post">
                         @csrf

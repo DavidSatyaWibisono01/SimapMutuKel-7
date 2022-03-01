@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DataUserController;
+use App\Http\Controllers\PedagogikController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [AdminController::class, 'index'])->middleware('auth');
 
-Route::get('/user-dashboard', [UserController::class, 'index'])->middleware('auth');
+Route::get('user-dashboard', [UserController::class, 'index'])->middleware('auth');
 
 Route::get('/data-pendidik', [DataUserController::class, 'pendidik']);
 
@@ -62,9 +63,7 @@ Route::get('/hasil-evaluasi-pertanyaan-profesional', function () {
 });
 
 // Bagian A
-Route::get('/hasil-evaluasi-individu-a-pedagogik', function () {
-    return view('admin/hasil-evaluasi-diri/bagian-a/pedagogik');
-});
+Route::get('/hasil-evaluasi-individu-a-pedagogik', [PedagogikController::class, 'index']);
 Route::get('/hasil-evaluasi-individu-a-kepribadian', function () {
     return view('admin/hasil-evaluasi-diri/bagian-a/kepribadian');
 });

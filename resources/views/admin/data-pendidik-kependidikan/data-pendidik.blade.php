@@ -46,12 +46,10 @@
                 <td>{{$pndk->name}}</td>
                 <td>{{$pndk->bidang}}</td>
                 <td>{{$pndk->status}}</td>
-                <td>{{$pndk->username}}</td>
-                <td>{{$pndk->password}}</td>
                 <td>
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-edit"></i></a>
-                  <a href="#"><i class="fa fa-trash"></i></a>
+                    <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
+                    <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
+                    <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
                 </td>
             </tr>
             @endforeach
