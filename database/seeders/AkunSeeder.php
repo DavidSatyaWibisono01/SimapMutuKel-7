@@ -20,8 +20,9 @@ class AkunSeeder extends Seeder
                'name'=>'ini akun Admin',
                'jk' => 'Laki-Laki',
                'bidang' => 'TI',
-               'status' => 'pendidik',
+               'status' => 'Pendidik',
                 'level'=>'admin',
+                'foto' =>'admin.jpg',
                'password'=> bcrypt('123456'),
             ],
             [
@@ -29,8 +30,9 @@ class AkunSeeder extends Seeder
                'name'=>'ini akun User (non admin)',
                'jk' => 'Perempuan',
                'bidang' => 'TI',
-               'status' => 'pendidik',
+               'status' => 'Kependidik',
                 'level'=>'user',
+                'foto' =>'user.jpg',
                'password'=> bcrypt('123456'),
             ],
         ];
