@@ -13,7 +13,7 @@
         <div class="modal-body">
             <form>
                 <label for="message-text" class="col-form-label">Nama</label>
-                <input class="form-control" placeholder="Biddin Abizar" id="message-text"></input>
+                <input class="form-control" placeholder="Biddin Abizar" id="message-text">
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Jenis Kelamin</label>
@@ -50,11 +50,11 @@
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Username</label>
-                <input class="form-control" placeholder="Tes" id="message-text"></input>
+                <input class="form-control" placeholder="Tes" id="message-text">
             </form>
             <form>
                 <label for="message-text" class="col-form-label">Password</label>
-                <input class="form-control" placeholder="12345" id="message-text"></input>
+                <input class="form-control" placeholder="12345" id="message-text">
             </form>
         </div>
 

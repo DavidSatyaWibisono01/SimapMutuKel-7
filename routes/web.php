@@ -20,7 +20,9 @@ use App\Http\Controllers\PedagogikController;
 
 Route::get('/', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
-Route::get('/logout', [LoginController::class, 'logout']);
+
+Route::group(['middleware' => 'auth'], function () {
+Route::post('/logout', [LoginController::class, 'logout']);
 
 Route::get('/dashboard', [AdminController::class, 'index'])->middleware('auth');
 
@@ -29,6 +31,10 @@ Route::get('user-dashboard', [UserController::class, 'index'])->middleware('auth
 Route::get('/data-pendidik', [DataUserController::class, 'pendidik']);
 
 Route::get('/data-kependidik', [DataUserController::class, 'kependidikan']);
+
+Route::post('/tambah-pengguna', [DataUserController::class, 'store']);
+
+Route::delete('/hapus-pengguna/{user}', [DataUserController::class, 'destroy']);
 
 Route::get('/data-diri', function () {
     return view('trash/data-diri');
@@ -64,6 +70,9 @@ Route::get('/hasil-evaluasi-pertanyaan-profesional', function () {
 
 // Bagian A
 Route::get('/hasil-evaluasi-individu-a-pedagogik', [PedagogikController::class, 'index']);
+Route::post('/hasil-evaluasi-individu-a-pedagogik/create', [PedagogikController::class, 'store']);
+Route::delete('/hasil-evaluasi-individu-a-pedagogik/delete/{pertanyaan}', [PedagogikController::class, 'destroy']);
+// Route::resource('hasil-evaluasi-individu-a-pedagogik','PedagogikController');
 
 Route::get('/hasil-evaluasi-individu-a-kepribadian', function () {
     return view('admin/hasil-evaluasi-diri/bagian-a/kepribadian');
@@ -136,10 +145,8 @@ Route::get('/admin-edit-profile', function () {
 Route::get('/user-edit-profile', function () {
     return view('user/edit-profile/edit-profile');
 });
-Route::get('/test', function () {
-    return view('test');
-});
 
+});
 
 //pengecekan level user login
 Route::group(['middleware' => ['auth']], function () {

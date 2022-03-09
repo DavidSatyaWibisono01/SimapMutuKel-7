@@ -41,12 +41,12 @@
           </thead>
 
           <tbody>
-            @foreach ($kependidik as $kpndk)
+            @foreach ($user as $usr)
             <tr>
                 <th scope="row">{{$loop->iteration}}</th>
-                <td>{{$kpndk->name}}</td>
-                <td>{{$kpndk->bidang}}</td>
-                <td>{{$kpndk->status}}</td>
+                <td>{{$usr->name}}</td>
+                <td>{{$usr->bidang}}</td>
+                <td>{{$usr->status}}</td>
                 <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
                 <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
                 <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>

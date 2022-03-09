@@ -137,9 +137,9 @@
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item user-profile"  href="/dashboard"><img src="{!! asset('assets/images/logo-wk.png') !!}">{{ auth()->user()->name }}</a>
                       <a class="dropdown-item"  href="/admin-edit-profile">Edit Profil</a>
-                      <form action="/logout" method="GET">
+                      <form action="/logout" method="POST">
                         @csrf
-                      <a class="dropdown-item" type="submit"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                      <button class="dropdown-item" type="submit"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</button>
                       </form>
                     </div>
                   </li>

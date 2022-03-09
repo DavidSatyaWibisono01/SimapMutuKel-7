@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bab;
+use App\Models\Pertanyaan;
+use App\Models\SubBab;
 use Illuminate\Http\Request;
 
 class PedagogikController extends Controller
@@ -13,7 +16,11 @@ class PedagogikController extends Controller
      */
     public function index()
     {
-        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik');
+        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 1);
+        $sub = SubBab::all()->where('bab_id', '=', 1);
+        $bab = Bab::find(1);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik', compact('pertanyaan', 'sub', 'bab'));
     }
 
     /**
@@ -23,7 +30,8 @@ class PedagogikController extends Controller
      */
     public function create()
     {
-        //
+        $bagian = SubBab::all();
+        return view('admin.modals.question.create-modal-question', compact('bagian'));
     }
 
     /**
@@ -34,7 +42,22 @@ class PedagogikController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'sub_bab_id' => 'required',
+            'nomor' => 'required',
+            'question' => 'required',
+        ]);
+
+        $babID = 1;
+
+        Pertanyaan::create([
+            'bab_id' => $babID,
+            'sub_bab_id' => $request->sub_bab_id,
+            'nomor' => $request->nomor,
+            'question' => $request->question,
+        ]);
+
+        return redirect('hasil-evaluasi-individu-a-pedagogik')->with('status', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -77,8 +100,9 @@ class PedagogikController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pertanyaan $pertanyaan)
     {
-        //
+        Pertanyaan::destroy($pertanyaan->id);
+        return redirect('/hasil-evaluasi-individu-a-pedagogik')->with('status', 'Data Berhasil Dihapus');
     }
 }
