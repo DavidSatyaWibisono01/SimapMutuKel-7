@@ -9,59 +9,61 @@
         <div class="text-center">
             <img src="{!! asset('assets/images/logo-wk.png') !!}" class="rounded" alt="...">
         </div>
-
-        <div class="modal-body">
-            <form>
-                <label for="message-text" class="col-form-label">Nama</label>
-                <input class="form-control" placeholder="Biddin Abizar" id="message-text"></input>
-            </form>
-            <form>
-                <label for="message-text" class="col-form-label">Jenis Kelamin</label>
-		    	<select class="form-control">
-		    		<option></option>
-		    		<option>Wanita</option>
-		    		<option>Laki-laki</option>
-		    		<option> - </option>
-		    	</select>
-            </form>
-            <form>
-                <label for="message-text" class="col-form-label">Bidang</label>
-		    	<select class="form-control">
-		    		<option></option>
-		    		<option>Bahasa Sunda</option>
-		    		<option>Bahasa Indonesia</option>
-		    		<option>PPLG</option>
-		    	</select>
-            </form>
-            <form>
+    <form action="/tambah-pengguna" method="POST">
+        @csrf
+            <div class="modal-body">
+                <div>
+                    <label for="message-text" class="col-form-label">Nama</label>
+                    <input name="nama" class="form-control" id="message-text">
+                </div>
+                <div>
+                    <label for="message-text" class="col-form-label">Jenis Kelamin</label>
+                    <select name="jk" class="form-control">
+                        <option></option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message-text" class="col-form-label">Bidang</label>
+                    <select name="bidang" class="form-control">
+                        <option></option>
+                        <option value="Matematika">Matematika</option>
+                        <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                        <option value="Bahasa Inggris">Bahasa Inggris</option>
+                    </select>
+                </div>
+            <div>
                 <label for="message-text" class="col-form-label">Status</label>
-		    	<select class="form-control">
-		    		<option></option>
-		    		<option>Pendidik</option>
-		    		<option>Kependidikan</option>
+		    	<select name="status" class="form-control">
+                    <option></option>
+		    		<option value="Pendidik">Pendidik</option>
+		    		<option value="Kependidik">Kependidik</option>
 		    	</select>
-            </form>
-            <form>
-                <label for="message-text" class="col-form-label">Tahun Ajaran</label>
-		    	<select class="form-control">
-		    		<option></option>
-		    		<option>2021-2022</option>
-		    	</select>
-            </form>
-            <form>
+            </div>
+            <div>
                 <label for="message-text" class="col-form-label">Username</label>
-                <input class="form-control" placeholder="Tes" id="message-text"></input>
-            </form>
-            <form>
+                <input type="text" class="form-control" name="username" id="message-text">
+            </div>
+            <div>
                 <label for="message-text" class="col-form-label">Password</label>
-                <input class="form-control" placeholder="12345" id="message-text"></input>
-            </form>
+                <input type="text" class="form-control" name="password" id="message-text">
+            </div>
+            <div>
+                <label for="message-text" class="col-form-label">level</label>
+                <select name="level" class="form-control">
+                    <option></option>
+                    <option value="user">user</option>
+                    <option value="admin">admin</option>
+                </select>
+            </div>
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-back" data-bs-dismiss="modal">Kembali</button>
-          <button type="button" class="btn btn-tambah-data">Simpan</button>
+            <button class="btn btn-back" data-bs-dismiss="modal">Kembali</button>
+            <button type="submit" class="btn btn-tambah-data">Simpan</button>
         </div>
+    </form>
     </div>
-  </div>
+</div>
 </div>

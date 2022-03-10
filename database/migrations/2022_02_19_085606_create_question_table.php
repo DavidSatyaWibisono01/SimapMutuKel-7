@@ -15,6 +15,7 @@ class CreateQuestionTable extends Migration
     {
         Schema::create('question', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('bab_id');
             $table->bigInteger('sub_bab_id');
             $table->integer('nomor');
             $table->string('question');

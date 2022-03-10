@@ -16,10 +16,13 @@
 
     <!-- Button Cari & Tambah -->
     <div class="input-group">
-      <input type="text" class="input-search">
-      <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fi fi-rr-search"></i> Cari</button>
-      </span>
+        <form action="/data-pendidik" method="GET">
+            <input type="text" class="input-search" name="keyword">
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-search"><i class="fi fi-rr-search"></i> Cari</button>
+            </span>
+        </form>
+
         <span class="input-group-btn">
             <button type="button" class="btn btn-tambah-data" data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-add"></i> Tambah</button>
             @extends('admin/modals/profile/aksi/tambah-profile-modal')
@@ -40,20 +43,21 @@
           </thead>
 
           <tbody>
-            @foreach ($pendidik as $pndk)
+            @foreach ($user as $usr)
             <tr>
 
                 <th scope="row">{{$loop->iteration}}</th>
-                <td>{{$pndk->name}}</td>
-                <td>{{$pndk->bidang}}</td>
-                <td>{{$pndk->status}}</td>
-                <td>{{$pndk->username}}</td>
-                <td>{{$pndk->password}}</td>
-                <td>
-                  <a href="#"><i class="fa fa-eye"></i></a>
-                  <a href="#"><i class="fa fa-edit"></i></a>
-                  <a href="#"><i class="fa fa-trash"></i></a>
-                </td>
+                <td>{{$usr->name}}</td>
+                <td>{{$usr->bidang}}</td>
+                <td>{{$usr->status}}</td>
+                <td class="ckk-question"><a href="/lihat-pengguna/{{$usr->id}}" ><i class="fi fi-rr-eye"></i></a></td>
+                <td class="ckk-question"><a href="/edit-pengguna/{{$usr->id}}" ><i class="fi fi-rr-edit"></i></a></td>
+                <form action="hapus-pengguna/{{$usr->id}}" method="post">
+                    @method('delete')
+                    @csrf
+                <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
+                </form>
+                {{-- <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td> --}}
             </tr>
             @endforeach
           </tbody>

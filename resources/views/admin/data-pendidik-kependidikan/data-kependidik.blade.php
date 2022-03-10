@@ -41,15 +41,20 @@
           </thead>
 
           <tbody>
-            @foreach ($kependidik as $kpndk)
+            @foreach ($user as $usr)
             <tr>
                 <th scope="row">{{$loop->iteration}}</th>
-                <td>{{$kpndk->name}}</td>
-                <td>{{$kpndk->bidang}}</td>
-                <td>{{$kpndk->status}}</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
+                <td>{{$usr->name}}</td>
+                <td>{{$usr->bidang}}</td>
+                <td>{{$usr->status}}</td>
+                <td class="ckk-question"><a href="/lihat-pengguna/{{$usr->id}}" ><i class="fi fi-rr-eye"></i></a></td>
+                <td class="ckk-question"><a href="/edit-pengguna/{{$usr->id}}" ><i class="fi fi-rr-edit"></i></a></td>
+                <form action="hapus-pengguna/{{$usr->id}}" method="post">
+                    @method('delete')
+                    @csrf
+                <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
+                </form>
+                {{-- <td class="ckk-question"><a href="" data-id="{{$usr->id}}" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td> --}}
             </tr>
             @endforeach
           </tbody>
@@ -62,9 +67,8 @@
       <li class="page-item">
         <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-left"></i></button>
       </li>
+
         <button type="button" class="btn btn-pagination">1</button>
-        <button type="button" class="btn btn-pagination">2</button>
-        <button type="button" class="btn btn-pagination">3</button>
       <li class="page-item">
         <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-right"></i></button>
       </li>
