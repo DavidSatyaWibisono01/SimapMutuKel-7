@@ -14,18 +14,29 @@ class DataUserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function pendidik()
+    public function pendidik(Request $request)
     {
-        $user = User::all()->where('status', '=', 'Pendidik');
+        $keyword=$request->get('keyword');
+        $user = DB::table('users')->where('status', '=', 'Pendidik')->paginate(10);
+        if($keyword){
+            $user=User::all()->where("name","LIKE","%$keyword%");
+        }
         return view('admin.data-pendidik-kependidikan.data-kependidik', compact('user'));
     }
 
     public function kependidikan()
     {
-        $user = User::all()->where('status', '=', 'Kependidik');
+        $user = DB::table('users')->where('status', '=', 'Kependidik')->paginate(10);
         return view('admin.data-pendidik-kependidikan.data-kependidik', compact('user'));
     }
 
+    public function cari(Request $request)
+    {
+        $cari=$request->cari;
+        $user=DB::table('users')
+        ->where('name','like',"%".$cari."%");
+        return view('produsen.index',compact('produsen'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -76,7 +87,7 @@ class DataUserController extends Controller
             // 'foto' => $imgName,
         ]);
 
-        return redirect('/data-pendidik')->with('status', 'Data Karyawan Berhasil Ditambahkan');
+        return redirect()->back()->with('status', 'Data Karyawan Berhasil Ditambahkan');
     }
 
     /**
@@ -85,9 +96,9 @@ class DataUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('admin.modals.profile.profile-view', compact('user'));
     }
 
     /**
@@ -96,9 +107,9 @@ class DataUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('admin/modals/profile/aksi/edit-profile', compact('user'));
     }
 
     /**
@@ -112,17 +123,19 @@ class DataUserController extends Controller
     {
         User::where('id', $user->id)
             ->update([
-                'nama' => $request->nama,
+                'name' => $request->nama,
                 'jk' => $request->jk,
-                'tgl_lahir' => $request->tgl_lahir,
-                'agama' => $request->agama,
-                'alamat' => $request->alamat,
-                'no_hp' => $request->no_hp,
-                'pendidikan_terakhir' => $request->pendidikan_terakhir,
-                'email' => $request->email,
-                'jabatan_id' => $request->jabatan_id,
+                'bidang' => $request->bidang,
+                'status' => $request->status,
+                'username' => $request->username,
+                'password' => bcrypt($request->password),
+                'level' => $request->level,
             ]);
-        return redirect('/karyawan')->with('status', 'Data Karyawan Berhasil Diubah');
+            if ($user->status == 'Pendidik') {
+                return redirect('/data-pendidik')->with('status', 'Data Pengguna Berhasil Diubah');
+            } elseif ($user->status == 'Kependidik') {
+                return redirect('/data-kependidik')->with('status', 'Data Pengguna Berhasil Diubah');
+            }
     }
 
     /**
@@ -134,6 +147,10 @@ class DataUserController extends Controller
     public function destroy(User $user)
     {
         User::destroy($user->id);
-        return redirect('/data-pendidik')->with('status', 'Data Berhasil Dihapus');
+        if ($user->status == 'Pendidik') {
+            return redirect('/data-pendidik')->with('status', 'Data Pengguna Berhasil Diubah');
+        } elseif ($user->status == 'Kependidik') {
+            return redirect('/data-kependidik')->with('status', 'Data Pengguna Berhasil Diubah');
+        }
     }
 }

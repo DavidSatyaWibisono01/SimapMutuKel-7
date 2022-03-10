@@ -16,10 +16,13 @@
 
     <!-- Button Cari & Tambah -->
     <div class="input-group">
-      <input type="text" class="input-search">
-      <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fi fi-rr-search"></i> Cari</button>
-      </span>
+        <form action="/data-pendidik" method="GET">
+            <input type="text" class="input-search" name="keyword">
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-search"><i class="fi fi-rr-search"></i> Cari</button>
+            </span>
+        </form>
+
         <span class="input-group-btn">
             <button type="button" class="btn btn-tambah-data" data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-add"></i> Tambah</button>
             @extends('admin/modals/profile/aksi/tambah-profile-modal')
@@ -47,9 +50,14 @@
                 <td>{{$usr->name}}</td>
                 <td>{{$usr->bidang}}</td>
                 <td>{{$usr->status}}</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-eye">@extends('admin/modals/profile/profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-edit">@extends('admin/modals/profile/aksi/edit-profile-modal')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
+                <td class="ckk-question"><a href="/lihat-pengguna/{{$usr->id}}" ><i class="fi fi-rr-eye"></i></a></td>
+                <td class="ckk-question"><a href="/edit-pengguna/{{$usr->id}}" ><i class="fi fi-rr-edit"></i></a></td>
+                <form action="hapus-pengguna/{{$usr->id}}" method="post">
+                    @method('delete')
+                    @csrf
+                <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
+                </form>
+                {{-- <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fi fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td> --}}
             </tr>
             @endforeach
           </tbody>

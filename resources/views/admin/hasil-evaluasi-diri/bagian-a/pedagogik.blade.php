@@ -58,7 +58,11 @@
                 <td>{{$prtn->nomor}}</td>
                 <td>{{$prtn->question}}</td>
                 <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Question" data-bs-whatever="@fat"><i class="fa fi-rr-edit">@extends('admin/modals/question/edit-modal-question')</i></a></td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fa fi-rr-trash">@extends('admin/modals/question/delete-question-modal')</i></a></td>
+                <form action="/hasil-evaluasi-individu-a-pedagogik/delete/{{$prtn->id}}" method="post">
+                    @method('delete')
+                    @csrf
+                <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
+                </form>
             </tr>
             @endforeach
             @endif

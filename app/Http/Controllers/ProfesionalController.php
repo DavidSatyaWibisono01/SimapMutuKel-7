@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pertanyaan;
+use App\Models\SubBab;
 
 class ProfesionalController extends Controller
 {
@@ -13,7 +15,10 @@ class ProfesionalController extends Controller
      */
     public function index()
     {
-        //
+        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 4);
+        $sub = SubBab::all()->where('bab_id', '=', 4);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.profesional', compact('pertanyaan', 'sub'));
     }
 
     /**

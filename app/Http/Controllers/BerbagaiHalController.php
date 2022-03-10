@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pertanyaan;
+use App\Models\SubBab;
 
 class BerbagaiHalController extends Controller
 {
@@ -13,7 +15,10 @@ class BerbagaiHalController extends Controller
      */
     public function index()
     {
-        //
+        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 5);
+        $sub = SubBab::all()->where('bab_id', '=', 5);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.berbagai-hal', compact('pertanyaan', 'sub'));
     }
 
     /**

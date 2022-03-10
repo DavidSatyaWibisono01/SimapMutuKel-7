@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pertanyaan;
+use App\Models\SubBab;
 
 class KepribadianController extends Controller
 {
@@ -13,7 +15,10 @@ class KepribadianController extends Controller
      */
     public function index()
     {
-        //
+        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 2);
+        $sub = SubBab::all()->where('bab_id', '=', 2);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.kepribadian', compact('pertanyaan', 'sub'));
     }
 
     /**

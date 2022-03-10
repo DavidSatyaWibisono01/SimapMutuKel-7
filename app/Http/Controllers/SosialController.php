@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pertanyaan;
+use App\Models\SubBab;
 
 class SosialController extends Controller
 {
@@ -13,7 +15,10 @@ class SosialController extends Controller
      */
     public function index()
     {
-        //
+        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 3);
+        $sub = SubBab::all()->where('bab_id', '=', 3);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.sosial', compact('pertanyaan', 'sub'));
     }
 
     /**

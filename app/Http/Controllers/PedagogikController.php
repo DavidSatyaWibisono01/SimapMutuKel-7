@@ -18,9 +18,8 @@ class PedagogikController extends Controller
     {
         $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 1);
         $sub = SubBab::all()->where('bab_id', '=', 1);
-        $bab = Bab::find(1);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik', compact('pertanyaan', 'sub', 'bab'));
+        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik', compact('pertanyaan', 'sub'));
     }
 
     /**

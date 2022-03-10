@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BerbagaiHalController;
 use App\Http\Controllers\DataUserController;
+use App\Http\Controllers\KepribadianController;
 use App\Http\Controllers\PedagogikController;
+use App\Http\Controllers\ProfesionalController;
+use App\Http\Controllers\SosialController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +22,7 @@ use App\Http\Controllers\PedagogikController;
 |
 */
 
-Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::group(['middleware' => 'auth'], function () {
@@ -35,6 +39,10 @@ Route::get('/data-kependidik', [DataUserController::class, 'kependidikan']);
 Route::post('/tambah-pengguna', [DataUserController::class, 'store']);
 
 Route::delete('/hapus-pengguna/{user}', [DataUserController::class, 'destroy']);
+
+Route::get('/lihat-pengguna/{user}', [DataUserController::class, 'show']);
+Route::get('/edit-pengguna/{user}', [DataUserController::class, 'edit']);
+Route::patch('/update-pengguna/{user}', [DataUserController::class, 'update']);
 
 Route::get('/data-diri', function () {
     return view('trash/data-diri');
@@ -74,18 +82,14 @@ Route::post('/hasil-evaluasi-individu-a-pedagogik/create', [PedagogikController:
 Route::delete('/hasil-evaluasi-individu-a-pedagogik/delete/{pertanyaan}', [PedagogikController::class, 'destroy']);
 // Route::resource('hasil-evaluasi-individu-a-pedagogik','PedagogikController');
 
-Route::get('/hasil-evaluasi-individu-a-kepribadian', function () {
-    return view('admin/hasil-evaluasi-diri/bagian-a/kepribadian');
-});
-Route::get('/hasil-evaluasi-individu-a-sosial', function () {
-    return view('admin/hasil-evaluasi-diri/bagian-a/sosial');
-});
-Route::get('/hasil-evaluasi-individu-a-profesional', function () {
-    return view('admin/hasil-evaluasi-diri/bagian-a/profesional');
-});
-Route::get('/hasil-evaluasi-individu-a-berbagai-hal', function () {
-    return view('admin/hasil-evaluasi-diri/bagian-a/berbagai-hal');
-});
+Route::get('/hasil-evaluasi-individu-a-kepribadian', [KepribadianController::class, 'index']);
+
+Route::get('/hasil-evaluasi-individu-a-sosial', [SosialController::class, 'index']);
+
+Route::get('/hasil-evaluasi-individu-a-profesional', [ProfesionalController::class, 'index']);
+
+Route::get('/hasil-evaluasi-individu-a-berbagai-hal', [BerbagaiHalController::class, 'index']);
+
 // Bagian B
 Route::get('/hasil-evaluasi-individu-b-publikasi-ilmiah', function () {
     return view('admin/hasil-evaluasi-diri/bagian-b/publikasi-ilmiah');
