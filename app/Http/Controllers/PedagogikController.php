@@ -19,7 +19,7 @@ class PedagogikController extends Controller
         $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 1);
         $sub = SubBab::all()->where('bab_id', '=', 1);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik', compact('pertanyaan', 'sub'));
+        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik.pedagogik', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -76,9 +76,11 @@ class PedagogikController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pertanyaan $pertanyaan)
     {
-        //
+        $sub = SubBab::all()->where('bab_id', '=', 1);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik.edit-question', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -88,9 +90,18 @@ class PedagogikController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pertanyaan $pertanyaan)
     {
-        //
+        $babID = 1;
+        Pertanyaan::where('id', $pertanyaan->id)
+            ->update([
+                'bab_id' => $babID,
+                'sub_bab_id' => $request->sub_bab_id,
+                'nomor' => $request->nomor,
+                'question' => $request->question,
+            ]);
+
+                return redirect('hasil-evaluasi-individu-a-pedagogik')->with('status', 'pertanyaan Berhasil Diubah');
     }
 
     /**

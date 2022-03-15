@@ -25,7 +25,7 @@
       </span>
       <span class="input-group-btn">
           <button type="button" class="btn btn-tambah-data"  data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Question" data-bs-whatever="@fat"><i class="fa fi-rr-add"></i> Tambah Pertanyaan</button>
-          @extends('admin/modals/question/create-modal-question')
+          @extends('admin/hasil-evaluasi-diri/bagian-a/profesional/create-question')
       </span>
     </div>
     <!-- End Button Cari & Tambah -->
@@ -54,7 +54,7 @@
             <tr>
                 <td>{{$prtn->nomor}}</td>
                 <td>{{$prtn->question}}</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Question" data-bs-whatever="@fat"><i class="fa fi-rr-edit">@extends('admin/modals/question/edit-modal-question')</i></a></td>
+                <td class="ckk-question"><a href="/hasil-evaluasi-individu-a-profesional/edit/{{$prtn->id}}" ><i class="fi fi-rr-edit"></i></a></td>
                 <form action="/hasil-evaluasi-individu-a-pedagogik/delete/{{$prtn->id}}" method="post">
                     @method('delete')
                     @csrf

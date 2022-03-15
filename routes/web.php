@@ -22,7 +22,10 @@ use App\Http\Controllers\SosialController;
 |
 */
 
-Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::get('/', function () {
+    return view('landing');
+});
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::group(['middleware' => 'auth'], function () {
@@ -79,16 +82,34 @@ Route::get('/hasil-evaluasi-pertanyaan-profesional', function () {
 // Bagian A
 Route::get('/hasil-evaluasi-individu-a-pedagogik', [PedagogikController::class, 'index']);
 Route::post('/hasil-evaluasi-individu-a-pedagogik/create', [PedagogikController::class, 'store']);
+Route::get('/hasil-evaluasi-individu-a-pedagogik/edit/{pertanyaan}', [PedagogikController::class, 'edit']);
+Route::patch('/hasil-evaluasi-individu-a-pedagogik/update/{pertanyaan}', [PedagogikController::class, 'update']);
 Route::delete('/hasil-evaluasi-individu-a-pedagogik/delete/{pertanyaan}', [PedagogikController::class, 'destroy']);
 // Route::resource('hasil-evaluasi-individu-a-pedagogik','PedagogikController');
 
 Route::get('/hasil-evaluasi-individu-a-kepribadian', [KepribadianController::class, 'index']);
+Route::post('/hasil-evaluasi-individu-a-kepribadian/create', [KepribadianController::class, 'store']);
+Route::get('/hasil-evaluasi-individu-a-kepribadian/edit/{pertanyaan}', [KepribadianController::class, 'edit']);
+Route::patch('/hasil-evaluasi-individu-a-kepribadian/update/{pertanyaan}', [KepribadianController::class, 'update']);
+Route::delete('/hasil-evaluasi-individu-a-kepribadian/delete/{pertanyaan}', [KepribadianController::class, 'destroy']);
 
 Route::get('/hasil-evaluasi-individu-a-sosial', [SosialController::class, 'index']);
+Route::post('/hasil-evaluasi-individu-a-sosial/create', [SosialController::class, 'store']);
+Route::get('/hasil-evaluasi-individu-a-sosial/edit/{pertanyaan}', [SosialController::class, 'edit']);
+Route::patch('/hasil-evaluasi-individu-a-sosial/update/{pertanyaan}', [SosialController::class, 'update']);
+Route::delete('/hasil-evaluasi-individu-a-sosial/delete/{pertanyaan}', [SosialController::class, 'destroy']);
 
 Route::get('/hasil-evaluasi-individu-a-profesional', [ProfesionalController::class, 'index']);
+Route::post('/hasil-evaluasi-individu-a-profesional/create', [ProfesionalController::class, 'store']);
+Route::get('/hasil-evaluasi-individu-a-profesional/edit/{pertanyaan}', [ProfesionalController::class, 'edit']);
+Route::patch('/hasil-evaluasi-individu-a-profesional/update/{pertanyaan}', [ProfesionalController::class, 'update']);
+Route::delete('/hasil-evaluasi-individu-a-profesional/delete/{pertanyaan}', [ProfesionalController::class, 'destroy']);
 
 Route::get('/hasil-evaluasi-individu-a-berbagai-hal', [BerbagaiHalController::class, 'index']);
+Route::post('/hasil-evaluasi-individu-a-berbagai-hal/create', [BerbagaiHalController::class, 'store']);
+Route::get('/hasil-evaluasi-individu-a-berbagai-hal/edit/{pertanyaan}', [BerbagaiHalController::class, 'edit']);
+Route::patch('/hasil-evaluasi-individu-a-berbagai-hal/update/{pertanyaan}', [BerbagaiHalController::class, 'update']);
+Route::delete('/hasil-evaluasi-individu-a-berbagai-hal/delete/{pertanyaan}', [BerbagaiHalController::class, 'destroy']);
 
 // Bagian B
 Route::get('/hasil-evaluasi-individu-b-publikasi-ilmiah', function () {

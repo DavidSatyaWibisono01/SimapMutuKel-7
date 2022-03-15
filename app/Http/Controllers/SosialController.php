@@ -18,7 +18,7 @@ class SosialController extends Controller
         $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 3);
         $sub = SubBab::all()->where('bab_id', '=', 3);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.sosial', compact('pertanyaan', 'sub'));
+        return view('admin.hasil-evaluasi-diri.bagian-a.sosial.sosial', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -39,7 +39,22 @@ class SosialController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'sub_bab_id' => 'required',
+            'nomor' => 'required',
+            'question' => 'required',
+        ]);
+
+        $babID = 3;
+
+        Pertanyaan::create([
+            'bab_id' => $babID,
+            'sub_bab_id' => $request->sub_bab_id,
+            'nomor' => $request->nomor,
+            'question' => $request->question,
+        ]);
+
+        return redirect('hasil-evaluasi-individu-a-sosial')->with('status', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -59,9 +74,11 @@ class SosialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pertanyaan $pertanyaan)
     {
-        //
+        $sub = SubBab::all()->where('bab_id', '=', 3);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.sosial.edit-question', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -71,9 +88,18 @@ class SosialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pertanyaan $pertanyaan)
     {
-        //
+        $babID = 3;
+        Pertanyaan::where('id', $pertanyaan->id)
+            ->update([
+                'bab_id' => $babID,
+                'sub_bab_id' => $request->sub_bab_id,
+                'nomor' => $request->nomor,
+                'question' => $request->question,
+            ]);
+
+                return redirect('hasil-evaluasi-individu-a-sosial')->with('status', 'pertanyaan Berhasil Diubah');
     }
 
     /**
@@ -82,8 +108,9 @@ class SosialController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pertanyaan $pertanyaan)
     {
-        //
+        Pertanyaan::destroy($pertanyaan->id);
+        return redirect('/hasil-evaluasi-individu-a-sosial')->with('status', 'Data Berhasil Dihapus');
     }
 }

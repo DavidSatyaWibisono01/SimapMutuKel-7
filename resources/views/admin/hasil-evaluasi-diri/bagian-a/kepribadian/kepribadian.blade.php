@@ -6,16 +6,13 @@
 <div class="right_col">
   <div class="">
 
-    @if (session()->has('status'))
-
-    @endif
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
         <h1>A. Kompetensi Inti</h1>
       </div>
       <div class="title_left mb-2">
-        <h2>Pedagogik</h2>
+        <h2>Kepribadian</h2>
       </div>
     </div>
     <!-- End Title dari Menu -->
@@ -28,7 +25,7 @@
       </span>
       <span class="input-group-btn">
           <button type="button" class="btn btn-tambah-data"  data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Question" data-bs-whatever="@fat"><i class="fa fi-rr-add"></i> Tambah Pertanyaan</button>
-          @extends('admin/modals/question/create-modal-question')
+          @extends('admin/hasil-evaluasi-diri/bagian-a/kepribadian/create-question')
       </span>
     </div>
     <!-- End Button Cari & Tambah -->
@@ -57,8 +54,8 @@
             <tr>
                 <td>{{$prtn->nomor}}</td>
                 <td>{{$prtn->question}}</td>
-                <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Question" data-bs-whatever="@fat"><i class="fa fi-rr-edit">@extends('admin/modals/question/edit-modal-question')</i></a></td>
-                <form action="/hasil-evaluasi-individu-a-pedagogik/delete/{{$prtn->id}}" method="post">
+                <td class="ckk-question"><a href="/hasil-evaluasi-individu-a-kepribadian/edit/{{$prtn->id}}" ><i class="fi fi-rr-edit"></i></a></td>
+                <form action="/hasil-evaluasi-individu-a-kepribadian/delete/{{$prtn->id}}" method="post">
                     @method('delete')
                     @csrf
                 <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
