@@ -29,7 +29,7 @@
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Nama Lengkap<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
+                        <input class="form-control" value="{{$user->name}}" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
                     </div>
                 </div>
                 <div class="field item form-group mb-4">
