@@ -36,10 +36,10 @@ class LoginController extends Controller
                     $request->session()->regenerate();
                     return redirect()->intended('/user-dashboard');
                 }
-                return redirect()->intended('/');
+                return redirect()->intended('/login');
             }
 
-        return redirect('/')
+        return redirect('/login')
                                 ->withInput()
                                 ->withErrors(['login_gagal' => 'These credentials do not match our records.']);
     }
@@ -53,6 +53,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

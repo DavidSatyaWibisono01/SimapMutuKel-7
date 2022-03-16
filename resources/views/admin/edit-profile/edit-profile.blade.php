@@ -29,7 +29,7 @@
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Nama Lengkap<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
+                        <input class="form-control" value="{{$user->name}}" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
                     </div>
                 </div>
                 <div class="field item form-group mb-4">
@@ -47,19 +47,6 @@
                 </div>
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Jenis Kelamin<span class="required"> :</span></label>
-                    <div class="col-md-6 col-sm-6">
-                        <select class="form-control">
-                            <option></option>
-                            <option>1.1</option>
-                            <option>1.2</option>
-                            <option>1.3</option>
-                            <option>1.5</option>
-                            <option>1.6</option>
-                          </select>
-                    </div>
-                </div>
-                <div class="field item form-group mb-4">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align">Tahun Ajaran<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
                         <select class="form-control">
                             <option></option>
@@ -91,13 +78,13 @@
                 </div>
 
                 <div class="field item form-group btn-data col-md-9 col-sm-9">
-                    <button type="submit" class="btn btn-back">Batal</button>
+                    <a href="/dashboard" class="btn btn-back">Batal</a>
                     <button type="submit" class="btn btn-tambah-data">Simpan</button>
                 </div>
             </form>
         </div>
         <!-- End Form pengisian Data Pribadi -->
-        
+
     </div>
 </div>
 

@@ -18,7 +18,7 @@ class KepribadianController extends Controller
         $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 2);
         $sub = SubBab::all()->where('bab_id', '=', 2);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.kepribadian', compact('pertanyaan', 'sub'));
+        return view('admin.hasil-evaluasi-diri.bagian-a.kepribadian.kepribadian', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -28,7 +28,7 @@ class KepribadianController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -39,7 +39,22 @@ class KepribadianController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'sub_bab_id' => 'required',
+            'nomor' => 'required',
+            'question' => 'required',
+        ]);
+
+        $babID = 2;
+
+        Pertanyaan::create([
+            'bab_id' => $babID,
+            'sub_bab_id' => $request->sub_bab_id,
+            'nomor' => $request->nomor,
+            'question' => $request->question,
+        ]);
+
+        return redirect('hasil-evaluasi-individu-a-kepribadian')->with('status', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -59,9 +74,11 @@ class KepribadianController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pertanyaan $pertanyaan)
     {
-        //
+        $sub = SubBab::all()->where('bab_id', '=', 2);
+
+        return view('admin.hasil-evaluasi-diri.bagian-a.kepribadian.edit-question', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -71,9 +88,18 @@ class KepribadianController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pertanyaan $pertanyaan)
     {
-        //
+        $babID = 2;
+        Pertanyaan::where('id', $pertanyaan->id)
+            ->update([
+                'bab_id' => $babID,
+                'sub_bab_id' => $request->sub_bab_id,
+                'nomor' => $request->nomor,
+                'question' => $request->question,
+            ]);
+
+                return redirect('hasil-evaluasi-individu-a-kepribadian')->with('status', 'pertanyaan Berhasil Diubah');
     }
 
     /**
@@ -82,8 +108,9 @@ class KepribadianController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pertanyaan $pertanyaan)
     {
-        //
+        Pertanyaan::destroy($pertanyaan->id);
+        return redirect('/hasil-evaluasi-individu-a-kepribadian')->with('status', 'Data Berhasil Dihapus');
     }
 }

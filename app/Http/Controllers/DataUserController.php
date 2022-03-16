@@ -148,9 +148,9 @@ class DataUserController extends Controller
     {
         User::destroy($user->id);
         if ($user->status == 'Pendidik') {
-            return redirect('/data-pendidik')->with('status', 'Data Pengguna Berhasil Diubah');
+            return redirect('/data-pendidik')->with('status', 'Data Pengguna Berhasil Dihapus');
         } elseif ($user->status == 'Kependidik') {
-            return redirect('/data-kependidik')->with('status', 'Data Pengguna Berhasil Diubah');
+            return redirect('/data-kependidik')->with('status', 'Data Pengguna Berhasil Dihapus');
         }
     }
 }
