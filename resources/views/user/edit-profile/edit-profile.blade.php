@@ -9,89 +9,87 @@
         <div class="profile_pic">
             <div id="crop-avatar">
               <!-- Current avatar -->
-              <img class="img-responsive avatar-view" src="{!! asset('assets/images/login/logo-wk.png') !!}" alt="Avatar" title="Change the avatar">
+              <img class="img-responsive avatar-view" src="/post-images/{{auth()->user()->foto}}" alt="Avatar" title="Change the avatar">
             </div>
         </div>
         <div class="profile_info">
-            <h1>Biddin Jasmat</h1>
+            <h1>{{ auth()->user()->name }}</h1>
             <ul class="list-unstyled user_data">
-                <li><i class="fa fi-rr-briefcase user-profile-icon"></i> Pendidik</li>
+                <li><i class="fa fi-rr-briefcase user-profile-icon"></i> {{ auth()->user()->status }}</li>
             </ul>
-            <a class="btn btn-tambah-data"><i class="fa fi-rr-edit mr-2"></i>Ubah Foto</a>
         </div>
         <!-- End Dashboard Container -->
 
         <!-- Form pengisian Data Pribadi -->
         <div class="x_content">
-            <form class="form-group form-data-diri" action="" method="" novalidate>
+            <form class="form-group form-data-diri" action="/edit-profile/update/{{$user->id}}" method="post" enctype="multipart/form-data" novalidate>
+                @method('patch')
+                @csrf
                 <span class="section"></span>
 
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Nama Lengkap<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
-                    </div>
-                </div>
-                <div class="field item form-group mb-4">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align">Bidang<span class="required"> :</span></label>
-                    <div class="col-md-6 col-sm-6">
-                        <select class="form-control">
-                            <option></option>
-                            <option>1.1</option>
-                            <option>1.2</option>
-                            <option>1.3</option>
-                            <option>1.5</option>
-                            <option>1.6</option>
-                          </select>
+                        <input class="form-control" value="{{ $user->name }}" data-validate-length-range="6" data-validate-words="2" name="nama" placeholder="" required="required" />
                     </div>
                 </div>
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Jenis Kelamin<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <select class="form-control">
-                            <option></option>
-                            <option>1.1</option>
-                            <option>1.2</option>
-                            <option>1.3</option>
-                            <option>1.5</option>
-                            <option>1.6</option>
-                          </select>
+                        <select name="jk" class="form-control" value="{{ $user->jk }}">
+                            <option value="{{ $user->jk }}">{{ $user->jk }}</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
                     </div>
                 </div>
                 <div class="field item form-group mb-4">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align">Tahun Ajaran<span class="required"> :</span></label>
+                    <label class="col-form-label col-md-3 col-sm-3 label-align">Bidang<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <select class="form-control">
-                            <option></option>
-                            <option>1.1</option>
-                            <option>1.2</option>
-                            <option>1.3</option>
-                            <option>1.5</option>
-                            <option>1.6</option>
-                          </select>
+                        <select name="bidang" class="form-control" value="{{ $user->bidang }}">
+                            <option value="{{ $user->bidang }}>{{ $user->bidang }}</option>
+                            <option value="Matematika">Matematika</option>
+                            <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+                            <option value="Bahasa Inggris">Bahasa Inggris</option>
+                        </select>
                     </div>
                 </div>
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Status<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
+                        <select name="status" class="form-control" value="{{ $user->status }}">
+                            <option value="{{ $user->status }}">{{ $user->status }}</option>
+                            <option value="Pendidik">Pendidik</option>
+                            <option value="Kependidik">Kependidik</option>
+                        </select>
                     </div>
                 </div>
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Username<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
+                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="username" value="{{ $user->username }}" required="required" />
                     </div>
                 </div>
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Password<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="" required="required" />
+                        <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="password" value="{{ $user->password }}" required="required" />
                     </div>
                 </div>
 
+                <div class="field item form-group mb-4">
+                    <label class="col-form-label col-md-3 col-sm-3 label-align">Foto</label>
+                    <div class="col-md-6 col-sm-6">
+                    <input type="file" name="foto" value="{{$user->foto}}" class="form-control @error('foto') is-invalid @enderror" placeholder="Masukan foto">
+                    @error('foto')
+                      <div class="invalid-feedback{{$message}}"></div>
+                    @enderror
+                    <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                   </div>
+                </div>
+
                 <div class="field item form-group btn-data col-md-9 col-sm-9">
-                    <button type="submit" class="btn btn-back">Batal</button>
+                    <a href="/dashboard" class="btn btn-back">Batal</a>
                     <button type="submit" class="btn btn-tambah-data">Simpan</button>
                 </div>
             </form>
