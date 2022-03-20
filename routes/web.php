@@ -9,7 +9,9 @@ use App\Http\Controllers\DataUserController;
 use App\Http\Controllers\KepribadianController;
 use App\Http\Controllers\PedagogikController;
 use App\Http\Controllers\ProfesionalController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SosialController;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 /*
 |--------------------------------------------------------------------------
@@ -163,13 +165,10 @@ Route::get('/page-edit-profil', function () {
     return view('trash/page-edit-profil');
 });
 
-Route::get('/admin-edit-profile', function () {
-    return view('admin/edit-profile/edit-profile');
-});
+Route::get('/admin-edit-profile', [ProfileController::class, 'adminEdit']);
+Route::get('/user-edit-profile', [ProfileController::class, 'userEdit']);
+Route::patch('/edit-profile/update/{user}', [ProfileController::class, 'update']);
 
-Route::get('/user-edit-profile', function () {
-    return view('user/edit-profile/edit-profile');
-});
 
 });
 
