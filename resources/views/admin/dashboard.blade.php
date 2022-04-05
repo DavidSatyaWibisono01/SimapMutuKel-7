@@ -10,7 +10,7 @@
           <div class="profile_img">
             <div id="crop-avatar">
               <!-- Current avatar -->
-              <img class="img-responsive avatar-view" src="/post-images/{{ auth()->user()->foto }}" alt="Avatar" title="Change the avatar">
+              <img class="img-responsive avatar-view img-circle" src="/post-images/{{ auth()->user()->foto }}" alt="Avatar" title="Change the avatar">
             </div>
           </div>
           <h3>{{ auth()->user()->name }}</h3>

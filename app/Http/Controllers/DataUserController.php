@@ -17,9 +17,11 @@ class DataUserController extends Controller
     public function pendidik(Request $request)
     {
         $keyword=$request->get('keyword');
-        $user = DB::table('users')->where('status', '=', 'Pendidik')->paginate(10);
+
         if($keyword){
             $user=User::all()->where("name","LIKE","%$keyword%");
+        }else{
+            $user = DB::table('users')->where('status', '=', 'Pendidik')->paginate(10);
         }
         return view('admin.data-pendidik-kependidikan.data-kependidik', compact('user'));
     }
@@ -30,13 +32,13 @@ class DataUserController extends Controller
         return view('admin.data-pendidik-kependidikan.data-kependidik', compact('user'));
     }
 
-    public function cari(Request $request)
-    {
-        $cari=$request->cari;
-        $user=DB::table('users')
-        ->where('name','like',"%".$cari."%");
-        return view('produsen.index',compact('produsen'));
-    }
+    // public function cari(Request $request)
+    // {
+    //     $cari=$request->cari;
+    //     $user=DB::table('users')
+    //     ->where('name','like',"%".$cari."%");
+    //     return view('prod.index',compact('produsen'));
+    // }
     /**
      * Show the form for creating a new resource.
      *

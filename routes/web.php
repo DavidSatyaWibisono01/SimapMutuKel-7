@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\bagianSatuController;
 use App\Http\Controllers\BerbagaiHalController;
 use App\Http\Controllers\DataUserController;
 use App\Http\Controllers\KepribadianController;
@@ -113,6 +114,8 @@ Route::get('/hasil-evaluasi-individu-a-berbagai-hal/edit/{pertanyaan}', [Berbaga
 Route::patch('/hasil-evaluasi-individu-a-berbagai-hal/update/{pertanyaan}', [BerbagaiHalController::class, 'update']);
 Route::delete('/hasil-evaluasi-individu-a-berbagai-hal/delete/{pertanyaan}', [BerbagaiHalController::class, 'destroy']);
 
+
+
 // Bagian B
 Route::get('/hasil-evaluasi-individu-b-publikasi-ilmiah', function () {
     return view('admin/hasil-evaluasi-diri/bagian-b/publikasi-ilmiah');
@@ -140,9 +143,8 @@ Route::get('/evaluasi-diri-2', function () {
 });
 
 // Evaluasi diri tipe 1
-Route::get('/evaluasi-diri-tipe1', function () {
-    return view('user/evadir/eval-diri-tipe-1/evaluasi-diri-tipe1');
-});
+Route::get('/evaluasi-diri-tipe1', [bagianSatuController::class, 'index']);
+Route::post('/simpanJawaban/{id}', [bagianSatuController::class, 'simpan']);
 
 // Evaluasi diri tipe 2
 Route::get('/evaluasi-diri-tipe2', function () {
