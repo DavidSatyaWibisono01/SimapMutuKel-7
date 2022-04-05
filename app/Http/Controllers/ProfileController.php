@@ -39,9 +39,9 @@ class ProfileController extends Controller
                 'bidang' => $request->bidang,
                 'status' => $request->status,
                 'username' => $request->username,
-                'password' => bcrypt($request->password),
+                // 'password' => bcrypt($request->password),
                 'foto' => $imgName,
             ]);
-        return redirect('/dashboard')->with('status', 'Data Karyawan Berhasil Diubah');
+        return redirect()->back()->with('status', 'Data Karyawan Berhasil Diubah');
     }
 }

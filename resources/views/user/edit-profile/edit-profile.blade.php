@@ -57,7 +57,7 @@
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Status<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
-                        <select name="status" class="form-control" value="{{ $user->status }}">
+                        <select name="status" class="form-control">
                             <option value="{{ $user->status }}">{{ $user->status }}</option>
                             <option value="Pendidik">Pendidik</option>
                             <option value="Kependidik">Kependidik</option>
@@ -70,17 +70,17 @@
                         <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="username" value="{{ $user->username }}" required="required" />
                     </div>
                 </div>
-                <div class="field item form-group mb-4">
+                {{-- <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Password<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
                         <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="password" value="{{ $user->password }}" required="required" />
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Foto</label>
                     <div class="col-md-6 col-sm-6">
-                    <input type="file" name="foto" value="{{$user->foto}}" class="form-control @error('foto') is-invalid @enderror" placeholder="Masukan foto">
+                    <input type="file" name="foto" value="{{$user->foto}}" class="form-control @error('foto') is-invalid @enderror" placeholder="Masukan foto" required>
                     @error('foto')
                       <div class="invalid-feedback{{$message}}"></div>
                     @enderror
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="field item form-group btn-data col-md-9 col-sm-9">
-                    <a href="/dashboard" class="btn btn-back">Batal</a>
+                    <a href="/user-dashboard" class="btn btn-back">Batal</a>
                     <button type="submit" class="btn btn-tambah-data">Simpan</button>
                 </div>
             </form>

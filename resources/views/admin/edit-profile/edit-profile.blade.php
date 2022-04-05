@@ -70,12 +70,12 @@
                         <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="username" value="{{ $user->username }}" required="required" />
                     </div>
                 </div>
-                <div class="field item form-group mb-4">
+                {{-- <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Password<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
                         <input class="form-control" data-validate-length-range="6" data-validate-words="2" name="password" value="{{ $user->password }}" required="required" />
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="field item form-group mb-4">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Foto</label>

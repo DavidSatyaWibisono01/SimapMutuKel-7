@@ -48,6 +48,7 @@ class ProfesionalController extends Controller
         $babID = 4;
 
         Pertanyaan::create([
+            'bagian' => 1,
             'bab_id' => $babID,
             'sub_bab_id' => $request->sub_bab_id,
             'nomor' => $request->nomor,
@@ -93,6 +94,7 @@ class ProfesionalController extends Controller
         $babID = 4;
         Pertanyaan::where('id', $pertanyaan->id)
             ->update([
+                'bagian' => 1,
                 'bab_id' => $babID,
                 'sub_bab_id' => $request->sub_bab_id,
                 'nomor' => $request->nomor,

@@ -48,6 +48,7 @@ class BerbagaiHalController extends Controller
         $babID = 5;
 
         Pertanyaan::create([
+            'bagian' => 1,
             'bab_id' => $babID,
             'sub_bab_id' => $request->sub_bab_id,
             'nomor' => $request->nomor,
@@ -93,6 +94,7 @@ class BerbagaiHalController extends Controller
         $babID = 5;
         Pertanyaan::where('id', $pertanyaan->id)
             ->update([
+                'bagian' => 1,
                 'bab_id' => $babID,
                 'sub_bab_id' => $request->sub_bab_id,
                 'nomor' => $request->nomor,

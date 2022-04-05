@@ -50,6 +50,7 @@ class PedagogikController extends Controller
         $babID = 1;
 
         Pertanyaan::create([
+            'bagian' => 1,
             'bab_id' => $babID,
             'sub_bab_id' => $request->sub_bab_id,
             'nomor' => $request->nomor,
@@ -95,6 +96,7 @@ class PedagogikController extends Controller
         $babID = 1;
         Pertanyaan::where('id', $pertanyaan->id)
             ->update([
+                'bagian' => 1,
                 'bab_id' => $babID,
                 'sub_bab_id' => $request->sub_bab_id,
                 'nomor' => $request->nomor,

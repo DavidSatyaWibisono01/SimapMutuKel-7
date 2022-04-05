@@ -5,7 +5,7 @@
 <!-- page content -->
 <div class="container-card">
   <div class="">
-    
+
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
@@ -26,7 +26,7 @@
       </span>
     </div>
     <!-- End Button back to home -->
-      
+
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
@@ -40,7 +40,7 @@
             <tr class="bg-table-color">
                 <td></td>
                 <td colspan='2'><b>Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya</b></td>
-                
+
                 <td class="td-question">Tidak Pernah</td>
                 <td class="td-question">Jarang</td>
                 <td class="td-question">Sering</td>
@@ -49,35 +49,39 @@
                 <td class="tds-question" colspan='2'>Harap diisi</td>
             </tr>
         </thead>
-
+        @foreach ($pertanyaan as $p)
         <tbody>
-          <tr>
-              <td colspan='1'>1</td>
-              <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
-              <td class="ck-question">
-								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-              </td>
-              <td class="ck-question">
-								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-              </td>
-              <td class="ck-question">
-								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-              </td>
-              <td class="ck-question">
-								<input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">
-              </td>
-              <td colspan='2'>
-                <textarea class="form-control" rows="3" placeholder="" ></textarea>
-              </td>
-          </tr>
+            <form action="{{url('simpanJawaban/'.$p->id)}}" method="post">
+                @csrf
+                <tr>
+                    <td colspan='1'>{{$p->nomor}}</td>
+                    <td colspan='2'>{{$p->question}}</td>
+                    <td class="ck-question">
+                                      <input type="radio" value="Tidak Pernah" name="option[{{$p->id}}]">
+                    </td>
+                    <td class="ck-question">
+                                      <input type="radio" value="Jarang" name="option[{{$p->id}}]">
+                    </td>
+                    <td class="ck-question">
+                                      <input type="radio" value="Sering" name="option[{{$p->id}}]">
+                    </td>
+                    <td class="ck-question">
+                                      <input type="radio" value="Selalu" name="option[{{$p->id}}]">
+                    </td>
+                    <td colspan='2'>
+                      <textarea class="form-control" rows="3" name="kendala[{{$p->id}}]" placeholder="" ></textarea>
+                    </td>
+                </tr>
         </tbody>
+        @endforeach
       </table>
     </div>
     <!-- End Table -->
 
     <!-- Pagination -->
     <div class="field item form-group btn-data">
-        <button type="button" class="btn btn-next">Selanjutnya</button>
+        <button type="submit" class="btn btn-next">Selanjutnya</button>
+    </form>
     </div>
     <!-- End Pagination -->
   </div>
