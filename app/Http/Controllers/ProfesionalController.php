@@ -41,7 +41,6 @@ class ProfesionalController extends Controller
     {
         $request->validate([
             'sub_bab_id' => 'required',
-            'nomor' => 'required',
             'question' => 'required',
         ]);
 
@@ -51,7 +50,6 @@ class ProfesionalController extends Controller
             'bagian' => 1,
             'bab_id' => $babID,
             'sub_bab_id' => $request->sub_bab_id,
-            'nomor' => $request->nomor,
             'question' => $request->question,
         ]);
 
@@ -97,7 +95,6 @@ class ProfesionalController extends Controller
                 'bagian' => 1,
                 'bab_id' => $babID,
                 'sub_bab_id' => $request->sub_bab_id,
-                'nomor' => $request->nomor,
                 'question' => $request->question,
             ]);
 

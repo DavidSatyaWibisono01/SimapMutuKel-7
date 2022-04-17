@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pertanyaan;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +22,7 @@ class DataUserController extends Controller
         }else{
             $user = DB::table('users')->where('status', '=', 'Pendidik')->paginate(10);
         }
-        return view('admin.data-pendidik-kependidikan.data-kependidik', compact('user'));
+        return view('admin.data-pendidik-kependidikan.data-pendidik', compact('user'));
     }
 
     public function kependidikan()

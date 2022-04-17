@@ -52,7 +52,7 @@
 
             @foreach ($pertanyaan as $prtn)
             <tr>
-                <td>{{$prtn->nomor}}</td>
+                <td>{{$loop->iteration}}</td>
                 <td>{{$prtn->question}}</td>
                 <td class="ckk-question"><a href="/hasil-evaluasi-individu-a-sosial/edit/{{$prtn->id}}" ><i class="fi fi-rr-edit"></i></a></td>
                 <form action="/hasil-evaluasi-individu-a-sosial/delete/{{$prtn->id}}" method="post">

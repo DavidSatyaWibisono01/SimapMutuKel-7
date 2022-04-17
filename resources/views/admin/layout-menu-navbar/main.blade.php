@@ -132,10 +132,21 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="#" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <img src="/post-images/{{auth()->user()->foto}}" alt=""> <i class="fa fi-rr-angle-small-down profile-nav"></i>
+                        @if(auth()->user()->foto)
+                        <img src="/post-images/{{ auth()->user()->foto }}">
+                        @else
+                        <img src="/post-images/none.png">
+                        @endif
+                      <i class="fa fi-rr-angle-small-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item user-profile"  href="/dashboard"><img src="/post-images/{{auth()->user()->foto}}">{{ auth()->user()->name }}</a>
+                      <a class="dropdown-item user-profile"  href="/dashboard">
+                        @if(auth()->user()->foto)
+                        <img src="/post-images/{{ auth()->user()->foto }}">
+                        @else
+                        <img src="/post-images/none.png">
+                        @endif
+                        {{ auth()->user()->name }}</a>
                       <a class="dropdown-item"  href="/admin-edit-profile">Edit Profil</a>
                       <form action="/logout" method="POST">
                         @csrf

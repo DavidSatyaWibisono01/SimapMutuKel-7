@@ -39,7 +39,7 @@
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="/user-edit-profile">Edit Profile</a>
                       <a class="dropdown-item"  href="/user-dashboard">Kembali ke Dashboard</a>
-                    <form action="/logout" method="GET">
+                      <form action="/logout" method="POST">
                         @csrf
                     <a class="dropdown-item"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
                     </form>

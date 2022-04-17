@@ -10,7 +10,11 @@
           <div class="profile_img">
             <div id="crop-avatar">
               <!-- Current avatar -->
+              @if(auth()->user()->foto)
               <img class="img-responsive avatar-view img-circle" src="/post-images/{{ auth()->user()->foto }}" alt="Avatar" title="Change the avatar">
+              @else
+              <img class="img-responsive avatar-view img-circle" src="/post-images/none.png" alt="Avatar" title="Change the avatar">
+              @endif
             </div>
           </div>
           <h3>{{ auth()->user()->name }}</h3>

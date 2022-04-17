@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\Bab;
 use App\Models\Pertanyaan;
 use App\Models\SubBab;
-use Illuminate\Http\Request;
 
-class PedagogikController extends Controller
+class KaryaInovatifController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +16,10 @@ class PedagogikController extends Controller
      */
     public function index()
     {
-        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 1);
-        $sub = SubBab::all()->where('bab_id', '=', 1);
+        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 7);
+        $sub = SubBab::all()->where('bab_id', '=', 7);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik.pedagogik', compact('pertanyaan', 'sub'));
+        return view('admin.hasil-evaluasi-diri.bagian-c.karya-inovatif', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -45,16 +45,16 @@ class PedagogikController extends Controller
             'question' => 'required',
         ]);
 
-        $babID = 1;
+        $babID = 7;
 
         Pertanyaan::create([
-            'bagian' => 1,
+            'bagian' => 2,
             'bab_id' => $babID,
             'sub_bab_id' => $request->sub_bab_id,
             'question' => $request->question,
         ]);
 
-        return redirect('hasil-evaluasi-individu-a-pedagogik')->with('status', 'pertanyaan Berhasil Ditambahkan');
+        return redirect('/hasil-evaluasi-individu-c-karya-inovatif')->with('status', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -76,9 +76,9 @@ class PedagogikController extends Controller
      */
     public function edit(Pertanyaan $pertanyaan)
     {
-        $sub = SubBab::all()->where('bab_id', '=', 1);
+        $sub = SubBab::all()->where('bab_id', '=', 7);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik.edit-question', compact('pertanyaan', 'sub'));
+        return view('admin.hasil-evaluasi-diri.bagian-c.edit-question', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -90,16 +90,16 @@ class PedagogikController extends Controller
      */
     public function update(Request $request, Pertanyaan $pertanyaan)
     {
-        $babID = 1;
+        $babID = 7;
         Pertanyaan::where('id', $pertanyaan->id)
             ->update([
-                'bagian' => 1,
+                'bagian' => 2,
                 'bab_id' => $babID,
                 'sub_bab_id' => $request->sub_bab_id,
                 'question' => $request->question,
             ]);
 
-                return redirect('hasil-evaluasi-individu-a-pedagogik')->with('status', 'pertanyaan Berhasil Diubah');
+                return redirect('/hasil-evaluasi-individu-c-karya-inovatif')->with('status', 'pertanyaan Berhasil Diubah');
     }
 
     /**
@@ -111,6 +111,6 @@ class PedagogikController extends Controller
     public function destroy(Pertanyaan $pertanyaan)
     {
         Pertanyaan::destroy($pertanyaan->id);
-        return redirect('/hasil-evaluasi-individu-a-pedagogik')->with('status', 'Data Berhasil Dihapus');
+        return redirect('/hasil-evaluasi-individu-c-karya-inovatif')->with('status', 'Data Berhasil Dihapus');
     }
 }

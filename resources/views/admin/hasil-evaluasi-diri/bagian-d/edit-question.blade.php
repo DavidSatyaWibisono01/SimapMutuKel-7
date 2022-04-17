@@ -9,7 +9,7 @@
             </div>
           </div>
 
-    <form method="post" action="/hasil-evaluasi-individu-a-berbagai-hal/update/{{$pertanyaan->id}}">
+    <form method="post" action="/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas/update/{{$pertanyaan->id}}">
       @method('patch')
       @csrf
       <div class="card-body">
@@ -31,7 +31,6 @@
 		    	</select>
             </div>
 		</div>
-
 
       </div>
       <div class="field item form-group btn-data col-md-9 col-sm-9">

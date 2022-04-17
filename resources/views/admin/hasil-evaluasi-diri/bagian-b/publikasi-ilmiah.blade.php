@@ -5,7 +5,7 @@
 <!-- page content -->
 <div class="right_col">
   <div class="">
-    
+
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <!-- End Title dari Menu -->
-    
+
     <!-- Button Cari & Tambah -->
     <div class="input-group">
       <input type="text" class="input-search">
@@ -22,11 +22,11 @@
       </span>
       <span class="input-group-btn">
           <button type="button" class="btn btn-tambah-data"  data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Question" data-bs-whatever="@fat"><i class="fa fi-rr-add"></i> Tambah Pertanyaan</button>
-          @extends('admin/modals/question/create-modal-question')
+          @extends('admin/hasil-evaluasi-diri/bagian-b/create-question')
       </span>
     </div>
     <!-- End Button Cari & Tambah -->
-      
+
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
@@ -36,19 +36,30 @@
                 <th colspan='2'><b>Pertanyaan</b></th>
                 <th class="ck-question" colspan='5'><b>Aksi</b></th>
             </tr>
+            @foreach ($sub as $sb )
             <tr class="bg-table-color">
                 <td></td>
-                <td colspan='4'><b> Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya </b></td>
+                <td colspan='4'><b> {{$sb->nama_bab}} </b></td>
             </tr>
+            @endforeach
           </thead>
 
           <tbody>
+            @if ($pertanyaan != null)
+
+            @foreach ($pertanyaan as $prtn)
             <tr>
-              <td colspan='1'>1</td>
-              <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
-              <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Edit-Question" data-bs-whatever="@fat"><i class="fa fi-rr-edit">@extends('admin/modals/question/edit-modal-question')</i></a></td>
-              <td class="ckk-question"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal-Hapus-Profile" data-bs-whatever="@fat"><i class="fa fi-rr-trash">@extends('admin/modals/profile/aksi/delete-profile-modal')</i></a></td>
-          </tr>
+                <td>{{$loop->iteration}}</td>
+                <td>{{$prtn->question}}</td>
+                <td class="ckk-question"><a href="/hasil-evaluasi-individu-b-publikasi-ilmiah/edit/{{$prtn->id}}" ><i class="fi fi-rr-edit"></i></a></td>
+                <form action="/hasil-evaluasi-individu-b-publikasi-ilmiah/delete/{{$prtn->id}}" method="post">
+                    @method('delete')
+                    @csrf
+                <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
+                </form>
+            </tr>
+            @endforeach
+            @endif
           </tbody>
       </table>
     </div>
