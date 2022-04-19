@@ -37,14 +37,20 @@
           </thead>
 
           <tbody>
+            <?php $no = 1?>
             @foreach ( $hasilKependidik as $hk )
-            <tr>
-                <th scope="row">{{$loop->iteration}}</th>
-                <td>{{$hk->name}}</td>
-                <td>{{$hk->bidang}}</td>
-                <td>{{$hk->status}}</td>
-                <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru/{{$hk->id}}"><i class="fa fi-rr-eye"></i></a></td>
-            </tr>
+                @foreach ( $sudahisi as $s)
+                    @if ($hk->id == $s->user_id)
+                        <tr>
+                            <th scope="row">{{$no}}</th>
+                            <td>{{$hk->name}}</td>
+                            <td>{{$hk->bidang}}</td>
+                            <td>{{$hk->status}}</td>
+                            <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru/{{$hk->id}}"><i class="fa fi-rr-eye"></i></a></td>
+                        </tr>
+                        <?php $no++?>
+                    @endif
+                @endforeach
             @endforeach
           </tbody>
       </table>

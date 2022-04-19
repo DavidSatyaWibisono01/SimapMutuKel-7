@@ -1,7 +1,6 @@
 @extends('user/layout-navbar/navbar')
 
 @section('container')
-
 <!-- page content -->
 <div class="container-card">
   <div class="">
@@ -51,10 +50,11 @@
         </thead>
         @foreach ($pertanyaan as $p)
         <tbody>
-            <form action="{{url('simpanJawaban/'.$p->id)}}" method="post">
+            <form action="{{url('evaluasi-diri-tipe1/simpanJawaban/'.$p->id)}}" method="POST">
                 @csrf
+                <input type="hidden" name="bagian" value="{{$p->bagian}}">
                 <tr>
-                    <td colspan='1'>{{$p->nomor}}</td>
+                    <td colspan='1'>{{$loop->iteration}}</td>
                     <td colspan='2'>{{$p->question}}</td>
                     <td class="ck-question">
                                       <input type="radio" value="Tidak Pernah" name="option[{{$p->id}}]">

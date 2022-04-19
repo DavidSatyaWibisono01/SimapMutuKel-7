@@ -4,10 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\bagianDuaController;
 use App\Http\Controllers\bagianSatuController;
 use App\Http\Controllers\BerbagaiHalController;
 use App\Http\Controllers\DataUserController;
 use App\Http\Controllers\HasilIndividuController;
+use App\Http\Controllers\HasilPertanyaanController;
 use App\Http\Controllers\KaryaInovatifController;
 use App\Http\Controllers\KepribadianController;
 use App\Http\Controllers\KompetisiPembelajaranController;
@@ -64,21 +66,13 @@ Route::get('/hasil-evaluasi-individu-kependidik', [HasilIndividuController::clas
 
 Route::get('/hasil-evaluasi-individu-profil-guru/{answer}', [HasilIndividuController::class, 'hasilEvaluasi']);
 
-Route::get('/hasil-evaluasi-pertanyaan-pedagogik', function () {
-    return view('admin/hasil-evaluasi-pertanyaan/pedagogik');
-});
+Route::get('/hasil-evaluasi-pertanyaan-pedagogik', [HasilPertanyaanController::class, 'hasilPedagogik']);
 
-Route::get('/hasil-evaluasi-pertanyaan-kepribadian', function () {
-    return view('admin/hasil-evaluasi-pertanyaan/kepribadian');
-});
+Route::get('/hasil-evaluasi-pertanyaan-kepribadian', [HasilPertanyaanController::class, 'hasilKepribadian']);
 
-Route::get('/hasil-evaluasi-pertanyaan-sosial', function () {
-    return view('admin/hasil-evaluasi-pertanyaan/sosial');
-});
+Route::get('/hasil-evaluasi-pertanyaan-sosial', [HasilPertanyaanController::class, 'hasilSosial']);
 
-Route::get('/hasil-evaluasi-pertanyaan-profesional', function () {
-    return view('admin/hasil-evaluasi-pertanyaan/profesional');
-});
+Route::get('/hasil-evaluasi-pertanyaan-profesional', [HasilPertanyaanController::class, 'hasilProfesional']);
 
 // Bagian A
 Route::get('/hasil-evaluasi-individu-a-pedagogik', [PedagogikController::class, 'index']);
@@ -129,9 +123,6 @@ Route::patch('/hasil-evaluasi-individu-c-karya-inovatif/update/{pertanyaan}', [K
 Route::delete('/hasil-evaluasi-individu-c-karya-inovatif/delete/{pertanyaan}', [KaryaInovatifController::class, 'destroy']);
 
 // Bagian D
-Route::get('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas', function () {
-    return view('admin/hasil-evaluasi-diri/bagian-d/kompetensi-pembelajaran-berkualitas');
-});
 Route::get('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas', [KompetisiPembelajaranController::class, 'index']);
 Route::post('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas/create', [KompetisiPembelajaranController::class, 'store']);
 Route::get('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas/edit/{pertanyaan}', [KompetisiPembelajaranController::class, 'edit']);
@@ -152,12 +143,11 @@ Route::get('/evaluasi-diri-2', function () {
 
 // Evaluasi diri tipe 1
 Route::get('/evaluasi-diri-tipe1', [bagianSatuController::class, 'index']);
-Route::post('/simpanJawaban/{id}', [bagianSatuController::class, 'simpan']);
+Route::post('/evaluasi-diri-tipe1/simpanJawaban/{id}', [bagianSatuController::class, 'simpan']);
 
 // Evaluasi diri tipe 2
-Route::get('/evaluasi-diri-tipe2', function () {
-    return view('user/evadir/eval-diri-tipe-2/evaluasi-diri-tipe2');
-});
+Route::get('/evaluasi-diri-tipe2', [bagianDuaController::class, 'index']);
+Route::post('/evaluasi-diri-tipe2/simpanJawaban/{id}', [bagianDuaController::class, 'simpan']);
 
 Route::get('/lupa-password', function () {
     return view('lupa-password');

@@ -14,4 +14,8 @@ class jawaban extends Model
     public function User(){
         return $this->hasone(User::class, 'id', 'user_id');
     }
+    public function Pertanyaan(){
+        return $this->hasone(Pertanyaan::class, 'id', 'question_id');
+    }
+
 }

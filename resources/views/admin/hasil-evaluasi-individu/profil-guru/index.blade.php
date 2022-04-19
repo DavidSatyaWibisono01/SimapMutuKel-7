@@ -10,11 +10,11 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>{{$hasil->User->nama}}</h1>
+        <h1>{{ $hasil[0]->User->name }}</h1>
       </div>
       <div class="title_left">
-        <h2>Mata Pelajaran : Bahasa Indonesia</h2>
-        <h2>Status : Pendidik</h2>
+        <h2>Pelajaran : {{ $hasil[0]->User->bidang }}</h2>
+        <h2>Status : {{ $hasil[0]->User->status }}</h2>
         <h2>Tahun Ajaran : 2021 - 2022</h2>
       </div>
     </div>
@@ -56,12 +56,14 @@
           </thead>
 
           <tbody>
-            <tr>
-                <td colspan='1'>1</td>
-                <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel</td>
-                <td class="ck-question">Selalu</td>
-                <td class="ck-question">Selama PJJ bagi siswa yang tidak aktif atau jarang hadir</td>
-            </tr>
+          @foreach ($hasil as $h)
+          <tr>
+              <td colspan='1'>{{$loop->iteration}}</td>
+              <td colspan='2'>{{$h->Pertanyaan->question}}</td>
+              <td class="ck-question">{{$h->answer}}</td>
+              <td class="ck-question">{{$h->kendala}}</td>
+          </tr>
+          @endforeach
           </tbody>
       </table>
     </div>

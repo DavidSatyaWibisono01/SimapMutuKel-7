@@ -9,7 +9,7 @@ class Pertanyaan extends Model
 {
     use HasFactory;
     protected $table = "pertanyaans";
-    protected $fillable = ['bagian','bab_id', 'sub_bab_id', 'nomor', 'question'];
+    protected $fillable = ['bagian','bab_id', 'sub_bab_id', 'question'];
 
     public function subBab(){
         return $this->hasOne(SubBab::class, 'id', 'sub_bab_id');

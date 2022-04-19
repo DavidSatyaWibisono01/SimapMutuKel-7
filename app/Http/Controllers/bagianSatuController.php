@@ -40,7 +40,7 @@ class bagianSatuController extends Controller
             'option' => 'required',
             'kendala' => 'required',
         ]);
-        $count = Pertanyaan::select('id')->get();
+        $count = Pertanyaan::select('id')->where('bagian',$request->bagian)->get();
         for ($i=0; $i < count($count); $i++) {
             jawaban::create([
             'user_id' => Auth::user()->id,

@@ -50,7 +50,10 @@
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="/user-edit-profile">Edit Profile</a>
                       <a class="dropdown-item"  href="/user-dashboard">Kembali ke Dashboard</a>
-                    <a class="dropdown-item"  href="login.html"><i class="fa fi-rr-sign-out pull-right"></i> Log Out</a>
+                      <form action="/logout" method="post">
+                        @csrf
+                      <button class="dropdown-item" type="submit" ><i class="fa fi-rr-sign-out pull-right"></i> Log Out</button>
+                      </form>
                   </div>
               </li>
               </ul>
@@ -58,7 +61,7 @@
           </div>
         </div>
         <!-- /top navigation -->
-      
+
         <!-- pembatas content -->
         @yield('container')
         <!-- /pembatas content -->
