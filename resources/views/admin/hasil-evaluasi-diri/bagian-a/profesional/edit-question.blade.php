@@ -32,23 +32,6 @@
             </div>
 		</div>
 
-        <div class="field item form-group mb-4">
-            <label for="message-text" class="col-form-label col-md-3 col-sm-3 label-align">Nomor</label>
-            <div class="col-md-6 col-sm-6">
-			<select class="form-control" name="nomor">
-				<option value="{{$pertanyaan->nomor}}">{{$pertanyaan->nomor}}</option>
-				<option value="1.1">1.1</option>
-                <option value="1.2">1.2</option>
-                <option value="1.3">1.3</option>
-                <option value="1.4">1.4</option>
-                <option value="1.5">1.5</option>
-                <option value="1.6">1.6</option>
-                <option value="1.7">1.7</option>
-                <option value="1.8">1.8</option>
-                <option value="1.9">1.9</option>
-			</select>
-            </div>
-		</div>
       </div>
       <div class="field item form-group btn-data col-md-9 col-sm-9">
         <a class="btn btn-back" href="{{ url()->previous() }}">Kembali</a>

@@ -5,7 +5,7 @@
 <!-- page content -->
 <div class="container-card">
   <div class="">
-    
+
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
@@ -26,7 +26,7 @@
       </span>
     </div>
     <!-- End Button back to home -->
-      
+
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
@@ -45,27 +45,32 @@
                 <td class="tds-question" colspan='4'>Harap diisi</td>
             </tr>
           </thead>
-
+          @foreach ($pertanyaan as $p)
           <tbody>
+              <form action="{{url('evaluasi-diri-tipe2/simpanJawaban/'.$p->id)}}" method="POST">
+                @csrf
+            <input type="hidden" name="bagian" value="{{$p->bagian}}">
             <tr>
-                <td colspan='1'>1</td>
-                <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
+                <td colspan='1'>{{$loop->iteration}}</td>
+                <td colspan='2'>{{$p->question}}</td>
                 <td colspan='2'>
-                  <textarea class="form-control" rows="3" placeholder="" ></textarea>
+                  <textarea class="form-control" name="kinerja[{{$p->id}}]" rows="3" placeholder="" ></textarea>
                 </td>
                 <td colspan='4'>
-                  <textarea class="form-control" rows="3" placeholder="" ></textarea>
+                  <textarea class="form-control" name="kendala[{{$p->id}}]" rows="3" placeholder="" ></textarea>
                 </td>
             </tr>
           </tbody>
+          @endforeach
       </table>
     </div>
     <!-- End Table -->
 
     <!-- Pagination -->
     <div class="field item form-group btn-data">
-        <button type="button" class="btn btn-next">Selanjutnya</button>
+        <button type="submit" class="btn btn-next">Selanjutnya</button>
     </div>
+    </form>
     <!-- End Pagination -->
 
     <!-- End page content -->

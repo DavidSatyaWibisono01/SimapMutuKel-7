@@ -10,4 +10,12 @@ class jawaban extends Model
     use HasFactory;
     protected $table = "answer";
     protected $fillable = ['user_id', 'question_id', 'answer', 'kendala'];
+
+    public function User(){
+        return $this->hasone(User::class, 'id', 'user_id');
+    }
+    public function Pertanyaan(){
+        return $this->hasone(Pertanyaan::class, 'id', 'question_id');
+    }
+
 }

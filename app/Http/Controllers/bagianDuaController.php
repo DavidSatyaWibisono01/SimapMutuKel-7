@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\jawaban;
 use Illuminate\Http\Request;
 use App\Models\Pertanyaan;
+use App\Models\jawaban;
 use Illuminate\Support\Facades\Auth;
-class bagianSatuController extends Controller
+
+class bagianDuaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,26 @@ class bagianSatuController extends Controller
      */
     public function index()
     {
-        $pertanyaan = Pertanyaan::all()->where('bagian', '=', 1);
-        return view('user/evadir/eval-diri-tipe-1/evaluasi-diri-tipe1', compact('pertanyaan'));
+        $pertanyaan = Pertanyaan::all()->where('bagian', '=', 2);
+        return view('user/evadir/eval-diri-tipe-2/evaluasi-diri-tipe2', compact('pertanyaan'));
+    }
+
+    public function simpan(Request $request,$id){
+        $request->validate([
+            'kinerja' => 'required',
+            'kendala' => 'required',
+        ]);
+        $count = Pertanyaan::select('id')->where('bagian',$request->bagian)->get();
+        for ($i=0; $i < count($count); $i++) {
+            jawaban::create([
+            'user_id' => Auth::user()->id,
+            'question_id' => $count[$i]->id,
+            'answer' => $request->kinerja[$count[$i]->id],
+            'kendala' => $request->kendala[$count[$i]->id],
+        ]);
+        }
+
+        return redirect('/evaluasi-diri-tipe2')->with('status', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -35,22 +54,9 @@ class bagianSatuController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function simpan(Request $request,$id){
-        $request->validate([
-            'option' => 'required',
-            'kendala' => 'required',
-        ]);
-        $count = Pertanyaan::select('id')->where('bagian',$request->bagian)->get();
-        for ($i=0; $i < count($count); $i++) {
-            jawaban::create([
-            'user_id' => Auth::user()->id,
-            'question_id' => $count[$i]->id,
-            'answer' => $request->option[$count[$i]->id],
-            'kendala' => $request->kendala[$count[$i]->id],
-        ]);
-        }
-
-        return redirect('/evaluasi-diri-tipe1')->with('status', 'pertanyaan Berhasil Ditambahkan');
+    public function store(Request $request)
+    {
+        //
     }
 
     /**
@@ -97,6 +103,4 @@ class bagianSatuController extends Controller
     {
         //
     }
-
-
 }

@@ -23,22 +23,6 @@
             </select>
 		    </div>
 
-        <div class="modal-body">
-            <label for="message-text" class="col-form-label">Nomor</label>
-            <select class="form-control" name="nomor">
-              <option></option>
-              <option value="1.1">1.1</option>
-              <option value="1.2">1.2</option>
-              <option value="1.3">1.3</option>
-              <option value="1.4">1.4</option>
-              <option value="1.5">1.5</option>
-              <option value="1.6">1.6</option>
-              <option value="1.7">1.7</option>
-              <option value="1.8">1.8</option>
-              <option value="1.9">1.9</option>
-            </select>
-	    </div>
-
         <div class="modal-footer">
           <button class="btn btn-back" data-bs-dismiss="modal">Kembali</button>
           <button type="submit" class="btn btn-tambah-data">Simpan</button>

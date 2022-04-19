@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Bab;
-use App\Models\Pertanyaan;
-use App\Models\SubBab;
 use Illuminate\Http\Request;
+use App\Models\Pertanyaan;
+use App\Models\Bab;
+use App\Models\SubBab;
 
-class PedagogikController extends Controller
+
+class KompetisiPembelajaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +17,10 @@ class PedagogikController extends Controller
      */
     public function index()
     {
-        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 1);
-        $sub = SubBab::all()->where('bab_id', '=', 1);
+        $pertanyaan = Pertanyaan::all()->where('bab_id', '=', 8);
+        $sub = SubBab::all()->where('bab_id', '=', 8);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik.pedagogik', compact('pertanyaan', 'sub'));
+        return view('admin.hasil-evaluasi-diri.bagian-d.kompetensi-pembelajaran-berkualitas', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -45,16 +46,16 @@ class PedagogikController extends Controller
             'question' => 'required',
         ]);
 
-        $babID = 1;
+        $babID = 8;
 
         Pertanyaan::create([
-            'bagian' => 1,
+            'bagian' => 2,
             'bab_id' => $babID,
             'sub_bab_id' => $request->sub_bab_id,
             'question' => $request->question,
         ]);
 
-        return redirect('hasil-evaluasi-individu-a-pedagogik')->with('status', 'pertanyaan Berhasil Ditambahkan');
+        return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('status', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -76,9 +77,9 @@ class PedagogikController extends Controller
      */
     public function edit(Pertanyaan $pertanyaan)
     {
-        $sub = SubBab::all()->where('bab_id', '=', 1);
+        $sub = SubBab::all()->where('bab_id', '=', 8);
 
-        return view('admin.hasil-evaluasi-diri.bagian-a.pedagogik.edit-question', compact('pertanyaan', 'sub'));
+        return view('admin.hasil-evaluasi-diri.bagian-d.edit-question', compact('pertanyaan', 'sub'));
     }
 
     /**
@@ -90,16 +91,16 @@ class PedagogikController extends Controller
      */
     public function update(Request $request, Pertanyaan $pertanyaan)
     {
-        $babID = 1;
+        $babID = 8;
         Pertanyaan::where('id', $pertanyaan->id)
             ->update([
-                'bagian' => 1,
+                'bagian' => 2,
                 'bab_id' => $babID,
                 'sub_bab_id' => $request->sub_bab_id,
                 'question' => $request->question,
             ]);
 
-                return redirect('hasil-evaluasi-individu-a-pedagogik')->with('status', 'pertanyaan Berhasil Diubah');
+                return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('status', 'pertanyaan Berhasil Diubah');
     }
 
     /**
@@ -111,6 +112,6 @@ class PedagogikController extends Controller
     public function destroy(Pertanyaan $pertanyaan)
     {
         Pertanyaan::destroy($pertanyaan->id);
-        return redirect('/hasil-evaluasi-individu-a-pedagogik')->with('status', 'Data Berhasil Dihapus');
+        return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('status', 'Data Berhasil Dihapus');
     }
 }

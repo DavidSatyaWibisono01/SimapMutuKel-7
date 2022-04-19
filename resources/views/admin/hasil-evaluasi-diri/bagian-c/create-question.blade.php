@@ -1,7 +1,7 @@
 <div class="modal fade" id="exampleModal-Tambah-Question" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
-        <form action="/hasil-evaluasi-individu-a-berbagai-hal/create" method="POST">
+        <form action="/hasil-evaluasi-individu-c-karya-inovatif/create" method="POST">
         @csrf
         <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Tambah Pertanyaan</h5>

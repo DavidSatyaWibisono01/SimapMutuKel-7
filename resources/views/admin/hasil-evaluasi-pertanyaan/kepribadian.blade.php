@@ -5,7 +5,7 @@
 <!-- page content -->
 <div class="right_col">
   <div class="">
-    
+
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <!-- End Title dari Menu -->
-    
+
     <!-- Button Cari & Tambah -->
     <div class="input-group">
       <input type="text" class="input-search">
@@ -22,7 +22,7 @@
       </span>
     </div>
     <!-- End Button Cari & Tambah -->
-      
+
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
@@ -35,7 +35,7 @@
             <tr class="bg-table-color">
                 <td></td>
                 <td colspan='2'><b> Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya </b></td>
-                
+
                 <td class="td-question">Tidak Pernah</td>
                 <td class="td-question">Jarang</td>
                 <td class="td-question">Sering</td>
@@ -43,16 +43,18 @@
             </tr>
           </thead>
 
+          @foreach ($pertanyaan as $p)
           <tbody>
             <tr>
-                <td colspan='1'>1</td>
-                <td colspan='2'>Mohon kesediaan Anda untuk memberikan penilaian dan masukan kepada GraPari Telkomsel, dimana hal ini sangat bermanfaat untuk meningkatkan kualitas layanan kami.</td>
+                <td colspan='1'>{{$loop->iteration}}</td>
+                <td colspan='2'>{{$p->question}}</td>
                 <td class="ck-question">23</td>
                 <td class="ck-question">88</td>
                 <td class="ck-question">72</td>
                 <td class="ck-question">90</td>
             </tr>
           </tbody>
+          @endforeach
       </table>
     </div>
     <!-- End Table -->

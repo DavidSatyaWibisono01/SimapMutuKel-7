@@ -41,17 +41,15 @@ class BerbagaiHalController extends Controller
     {
         $request->validate([
             'sub_bab_id' => 'required',
-            'nomor' => 'required',
             'question' => 'required',
         ]);
 
         $babID = 5;
 
         Pertanyaan::create([
-            'bagian' => 1,
+            'bagian' => 2,
             'bab_id' => $babID,
             'sub_bab_id' => $request->sub_bab_id,
-            'nomor' => $request->nomor,
             'question' => $request->question,
         ]);
 
@@ -94,10 +92,9 @@ class BerbagaiHalController extends Controller
         $babID = 5;
         Pertanyaan::where('id', $pertanyaan->id)
             ->update([
-                'bagian' => 1,
+                'bagian' => 2,
                 'bab_id' => $babID,
                 'sub_bab_id' => $request->sub_bab_id,
-                'nomor' => $request->nomor,
                 'question' => $request->question,
             ]);
 

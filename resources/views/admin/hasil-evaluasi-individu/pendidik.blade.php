@@ -5,7 +5,7 @@
 <!-- page content -->
 <div class="right_col">
   <div class="">
-    
+
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
@@ -13,7 +13,7 @@
       </div>
     </div>
     <!-- End Title dari Menu -->
-    
+
     <!-- Button Cari & Tambah -->
     <div class="input-group">
       <input type="text" class="input-search">
@@ -22,7 +22,7 @@
       </span>
     </div>
     <!-- End Button Cari & Tambah -->
-      
+
     <!-- Table -->
     <div class="table-responsive">
       <table class="table table-hover bulk_action">
@@ -37,13 +37,21 @@
           </thead>
 
           <tbody>
-            <tr>
-                <td>1</td>
-                <td>Nomin</td>
-                <td>B. Inggris</td>
-                <td>Pendidik</td>
-                <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru"><i class="fa fi-rr-eye"></i></a></td>
-            </tr>
+              <?php $no = 1?>
+            @foreach ( $hasilPendidik as $hp )
+                @foreach ( $sudahisi as $s)
+                    @if ($hp->id == $s->user_id)
+                        <tr>
+                            <th scope="row">{{$no}}</th>
+                            <td>{{$hp->name}}</td>
+                            <td>{{$hp->bidang}}</td>
+                            <td>{{$hp->status}}</td>
+                            <td class="ckk-question"><a href="/hasil-evaluasi-individu-profil-guru/{{$hp->id}}"><i class="fa fi-rr-eye"></i></a></td>
+                        </tr>
+                        <?php $no++?>
+                    @endif
+                @endforeach
+            @endforeach
           </tbody>
       </table>
     </div>
