@@ -28,11 +28,11 @@
       <table class="table table-hover bulk_action">
           <thead>
             <tr>
-                <th><b>No</b></th>
-                <th><b>Nama</b></th>
-                <th><b>Bidang</b></th>
-                <th><b>Status</b></th>
-                <th colspan='4' class="ckk-question"><b>Aksi</b></th>
+                <th>No</th>
+                <th>Nama</th>
+                <th>dang</th>
+                <th>Status</th>
+                <th colspan='4' class="ckk-question">Aksi</th>
             </tr>
           </thead>
 

@@ -42,12 +42,15 @@
                 <th colspan='2'><b>Pertanyaan</b></th>
                 <th class="ck-question" colspan='5'><b>Aksi</b></th>
             </tr>
+            @if ($sub != null)
+
             @foreach ($sub as $sb )
             <tr class="bg-table-color">
                 <td></td>
                 <td colspan='4'><b> {{$sb->nama_bab}} </b></td>
             </tr>
             @endforeach
+            @endif
           </thead>
 
           <tbody>

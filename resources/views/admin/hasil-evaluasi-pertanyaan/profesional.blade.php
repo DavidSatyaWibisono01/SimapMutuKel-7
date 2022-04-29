@@ -32,26 +32,25 @@
                 <th colspan='2'><b>Pertanyaan</b></th>
                 <th class="ck-question" colspan='5'><b>Hasil Evaluasi</b></th>
             </tr>
-            <tr class="bg-table-color">
-                <td></td>
-                <td colspan='2'><b> Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya </b></td>
-
-                <td class="td-question">Tidak Pernah</td>
-                <td class="td-question">Jarang</td>
-                <td class="td-question">Sering</td>
-                <td class="td-question">Selalu</td>
-            </tr>
           </thead>
+          <tr class="bg-table-color">
+            <td></td>
+            <td colspan='2'><b> Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya </b></td>
 
+            <td class="td-question">Tidak Pernah</td>
+            <td class="td-question">Jarang</td>
+            <td class="td-question">Sering</td>
+            <td class="td-question">Selalu</td>
+        </tr>
           @foreach ($pertanyaan as $p)
           <tbody>
             <tr>
                 <td colspan='1'>{{$loop->iteration}}</td>
                 <td colspan='2'>{{$p->question}}</td>
-                <td class="ck-question">23</td>
-                <td class="ck-question">88</td>
-                <td class="ck-question">72</td>
-                <td class="ck-question">90</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Tidak Pernah')->where('question_id', $p->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Jarang')->where('question_id', $p->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Sering')->where('question_id', $p->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Selalu')->where('question_id', $p->id)->count()}}</td>
             </tr>
           </tbody>
           @endforeach
@@ -60,9 +59,9 @@
     <!-- End Table -->
 
     <!-- Pagination -->
-    <div class="field item form-group btn-data">
+    {{-- <div class="field item form-group btn-data">
         <button type="button" class="btn btn-next">Selanjutnya</button>
-    </div>
+    </div> --}}
     <!-- End Pagination -->
 
     <!-- End page content -->
