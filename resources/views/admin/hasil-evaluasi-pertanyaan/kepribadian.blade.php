@@ -48,10 +48,10 @@
             <tr>
                 <td colspan='1'>{{$loop->iteration}}</td>
                 <td colspan='2'>{{$p->question}}</td>
-                <td class="ck-question">23</td>
-                <td class="ck-question">88</td>
-                <td class="ck-question">72</td>
-                <td class="ck-question">90</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Tidak Pernah')->where('question_id', $p->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Jarang')->where('question_id', $p->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Sering')->where('question_id', $p->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Selalu')->where('question_id', $p->id)->count()}}</td>
             </tr>
           </tbody>
           @endforeach
@@ -60,9 +60,9 @@
     <!-- End Table -->
 
     <!-- Pagination -->
-    <div class="field item form-group btn-data">
+    {{-- <div class="field item form-group btn-data">
         <button type="button" class="btn btn-next">Selanjutnya</button>
-    </div>
+    </div> --}}
     <!-- End Pagination -->
 
     <!-- End page content -->
