@@ -6,7 +6,7 @@
         <div class="">
 
 
-            
+
             <!-- Title dari Menu -->
             <div class="page-title">
                 <div class="title_left page-title-left">
@@ -32,12 +32,11 @@
                             <h5><b>C.</b> Kompetensi Menghasilkan Karya Inovatif.</h5>
                             <h5><b>D.</b> Kompetensi Untuk Penunjang Pelaksanaan Pembelajaran Berkualitas (TIK, Bahasa Asing, Dsb).</h5>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
 
             <div class="field item form-group btn-card-user">
-                <p>Total : 91 Pertanyaan</p>
                 <a href="/evaluasi-diri-tipe2">
                     <button type="button" class="btn btn-next-card">Mulai</button>
                 </a>

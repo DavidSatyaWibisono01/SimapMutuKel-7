@@ -51,7 +51,7 @@
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Bidang<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
                         <select name="bidang" class="form-control" value="{{ $user->bidang }}">
-                            <option value="{{ $user->bidang }}>{{ $user->bidang }}</option>
+                            <option value="{{ $user->bidang }}">{{ $user->bidang }}</option>
                             <option value="Matematika">Matematika</option>
                             <option value="Bahasa Indonesia">Bahasa Indonesia</option>
                             <option value="Bahasa Inggris">Bahasa Inggris</option>

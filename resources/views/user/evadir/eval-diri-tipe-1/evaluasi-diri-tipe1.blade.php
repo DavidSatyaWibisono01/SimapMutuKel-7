@@ -1,6 +1,9 @@
 @extends('user/layout-navbar/navbar')
 
 @section('container')
+@if ($message = Session::get('success'))
+  <?php echo "<script>alert('Anda telah menyelesaikan pengisian form Evaluasi Diri')</script>"; ?>
+@endif
 <!-- page content -->
 <div class="container-card">
   <div class="">
@@ -80,7 +83,7 @@
 
     <!-- Pagination -->
     <div class="field item form-group btn-data">
-        <button type="submit" class="btn btn-next">Selanjutnya</button>
+        <button type="submit" class="btn btn-next">Selesai</button>
     </form>
     </div>
     <!-- End Pagination -->

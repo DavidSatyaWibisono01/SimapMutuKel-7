@@ -4,7 +4,7 @@
 
     <div class="container-card">
         <div class="">
-            
+
             <!-- Title dari Menu -->
             <div class="page-title">
                 <div class="title_left page-title-left">
@@ -31,12 +31,11 @@
                                 <li>Profesi</li>
                             </ul>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
             </div>
 
             <div class="field item form-group btn-card-user">
-                <p>Total : 91 Pertanyaan</p>
                 <a href="/evaluasi-diri-tipe1">
                     <button type="button" class="btn btn-next-card">Mulai</button>
                 </a>

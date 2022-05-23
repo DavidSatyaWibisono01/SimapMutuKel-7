@@ -21,20 +21,6 @@
     <!-- End Title dari Menu -->
 
     <!-- Button Cari & Tambah -->
-    <div class="input-group">
-      <input type="text" class="input-search">
-      <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fa fi-rr-search"></i> Cari</button>
-      </span>
-      <div class="col-md-5 mb-3">
-          <select class="form-control">
-              <option></option>
-              <option>Jomblo Fisabililah</option>
-              <option>Jomblo Akut</option>
-              <option>Perawan tapi kelamin koncol</option>
-          </select>
-        </div>
-    </div>
     <!-- End Button Cari & Tambah -->
 
     <!-- Table -->
@@ -48,8 +34,7 @@
             </tr>
             <tr class="bg-table-color">
                 <td></td>
-                <th colspan='2'><b> Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya </b></th>
-
+                <th colspan="2"></th>
                 <th class="cks-question-dua">Level Kinerja</th>
                 <th class="cks-question">Kendala yang dihadapi</th>
             </tr>

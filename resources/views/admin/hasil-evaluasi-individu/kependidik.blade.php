@@ -15,12 +15,6 @@
     <!-- End Title dari Menu -->
 
     <!-- Button Cari & Tambah -->
-    <div class="input-group">
-      <input type="text" class="input-search">
-      <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fa fi-rr-search"></i> Cari</button>
-      </span>
-    </div>
     <!-- End Button Cari & Tambah -->
 
     <!-- Table -->
@@ -57,17 +51,6 @@
     <!-- End Table -->
 
     <!-- Pagination -->
-    <div class="pagination pagi-right">
-      <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-left"></i></button>
-      </li>
-        <button type="button" class="btn btn-pagination">1</button>
-        <button type="button" class="btn btn-pagination">2</button>
-        <button type="button" class="btn btn-pagination">3</button>
-      <li class="page-item">
-        <button type="button" class="btn btn-pagination"><i class="fa fi-rr-arrow-right"></i></button>
-      </li>
-    </div>
     <!-- End Pagination -->
 
     <!-- End page content -->
