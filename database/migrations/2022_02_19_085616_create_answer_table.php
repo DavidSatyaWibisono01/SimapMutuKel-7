@@ -18,7 +18,7 @@ class CreateAnswerTable extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('question id');
             $table->string('answer');
-            $table->string('kendala');
+            $table->string('kendala')->nullable();
             $table->timestamps();
         });
     }

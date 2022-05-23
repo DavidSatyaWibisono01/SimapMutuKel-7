@@ -13,7 +13,7 @@ class CreateQuestionTable extends Migration
      */
     public function up()
     {
-        Schema::create('question', function (Blueprint $table) {
+        Schema::create('pertanyaans', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('bagian');
             $table->bigInteger('bab_id');

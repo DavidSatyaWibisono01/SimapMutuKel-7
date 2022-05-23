@@ -24,24 +24,32 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
-        $imgName = null;
         if ($request->foto) {
             $imgName = $request->foto->getClientOriginalName() . '-' . time() . '-' . $request->foto->extension();
 
             //$imgName=$request->foto->getClientOriginalName();
             $request->foto->move(public_path('post-images'), $imgName);
+            User::where('id', $request->user()->id)
+                ->update([
+                    'name' => $request->nama,
+                    'jk' => $request->jk,
+                    'bidang' => $request->bidang,
+                    'status' => $request->status,
+                    'username' => $request->username,
+                    // 'password' => bcrypt($request->password),
+                    'foto' => $imgName,
+                ]);
+                return redirect()->back()->with('status', 'Data Karyawan Berhasil Diubah');
         }
-
         User::where('id', $request->user()->id)
-            ->update([
-                'name' => $request->nama,
-                'jk' => $request->jk,
-                'bidang' => $request->bidang,
-                'status' => $request->status,
-                'username' => $request->username,
-                // 'password' => bcrypt($request->password),
-                'foto' => $imgName,
-            ]);
-        return redirect()->back()->with('status', 'Data Karyawan Berhasil Diubah');
+                ->update([
+                    'name' => $request->nama,
+                    'jk' => $request->jk,
+                    'bidang' => $request->bidang,
+                    'status' => $request->status,
+                    'username' => $request->username,
+                    // 'password' => bcrypt($request->password),
+                ]);
+                return redirect()->back()->with('status', 'Data Karyawan Berhasil Diubah');
     }
 }

@@ -68,7 +68,7 @@
 
     <!-- Pagination -->
     <div class="field item form-group btn-data">
-        <button type="submit" class="btn btn-next">Selanjutnya</button>
+        <button type="submit" class="btn btn-next">Selesai</button>
     </div>
     </form>
     <!-- End Pagination -->

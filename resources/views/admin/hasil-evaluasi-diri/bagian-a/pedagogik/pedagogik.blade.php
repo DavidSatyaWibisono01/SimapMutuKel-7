@@ -22,10 +22,6 @@
 
     <!-- Button Cari & Tambah -->
     <div class="input-group">
-      <input type="text" class="input-search">
-      <span class="input-group-btn">
-          <button type="button" class="btn btn-search"><i class="fa fi-rr-search"></i> Cari</button>
-      </span>
       <span class="input-group-btn">
           <button type="button" class="btn btn-tambah-data"  data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Question" data-bs-whatever="@fat"><i class="fa fi-rr-add"></i> Tambah Pertanyaan</button>
           @extends('admin/hasil-evaluasi-diri/bagian-a/pedagogik/create-question')
@@ -42,31 +38,31 @@
                 <th colspan='2'><b>Pertanyaan</b></th>
                 <th class="ck-question" colspan='5'><b>Aksi</b></th>
             </tr>
-            @if ($sub != null)
+          </thead>
 
+          <tbody>
+            @if ($sub != null)
             @foreach ($sub as $sb )
             <tr class="bg-table-color">
                 <td></td>
                 <td colspan='4'><b> {{$sb->nama_bab}} </b></td>
             </tr>
-            @endforeach
-            @endif
-          </thead>
-
-          <tbody>
-            @if ($pertanyaan != null)
-
-            @foreach ($pertanyaan as $prtn)
-            <tr>
-                <td>{{$loop->iteration}}</td>
-                <td>{{$prtn->question}}</td>
-                <td class="ckk-question"><a href="/hasil-evaluasi-individu-a-pedagogik/edit/{{$prtn->id}}" ><i class="fi fi-rr-edit"></i></a></td>
-                <form action="/hasil-evaluasi-individu-a-pedagogik/delete/{{$prtn->id}}" method="post">
-                    @method('delete')
-                    @csrf
-                <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
-                </form>
-            </tr>
+                @foreach ($pertanyaan as $prtn)
+                @if ($prtn->bab_id == 1)
+                    @if ($prtn->sub_bab_id == $sb->id)
+                        <tr>
+                            <td>{{$loop->iteration}}</td>
+                            <td>{{$prtn->question}}</td>
+                            <td class="ckk-question"><a href="/hasil-evaluasi-individu-a-pedagogik/edit/{{$prtn->id}}" ><i class="fi fi-rr-edit"></i></a></td>
+                            <form action="/hasil-evaluasi-individu-a-pedagogik/delete/{{$prtn->id}}" method="post">
+                                @method('delete')
+                                @csrf
+                            <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
+                            </form>
+                        </tr>
+                    @endif
+                @endif
+                @endforeach
             @endforeach
             @endif
           </tbody>
