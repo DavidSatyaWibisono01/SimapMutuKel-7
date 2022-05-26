@@ -1,7 +1,9 @@
 @extends('user/layout-navbar/navbar')
 
 @section('container')
-
+@if ($message = Session::get('success'))
+  <?php echo "<script>alert('Anda telah menyelesaikan pengisian form Evaluasi Diri Bagian 2')</script>"; ?>
+@endif
 <!-- page content -->
 <div class="container-card">
   <div class="">
@@ -9,10 +11,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>Berbagai hal terkait dengan pemenuhan peningkatan kompetensi inti tersebut</h1>
-      </div>
-      <div class="title_left mb-3">
-        <h2>Pedagogik</h2>
+        <h1>Evaluasi Diri Bagian 2</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
@@ -39,7 +38,7 @@
             </tr>
             <tr class="bg-table-color">
                 <td></td>
-                <td colspan='2'><b>Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya</b></td>
+                <td colspan='2'></td>
 
                 <td class="tds-question" colspan='2'>Harap diisi</td>
                 <td class="tds-question" colspan='4'>Harap diisi</td>
@@ -54,7 +53,7 @@
                 <td colspan='1'>{{$loop->iteration}}</td>
                 <td colspan='2'>{{$p->question}}</td>
                 <td colspan='2'>
-                  <textarea class="form-control" name="kinerja[{{$p->id}}]" rows="3" placeholder="" ></textarea>
+                  <textarea class="form-control" name="kinerja[{{$p->id}}]" rows="3" placeholder="" required></textarea>
                 </td>
                 <td colspan='4'>
                   <textarea class="form-control" name="kendala[{{$p->id}}]" rows="3" placeholder="" ></textarea>

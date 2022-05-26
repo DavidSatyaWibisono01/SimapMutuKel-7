@@ -16,7 +16,6 @@
 
     <!-- Button Cari & Tambah -->
     <div class="input-group">
-      <input type="text" class="input-search">
       <span class="input-group-btn">
           <button type="button" class="btn btn-tambah-data"  data-bs-toggle="modal" data-bs-target="#exampleModal-Tambah-Question" data-bs-whatever="@fat"><i class="fa fi-rr-add"></i> Tambah Pertanyaan</button>
           @extends('admin/hasil-evaluasi-diri/bagian-c/create-question')

@@ -27,25 +27,39 @@
           </thead>
           <tr class="bg-table-color">
             <td></td>
-            <td colspan='2'><b> Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya </b></td>
+            <td colspan='2'></td>
 
             <td class="td-question">Tidak Pernah</td>
             <td class="td-question">Jarang</td>
             <td class="td-question">Sering</td>
             <td class="td-question">Selalu</td>
         </tr>
-          @foreach ($pertanyaan as $p)
+
           <tbody>
+            @if ($sub != null)
+            @foreach ($sub as $sb )
+            <tr class="bg-table-color">
+                <td></td>
+                <td colspan='8'><b> {{$sb->nama_bab}} </b></td>
+            </tr>
+                @foreach ($pertanyaan as $prtn)
+                @if ($prtn->bab_id == 1)
+                    @if ($prtn->sub_bab_id == $sb->id)
             <tr>
                 <td colspan='1'>{{$loop->iteration}}</td>
-                <td colspan='2'>{{$p->question}}</td>
-                <td class="ck-question">{{$hasil->where('answer', 'Tidak Pernah')->where('question_id', $p->id)->count()}}</td>
-                <td class="ck-question">{{$hasil->where('answer', 'Jarang')->where('question_id', $p->id)->count()}}</td>
-                <td class="ck-question">{{$hasil->where('answer', 'Sering')->where('question_id', $p->id)->count()}}</td>
-                <td class="ck-question">{{$hasil->where('answer', 'Selalu')->where('question_id', $p->id)->count()}}</td>
+                <td colspan='2'>{{$prtn->question}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Tidak Pernah')->where('question_id', $prtn->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Jarang')->where('question_id', $prtn->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Sering')->where('question_id', $prtn->id)->count()}}</td>
+                <td class="ck-question">{{$hasil->where('answer', 'Selalu')->where('question_id', $prtn->id)->count()}}</td>
             </tr>
-        </tbody>
+            @endif
+            @endif
+            @endforeach
         @endforeach
+        @endif
+        </tbody>
+
       </table>
     </div>
     <!-- End Table -->

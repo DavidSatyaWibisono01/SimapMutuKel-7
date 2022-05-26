@@ -15,19 +15,13 @@ class DataUserController extends Controller
      */
     public function pendidik(Request $request)
     {
-        $keyword=$request->get('keyword');
-
-        if($keyword){
-            $user=User::all()->where("name","LIKE","%$keyword%");
-        }else{
-            $user = DB::table('users')->where('status', '=', 'Pendidik')->paginate(10);
-        }
+        $user = DB::table('users')->where('status', '=', 'Pendidik')->paginate(10);
         return view('admin.data-pendidik-kependidikan.data-pendidik', compact('user'));
     }
 
     public function kependidikan()
     {
-        $user = DB::table('users')->where('status', '=', 'Kependidik')->paginate(10);
+        $user = DB::table('users')->where('status', '=', 'Kependidikan')->paginate(10);
         return view('admin.data-pendidik-kependidikan.data-kependidik', compact('user'));
     }
 

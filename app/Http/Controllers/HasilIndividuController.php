@@ -19,7 +19,7 @@ class HasilIndividuController extends Controller
     public function kependidikHasil()
     {
         $sudahisi = Jawaban::select('user_id')->distinct()->get();
-        $hasilKependidik = User::where('status','Kependidik')->paginate(10);
+        $hasilKependidik = User::where('status','Kependidikan')->paginate(10);
 
         return view('admin.hasil-evaluasi-individu.kependidik', compact('hasilKependidik','sudahisi'));
     }

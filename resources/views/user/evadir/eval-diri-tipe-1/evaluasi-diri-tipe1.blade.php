@@ -2,7 +2,7 @@
 
 @section('container')
 @if ($message = Session::get('success'))
-  <?php echo "<script>alert('Anda telah menyelesaikan pengisian form Evaluasi Diri')</script>"; ?>
+  <?php echo "<script>alert('Anda telah menyelesaikan pengisian form Evaluasi Diri Bagian 1')</script>"; ?>
 @endif
 <!-- page content -->
 <div class="container-card">
@@ -11,10 +11,7 @@
     <!-- Title dari Menu -->
     <div  iv class="page-title">
       <div class="title_left">
-        <h1>A. Kompetensi Inti</h1>
-      </div>
-      <div class="title_left mb-3">
-        <h2>Pedagogik</h2>
+        <h1>Evaluasi Diri Bagian 1</h1>
       </div>
     </div>
     <!-- End Title dari Menu -->
@@ -41,7 +38,7 @@
             </tr>
             <tr class="bg-table-color">
                 <td></td>
-                <td colspan='2'><b>Guru dapat mengidentifikasi karakteristik belajar setiap peserta didik di kelasnya</b></td>
+                <td colspan='2'></td>
 
                 <td class="td-question">Tidak Pernah</td>
                 <td class="td-question">Jarang</td>

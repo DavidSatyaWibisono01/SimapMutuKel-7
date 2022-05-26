@@ -20,7 +20,7 @@
                 </div>
         </div>
 
-        <div class="field item form-group mb-4">
+        {{-- <div class="field item form-group mb-4">
             <label for="message-text" class="col-form-label col-md-3 col-sm-3 label-align">Bagian</label>
             <div class="col-md-6 col-sm-6">
 		    	<select class="form-control" name="sub_bab_id">
@@ -30,7 +30,7 @@
                     @endforeach
 		    	</select>
             </div>
-		</div>
+		</div> --}}
 
       </div>
       <div class="field item form-group btn-data col-md-9 col-sm-9">

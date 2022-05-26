@@ -41,7 +41,6 @@ class KaryaInovatifController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'sub_bab_id' => 'required',
             'question' => 'required',
         ]);
 

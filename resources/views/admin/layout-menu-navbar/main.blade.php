@@ -45,7 +45,7 @@
                 <ul class="nav side-menu">
                   <li><a href="/dashboard"><i class="fa fi-rr-home"></i>Dashboard</a></li>
 
-                  <li><a><i class="fa fi-rr-address-book"></i>Data Pendidik & Kependidik</a>
+                  <li><a><i class="fa fi-rr-address-book"></i>Data Pendidik & Kependidikan</a>
                     <ul class="nav child_menu">
                       <li><a href="/data-pendidik">Pendidik</a></li>
                       <li><a href="/data-kependidik">Kependidikan</a></li>

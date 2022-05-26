@@ -1,7 +1,9 @@
 @extends('user/evadir/eval-diri-tipe-1/layout-nav/nav-bread')
 
 @section('container')
-
+@if ($message = Session::get('success'))
+  <?php echo "<script>alert('Anda telah menyelesaikan pengisian form Evaluasi Diri')</script>"; ?>
+@endif
     <div class="container-card">
         <div class="">
 
