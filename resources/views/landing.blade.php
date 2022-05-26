@@ -77,16 +77,6 @@
           <p class="lead text-muted mt-2">Klik Login untuk masuk dan mulai isi evaluasi diri masing-masing.</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-6 mx-auto">
-          <form action="#" class="subscription-form mt-5">
-            <div class="form-group">
-              <input type="name" name="name" placeholder="masukan saran mu" class="form-control" />
-              <button type="submit" class="btn color-button">Kirim</button>
-            </div>
-          </form>
-        </div>
-      </div>
     </div>
   </section>
 

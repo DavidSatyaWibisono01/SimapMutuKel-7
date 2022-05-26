@@ -51,10 +51,25 @@
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Bidang<span class="required"> :</span></label>
                     <div class="col-md-6 col-sm-6">
                         <select name="bidang" class="form-control" value="{{ $user->bidang }}">
-                            <option value="{{ $user->bidang }}>{{ $user->bidang }}</option>
+                            <option value="{{ $user->bidang }}">{{ $user->bidang }}</option>
                             <option value="Matematika">Matematika</option>
                             <option value="Bahasa Indonesia">Bahasa Indonesia</option>
                             <option value="Bahasa Inggris">Bahasa Inggris</option>
+                            <option value="Bahasa Sunda">Bahasa Sunda</option>
+                            <option value="PIPAS">PIPAS</option>
+                            <option value="PKK">PKK</option>
+                            <option value="Agama">Agama</option>
+                            <option value="PPKn">PPKn</option>
+                            <option value="Sejarah">Sejarah</option>
+                            <option value="PJOK">PJOK</option>
+                            <option value="Informatika">Informatika</option>
+                            <option value="Program Keahlian PPLG">Program Keahlian PPLG</option>
+                            <option value="Program Keahlian TJKT">Program Keahlian TJKT</option>
+                            <option value="Program Keahlian DKV">Program Keahlian DKV</option>
+                            <option value="Program Keahlian MPLB">Program Keahlian MPLB</option>
+                            <option value="Program Keahlian PMN">Program Keahlian PMN</option>
+                            <option value="Program Keahlian HTL">Program Keahlian HTL</option>
+                            <option value="Program Keahlian KLN">Program Keahlian KLN</option>
                         </select>
                     </div>
                 </div>
@@ -64,7 +79,7 @@
                         <select name="status" class="form-control">
                             <option value="{{ $user->status }}">{{ $user->status }}</option>
                             <option value="Pendidik">Pendidik</option>
-                            <option value="Kependidik">Kependidik</option>
+                            <option value="Kependidikan">Kependidikan</option>
                         </select>
                     </div>
                 </div>

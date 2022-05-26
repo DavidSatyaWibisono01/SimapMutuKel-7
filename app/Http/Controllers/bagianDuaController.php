@@ -35,7 +35,7 @@ class bagianDuaController extends Controller
         ]);
         }
 
-        return redirect('/evaluasi-diri-tipe2')->with('status', 'pertanyaan Berhasil Ditambahkan');
+        return redirect('/evaluasi-diri-tipe2')->with('success', 'Anda telah menyelesaikan pengisian form Evaluasi Diri');
     }
 
     /**

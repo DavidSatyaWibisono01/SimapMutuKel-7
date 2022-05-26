@@ -45,7 +45,12 @@
                 <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="{!! asset('assets/images/logo-wk.png') !!}" alt=""> <i class="fa fa-angle-down profile-nav"></i>
+                        @if(auth()->user()->foto)
+                        <img src="/post-images/{{ auth()->user()->foto }}">
+                        @else
+                        <img src="/post-images/none.png">
+                        @endif
+                    <i class="fa fa-angle-down profile-nav"></i>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                       <a class="dropdown-item"  href="/user-edit-profile">Edit Profile</a>
@@ -58,7 +63,7 @@
             </div>
         </div>
         <!-- /top navigation -->
-      
+
         <!-- pembatas content -->
         @yield('container')
         <!-- /pembatas content -->

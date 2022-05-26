@@ -16,7 +16,7 @@ class CreateAnswerTable extends Migration
         Schema::create('answer', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('user_id');
-            $table->bigInteger('question id');
+            $table->bigInteger('question_id');
             $table->string('answer');
             $table->string('kendala')->nullable();
             $table->timestamps();

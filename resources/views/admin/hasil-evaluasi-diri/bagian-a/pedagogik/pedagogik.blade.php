@@ -41,6 +41,7 @@
           </thead>
 
           <tbody>
+            <?php $no=1 ?>
             @if ($sub != null)
             @foreach ($sub as $sb )
             <tr class="bg-table-color">
@@ -51,7 +52,7 @@
                 @if ($prtn->bab_id == 1)
                     @if ($prtn->sub_bab_id == $sb->id)
                         <tr>
-                            <td>{{$loop->iteration}}</td>
+                            <td>{{$no}}</td>
                             <td>{{$prtn->question}}</td>
                             <td class="ckk-question"><a href="/hasil-evaluasi-individu-a-pedagogik/edit/{{$prtn->id}}" ><i class="fi fi-rr-edit"></i></a></td>
                             <form action="/hasil-evaluasi-individu-a-pedagogik/delete/{{$prtn->id}}" method="post">
@@ -60,6 +61,7 @@
                             <td class="ckk-question"><button class="border-0" type="submit" ><i class="fi fi-rr-trash"></i></button></td>
                             </form>
                         </tr>
+                        <?php $no++?>
                     @endif
                 @endif
                 @endforeach
