@@ -57,16 +57,16 @@
                     <td colspan='1'>{{$loop->iteration}}</td>
                     <td colspan='2'>{{$p->question}}</td>
                     <td class="ck-question">
-                                      <input type="radio" value="Tidak Pernah" name="option[{{$p->id}}]">
+                                      <input type="radio" value="Tidak Pernah" name="option[{{$p->id}}]" required>
                     </td>
                     <td class="ck-question">
-                                      <input type="radio" value="Jarang" name="option[{{$p->id}}]">
+                                      <input type="radio" value="Jarang" name="option[{{$p->id}}]" required>
                     </td>
                     <td class="ck-question">
-                                      <input type="radio" value="Sering" name="option[{{$p->id}}]">
+                                      <input type="radio" value="Sering" name="option[{{$p->id}}]" required>
                     </td>
                     <td class="ck-question">
-                                      <input type="radio" value="Selalu" name="option[{{$p->id}}]">
+                                      <input type="radio" value="Selalu" name="option[{{$p->id}}]" required>
                     </td>
                     <td colspan='2'>
                       <textarea class="form-control" rows="3" name="kendala[{{$p->id}}]" placeholder="" ></textarea>

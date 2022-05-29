@@ -48,14 +48,6 @@
 					</div>
 
                     </form>
-					<div class="text-center p-t-35">
-						<span class="txt1">
-							Lupa Password, hubungi
-						</span>
-						<a class="txt2" href="/dashboard">
-							Dibawah ini
-						</a>
-					</div>
 			</div>
 		</div>
 	</div>
