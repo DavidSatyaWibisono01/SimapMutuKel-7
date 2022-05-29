@@ -37,12 +37,13 @@ Route::get('/', function () {
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/home', [LoginController::class, 'home']);
+
 
 Route::group(['middleware' => 'auth'], function () {
-
-Route::get('/dashboard', [AdminController::class, 'index'])->middleware('auth');
-
-Route::get('user-dashboard', [UserController::class, 'index'])->middleware('auth');
+//admin
+Route::group(['middleware' => ['admin']], function () {
+Route::get('/dashboard', [AdminController::class, 'index']);
 
 Route::get('/data-pendidik', [DataUserController::class, 'pendidik']);
 
@@ -129,9 +130,11 @@ Route::get('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas/edit/
 Route::patch('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas/update/{pertanyaan}', [KompetisiPembelajaranController::class, 'update']);
 Route::delete('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas/delete/{pertanyaan}', [KompetisiPembelajaranController::class, 'destroy']);
 
-Route::get('/hasil-evaluasi-pertanyaan', function () {
-    return view('admin/hasil-evaluasi-pertanyaan/pedagogik');
 });
+
+
+//user
+Route::get('user-dashboard', [UserController::class, 'index']);
 
 Route::get('/evaluasi-diri-1', function () {
     return view('user/evadir/eval-diri-tipe-1/evaluasi-diri-landingpage');

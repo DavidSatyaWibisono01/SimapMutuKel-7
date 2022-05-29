@@ -26,6 +26,9 @@
   </head>
 
   <body class="nav-md">
+    @if ($message = Session::get('error'))
+    <?php echo "<script>alert('Maaf anda tidak memiliki akses!!!')</script>"; ?>
+    @endif
   <div class="container body">
       <div class="main_container">
         <div class="col-md-3 left_col footer_fixed">

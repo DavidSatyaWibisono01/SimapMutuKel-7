@@ -108,7 +108,7 @@
                 </div>
 
                 <div class="field item form-group btn-data col-md-9 col-sm-9">
-                    <a href="/user-dashboard" class="btn btn-back">Batal</a>
+                    <a href="/user-dashboard" class="btn btn-back">Kembali</a>
                     <button type="submit" class="btn btn-tambah-data">Simpan</button>
                 </div>
             </form>

@@ -17,7 +17,7 @@ class CreateQuestionTable extends Migration
             $table->id();
             $table->bigInteger('bagian');
             $table->bigInteger('bab_id');
-            $table->bigInteger('sub_bab_id');
+            $table->bigInteger('sub_bab_id')->nullable();
             $table->string('question');
             $table->timestamps();
         });

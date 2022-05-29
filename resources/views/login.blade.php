@@ -4,19 +4,16 @@
 
 	<div class="limiter">
 		<div class="container-login100">
-			<div class="wrap-login100">
-                    @if(session()->has('success'))
-                    <div class="alert alert-success alert-dismissible position-absolute w-100 fade show" role="alert">
-                        {{session('success')}}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    @endif
-                    @if(session()->has('loginError'))
-                    <div class="alert alert-danger alert-dismissible position-absolute w-100 fade show " role="alert">
-                        {{session('loginError')}}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                    @endif
+            <div class="wrap-login100">
+                @if ($message = Session::get('login_error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                 {{$message}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                @endif
+
 					<span class="login100-form-title p-b-26">
 						SIMAP MUTU
 					</span>
@@ -48,14 +45,6 @@
 					</div>
 
                     </form>
-					<div class="text-center p-t-35">
-						<span class="txt1">
-							Lupa Password, hubungi
-						</span>
-						<a class="txt2" href="/dashboard">
-							Dibawah ini
-						</a>
-					</div>
 			</div>
 		</div>
 	</div>

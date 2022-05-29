@@ -79,10 +79,9 @@ class DataUserController extends Controller
             'username' => $request['username'],
             'password' => bcrypt($request['password']),
             'level' => $request['level'],
-            // 'foto' => $imgName,
         ]);
 
-        return redirect()->back()->with('status', 'Data Karyawan Berhasil Ditambahkan');
+        return redirect()->back();
     }
 
     /**
@@ -128,7 +127,7 @@ class DataUserController extends Controller
             ]);
             if ($user->status == 'Pendidik') {
                 return redirect('/data-pendidik')->with('status', 'Data Pengguna Berhasil Diubah');
-            } elseif ($user->status == 'Kependidik') {
+            } elseif ($user->status == 'Kependidikan') {
                 return redirect('/data-kependidik')->with('status', 'Data Pengguna Berhasil Diubah');
             }
     }

@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Auth\Events\Validated;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class LoginController extends Controller
 {
@@ -41,7 +42,7 @@ class LoginController extends Controller
 
         return redirect('/login')
                                 ->withInput()
-                                ->withErrors(['login_gagal' => 'These credentials do not match our records.']);
+                                ->with('login_error', 'Maaf Username atau Password anda salah, mohon coba lagi.');
     }
 
 
@@ -54,5 +55,15 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/login');
+    }
+
+    public function home()
+    {
+       $user = Auth::user();
+       if($user->level == 'admin'){
+       return redirect('/dashboard');
+       }elseif($user->level == 'user'){
+        return redirect('/user-dashboard');
+       }
     }
 }
