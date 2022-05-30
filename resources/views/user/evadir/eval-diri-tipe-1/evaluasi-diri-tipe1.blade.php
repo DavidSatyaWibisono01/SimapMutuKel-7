@@ -33,7 +33,7 @@
             <tr>
                 <th><b>No</b></th>
                 <th colspan='2'><b>Pertanyaan</b></th>
-                <th class="ck-question" colspan='5'><b>Hasil Evaluasi</b></th>
+                <th class="ck-question" colspan='5'><b>Level Kinerja</b></th>
                 <th class="tds-question" colspan='5'><b>Kendala yang dihadapi</b></th>
             </tr>
             <tr class="bg-table-color">

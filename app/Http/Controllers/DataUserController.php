@@ -81,7 +81,7 @@ class DataUserController extends Controller
             'level' => $request['level'],
         ]);
 
-        return redirect()->back();
+        return redirect()->back()->with('simpan', 'Data Pengguna Berhasil Disimpan');
     }
 
     /**
@@ -126,9 +126,9 @@ class DataUserController extends Controller
                 'level' => $request->level,
             ]);
             if ($user->status == 'Pendidik') {
-                return redirect('/data-pendidik')->with('status', 'Data Pengguna Berhasil Diubah');
+                return redirect('/data-pendidik')->with('update', 'Data Pengguna Berhasil Diubah');
             } elseif ($user->status == 'Kependidikan') {
-                return redirect('/data-kependidik')->with('status', 'Data Pengguna Berhasil Diubah');
+                return redirect('/data-kependidik')->with('update', 'Data Pengguna Berhasil Diubah');
             }
     }
 
@@ -142,9 +142,9 @@ class DataUserController extends Controller
     {
         User::destroy($user->id);
         if ($user->status == 'Pendidik') {
-            return redirect('/data-pendidik')->with('status', 'Data Pengguna Berhasil Dihapus');
-        } elseif ($user->status == 'Kependidik') {
-            return redirect('/data-kependidik')->with('status', 'Data Pengguna Berhasil Dihapus');
+            return redirect('/data-pendidik')->with('hapus', 'Data Pengguna Berhasil Dihapus');
+        } elseif ($user->status == 'Kependidikan') {
+            return redirect('/data-kependidik')->with('hapus', 'Data Pengguna Berhasil Dihapus');
         }
     }
 }

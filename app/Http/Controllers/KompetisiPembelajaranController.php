@@ -54,7 +54,7 @@ class KompetisiPembelajaranController extends Controller
             'question' => $request->question,
         ]);
 
-        return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('status', 'pertanyaan Berhasil Ditambahkan');
+        return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('simpan', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -99,7 +99,7 @@ class KompetisiPembelajaranController extends Controller
                 'question' => $request->question,
             ]);
 
-                return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('status', 'pertanyaan Berhasil Diubah');
+                return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('update', 'pertanyaan Berhasil Diubah');
     }
 
     /**
@@ -111,6 +111,6 @@ class KompetisiPembelajaranController extends Controller
     public function destroy(Pertanyaan $pertanyaan)
     {
         Pertanyaan::destroy($pertanyaan->id);
-        return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('status', 'Data Berhasil Dihapus');
+        return redirect('/hasil-evaluasi-individu-d-kompetensi-pembelajaran-berkualitas')->with('hapus', 'Data Berhasil Dihapus');
     }
 }

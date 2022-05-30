@@ -1,7 +1,15 @@
 @extends('admin/layout-menu-navbar/main')
 
 @section('container')
-
+@if ($message = Session::get('hapus'))
+  <?php echo "<script>alert('Data Pertanyaan Berhasil Dihapus')</script>"; ?>
+@endif
+@if ($message = Session::get('update'))
+  <?php echo "<script>alert('Data Pertanyaan Berhasil Diubah')</script>"; ?>
+@endif
+@if ($message = Session::get('simpan'))
+  <?php echo "<script>alert('Data Pertanyaan Berhasil Disimpan')</script>"; ?>
+@endif
 <!-- page content -->
 <div class="right_col">
   <div class="">

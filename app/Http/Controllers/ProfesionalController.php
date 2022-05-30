@@ -53,7 +53,7 @@ class ProfesionalController extends Controller
             'question' => $request->question,
         ]);
 
-        return redirect('hasil-evaluasi-individu-a-profesional')->with('status', 'pertanyaan Berhasil Ditambahkan');
+        return redirect('hasil-evaluasi-individu-a-profesional')->with('simpan', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -98,7 +98,7 @@ class ProfesionalController extends Controller
                 'question' => $request->question,
             ]);
 
-                return redirect('hasil-evaluasi-individu-a-profesional')->with('status', 'pertanyaan Berhasil Diubah');
+                return redirect('hasil-evaluasi-individu-a-profesional')->with('update', 'pertanyaan Berhasil Diubah');
     }
 
     /**
@@ -110,6 +110,6 @@ class ProfesionalController extends Controller
     public function destroy(Pertanyaan $pertanyaan)
     {
         Pertanyaan::destroy($pertanyaan->id);
-        return redirect('/hasil-evaluasi-individu-a-profesional')->with('status', 'Data Berhasil Dihapus');
+        return redirect('/hasil-evaluasi-individu-a-profesional')->with('hapus', 'Data Berhasil Dihapus');
     }
 }

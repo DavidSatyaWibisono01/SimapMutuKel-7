@@ -53,7 +53,7 @@ class PublikasiIlmiahController extends Controller
             'question' => $request->question,
         ]);
 
-        return redirect('hasil-evaluasi-individu-b-publikasi-ilmiah')->with('status', 'pertanyaan Berhasil Ditambahkan');
+        return redirect('hasil-evaluasi-individu-b-publikasi-ilmiah')->with('simpan', 'pertanyaan Berhasil Ditambahkan');
     }
 
     /**
@@ -98,7 +98,7 @@ class PublikasiIlmiahController extends Controller
                 'question' => $request->question,
             ]);
 
-                return redirect('hasil-evaluasi-individu-b-publikasi-ilmiah')->with('status', 'pertanyaan Berhasil Diubah');
+                return redirect('hasil-evaluasi-individu-b-publikasi-ilmiah')->with('update', 'pertanyaan Berhasil Diubah');
     }
 
     /**
@@ -110,6 +110,6 @@ class PublikasiIlmiahController extends Controller
     public function destroy(Pertanyaan $pertanyaan)
     {
         Pertanyaan::destroy($pertanyaan->id);
-        return redirect('/hasil-evaluasi-individu-b-publikasi-ilmiah')->with('status', 'Data Berhasil Dihapus');
+        return redirect('/hasil-evaluasi-individu-b-publikasi-ilmiah')->with('hapus', 'Data Berhasil Dihapus');
     }
 }
