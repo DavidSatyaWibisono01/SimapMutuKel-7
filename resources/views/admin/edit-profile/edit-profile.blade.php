@@ -1,7 +1,9 @@
 @extends('admin/layout-menu-navbar/main')
 
 @section('container')
-
+@if ($message = Session::get('update'))
+  <?php echo "<script>alert('Data pengguna Berhasil Diubah')</script>"; ?>
+@endif
 <div class="right_col">
     <div class="">
 
@@ -103,7 +105,6 @@
                     @error('foto')
                       <div class="invalid-feedback{{$message}}"></div>
                     @enderror
-                    <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
                    </div>
                 </div>
 

@@ -39,7 +39,7 @@ class ProfileController extends Controller
                     // 'password' => bcrypt($request->password),
                     'foto' => $imgName,
                 ]);
-                return redirect()->back()->with('status', 'Data Karyawan Berhasil Diubah');
+                return redirect()->back()->with('update', 'Data Karyawan Berhasil Diubah');
         }
         User::where('id', $request->user()->id)
                 ->update([
@@ -50,6 +50,7 @@ class ProfileController extends Controller
                     'username' => $request->username,
                     // 'password' => bcrypt($request->password),
                 ]);
-                return redirect()->back()->with('status', 'Data Karyawan Berhasil Diubah');
+                return redirect()->back()->with('update', 'Data Karyawan Berhasil Diubah');
     }
+
 }

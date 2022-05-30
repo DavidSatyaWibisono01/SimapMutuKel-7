@@ -15,7 +15,6 @@
       <div class="title_left">
         <h2>Pelajaran : {{ $hasil[0]->User->bidang }}</h2>
         <h2>Status : {{ $hasil[0]->User->status }}</h2>
-        <h2>Tahun Ajaran : 2021 - 2022</h2>
       </div>
     </div>
     <!-- End Title dari Menu -->
